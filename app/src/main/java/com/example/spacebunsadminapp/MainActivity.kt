@@ -21,10 +21,16 @@ class MainActivity : AppCompatActivity() {
 
         abc = AppBarConfiguration(
             setOf(
-                R.id.dashboard,
-                R.id.user,
-                R.id.order,
-                R.id.product,
+                R.id.loginFragment,
+                R.id.dashboardFragment,
+                R.id.userFragment,
+                R.id.productFragment,
+                R.id.vouchersFragment,
+                R.id.donationsFragment,
+                R.id.orderFragment,
+                R.id.salesFragment,
+                R.id.contactsFragment,
+                R.id.settingsFragment,
             ),
             binding.drawerLayout
         )
