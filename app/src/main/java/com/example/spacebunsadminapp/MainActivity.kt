@@ -33,12 +33,6 @@ class MainActivity : AppCompatActivity() {
         binding.navView.setupWithNavController(nav)
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        menu?.setGroupDividerEnabled(true)
-//        menuInflater.inflate(R.menu.drawer, menu)
-//        return super.onCreateOptionsMenu(menu)
-//    }
-
     override fun onSupportNavigateUp(): Boolean {
         return nav.navigateUp(abc) || super.onSupportNavigateUp()
     }
