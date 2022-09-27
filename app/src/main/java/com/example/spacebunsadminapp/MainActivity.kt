@@ -2,7 +2,6 @@ package com.example.spacebunsadminapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.*
 import com.example.spacebunsadminapp.databinding.ActivityMainBinding
