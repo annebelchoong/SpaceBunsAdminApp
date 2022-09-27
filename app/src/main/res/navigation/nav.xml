@@ -8,21 +8,21 @@
     <fragment
         android:id="@+id/dashboard"
         android:name="com.example.spacebunsadminapp.ui.Dashboard"
-        android:label="fragment_dashboard"
+        android:label="Dashboard"
         tools:layout="@layout/fragment_dashboard" />
     <fragment
         android:id="@+id/order"
         android:name="com.example.spacebunsadminapp.ui.OrdersFragment"
-        android:label="fragment_orders"
+        android:label="Orders"
         tools:layout="@layout/fragment_orders" />
     <fragment
         android:id="@+id/product"
         android:name="com.example.spacebunsadminapp.ui.ProductsFragment"
-        android:label="fragment_products"
+        android:label="Products"
         tools:layout="@layout/fragment_products" />
     <fragment
         android:id="@+id/user"
         android:name="com.example.spacebunsadminapp.ui.UserFragment"
-        android:label="fragment_user"
+        android:label="User"
         tools:layout="@layout/fragment_user" />
 </navigation>

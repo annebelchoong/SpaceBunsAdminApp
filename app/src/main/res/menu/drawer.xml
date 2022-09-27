@@ -13,16 +13,16 @@
         <item
             android:id="@+id/user"
             android:checkable="false"
-            android:title="userFragment" />
+            android:title="User" />
     </group>
     <group >
         <item
             android:id="@+id/order"
             android:checkable="false"
-            android:title="orderFragment" />
+            android:title="Orders" />
         <item
             android:id="@+id/product"
             android:checkable="false"
-            android:title="productFragment" />
+            android:title="Products" />
     </group>
 </menu>
