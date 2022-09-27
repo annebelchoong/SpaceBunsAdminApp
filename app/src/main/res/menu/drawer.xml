@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dashboard"
+        android:checkable="true"
+        android:title="Dashboard" />
+    <group >
+        <item
+            android:id="@+id/user"
+            android:checkable="true"
+            android:title="userFragment" />
+    </group>
+    <group >
+        <item
+            android:id="@+id/order"
+            android:title="orderFragment" />
+        <item
+            android:id="@+id/product"
+            android:title="productFragment" />
+    </group>
+</menu>
