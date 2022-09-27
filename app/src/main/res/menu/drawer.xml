@@ -4,25 +4,25 @@
     tools:showIn="navigation_view">
 
 
-
-<item
+    <group android:id="@+id/loginSession">
+        <item
+            android:id="@+id/login"
+            android:title="Login" />
+    </group>
+    <item
         android:id="@+id/dashboard"
         android:checkable="false"
         android:title="Dashboard" />
-    <group >
-        <item
-            android:id="@+id/user"
-            android:checkable="false"
-            android:title="User" />
-    </group>
-    <group >
-        <item
-            android:id="@+id/order"
-            android:checkable="false"
-            android:title="Orders" />
-        <item
-            android:id="@+id/product"
-            android:checkable="false"
-            android:title="Products" />
-    </group>
+    <item
+        android:id="@+id/user"
+        android:checkable="false"
+        android:title="User" />
+    <item
+        android:id="@+id/order"
+        android:checkable="false"
+        android:title="Orders" />
+    <item
+        android:id="@+id/product"
+        android:checkable="false"
+        android:title="Products" />
 </menu>
