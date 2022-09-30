@@ -19,6 +19,7 @@
         <entry key="app/src/main/res/layout/item_order.xml" value="0.4385650634765626" />
         <entry key="app/src/main/res/layout/item_order_detail.xml" value="0.375" />
         <entry key="app/src/main/res/layout/order_details.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/update_order_status.xml" value="0.375" />
         <entry key="app/src/main/res/menu/drawer.xml" value="0.5835391861353165" />
       </map>
     </option>
