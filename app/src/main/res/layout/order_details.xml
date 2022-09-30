@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="124dp" />
+        app:layout_constraintGuide_begin="123dp" />
 
     <TextView
         android:id="@+id/lblCustomerId"
@@ -197,6 +197,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="XXX"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/lblOrderStatus"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/lblOrderStatus" />
@@ -222,5 +223,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" />
     </ScrollView>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Update status"
+        app:layout_constraintBottom_toTopOf="@+id/rvOrderDetails"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
