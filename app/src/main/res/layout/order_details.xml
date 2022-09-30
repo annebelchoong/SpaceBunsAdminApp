@@ -169,7 +169,7 @@
         android:layout_marginTop="8dp"
         android:text="Payment Method:"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/lblAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/lblOrderStatus" />
 
     <TextView
         android:id="@+id/edtPaymentMethod"
@@ -182,14 +182,45 @@
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/lblPaymentMethod" />
 
+    <TextView
+        android:id="@+id/lblOrderStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Order Status:"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/lblAddress" />
+
+    <TextView
+        android:id="@+id/txtOrderStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="XXX"
+        app:layout_constraintBottom_toBottomOf="@+id/lblOrderStatus"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/lblOrderStatus" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvOrderDetails"
         android:layout_width="409dp"
-        android:layout_height="450dp"
+        android:layout_height="423dp"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider3"
         tools:listitem="@layout/item_order_detail" />
+
+    <ScrollView
+        android:layout_width="14dp"
+        android:layout_height="6dp"
+        tools:layout_editor_absoluteX="395dp"
+        tools:layout_editor_absoluteY="320dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
