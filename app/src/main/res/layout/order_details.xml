@@ -127,38 +127,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPaymentMethod" />
 
+    <view
+        android:id="@+id/view"
+        class="androidx.constraintlayout.widget.ConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="82dp"
+        android:background="@drawable/top_side_rounded_rectangle_gold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/lblTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
         android:text="Total: "
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/view" />
 
     <TextView
         android:id="@+id/edtTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
-        android:text="00.00"
-        android:textColor="@color/black"
+        android:text="RM 00.00"
+        android:textColor="@color/white"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/lblTotal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/lblTotal" />
-
-    <View
-        android:id="@+id/divider5"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
-        android:layout_marginBottom="8dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toTopOf="@+id/lblTotal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/lblPaymentMethod"
@@ -184,9 +186,10 @@
         android:id="@+id/rvOrderDetails"
         android:layout_width="409dp"
         android:layout_height="450dp"
-        app:layout_constraintBottom_toTopOf="@+id/divider5"
+        app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+        app:layout_constraintTop_toBottomOf="@+id/divider3"
+        tools:listitem="@layout/item_order_detail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
