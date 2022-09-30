@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.spacebunsadminapp.R
 import com.example.spacebunsadminapp.databinding.FragmentLoginBinding
 import com.example.spacebunsadminapp.databinding.FragmentOrdersBinding
+import com.example.spacebunsadminapp.util.hideKeyboard
 import kotlinx.coroutines.launch
 
 
@@ -26,7 +27,7 @@ class LoginFragment : Fragment() {
     }
 
     private fun login() {
-        //hideKeyboard()
+        hideKeyboard()
 
         val ctx      = requireContext()
         val email    = binding.edtEmail.text.toString().trim()
