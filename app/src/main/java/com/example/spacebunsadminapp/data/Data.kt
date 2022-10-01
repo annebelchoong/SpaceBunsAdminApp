@@ -10,6 +10,7 @@ import java.util.*
 data class Orders(
     @DocumentId
     var orderId: String = "",
+    var customerId: String = "",
     var dateTime: LocalDateTime,
     var address: String = "",
     var orderStatus: String = "",
