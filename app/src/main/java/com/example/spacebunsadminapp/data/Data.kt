@@ -10,13 +10,15 @@ import java.util.*
 data class Orders(
     @DocumentId
     var orderId: String = "",
-    var customerId: String = "",
+//    var customerId: String = "",
     var date: Date = Date(),
     var address: String = "",
     var orderStatus: String = "",
     var paymentMethod: String = "",
+    var subtotal: Double = 0.00,
     var totalPrice: Double = 0.00,
-    var discount: Double = 0.00,
+    var voucherId: String = "",
+    val deliveryFee: Double = 3.00,
 
 ) {
     @get:Exclude
