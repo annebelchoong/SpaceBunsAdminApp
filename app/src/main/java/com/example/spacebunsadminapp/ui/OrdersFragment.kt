@@ -27,7 +27,7 @@ class OrdersFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentOrdersBinding.inflate(inflater, container, false)
 
-//        binding.btnInsert.setOnClickListener { nav.navigate(R.id.) }
+        binding.btnInsert.setOnClickListener { nav.navigate(R.id.insertOrderFragment) }
 
         adapter = OrderAdapter {holder, order ->
             holder.binding.root.setOnClickListener{
