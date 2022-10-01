@@ -24,9 +24,9 @@
         android:layout_height="wrap_content"
         android:text="Customer ID:"
         android:textAlignment="viewEnd"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/edtNewCustomerId"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toTopOf="@+id/edtNewCustomerId" />
 
     <TextView
         android:id="@+id/lblNewAddress"
@@ -34,9 +34,9 @@
         android:layout_height="wrap_content"
         android:text="Address:"
         android:textAlignment="viewEnd"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPostalAddress"
+        app:layout_constraintBottom_toBottomOf="@+id/edtNewAddress"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPostalAddress" />
+        app:layout_constraintTop_toTopOf="@+id/edtNewAddress" />
 
     <TextView
         android:id="@+id/lblNewDate"
@@ -44,9 +44,9 @@
         android:layout_height="wrap_content"
         android:text="Date:"
         android:textAlignment="viewEnd"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextDate"
+        app:layout_constraintBottom_toBottomOf="@+id/edtNewDate"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toTopOf="@+id/editTextDate" />
+        app:layout_constraintTop_toTopOf="@+id/edtNewDate" />
 
     <TextView
         android:id="@+id/lblNewOrderStatus"
@@ -83,19 +83,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/edtNewCustomerId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:hint="Eg. C001"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintStart_toEndOf="@+id/lblNewCustomerId"
         app:layout_constraintTop_toBottomOf="@+id/edtNewOrderId" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/edtNewDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -103,10 +103,10 @@
         android:ems="10"
         android:inputType="date"
         app:layout_constraintStart_toEndOf="@+id/lblNewDate"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/edtNewCustomerId" />
 
     <EditText
-        android:id="@+id/editTextTextPostalAddress"
+        android:id="@+id/edtNewAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -114,7 +114,7 @@
         android:ems="10"
         android:inputType="textPostalAddress"
         app:layout_constraintStart_toEndOf="@+id/lblNewAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+        app:layout_constraintTop_toBottomOf="@+id/edtNewDate" />
 
     <Spinner
         android:id="@+id/spnStatus"
@@ -124,7 +124,7 @@
         android:layout_marginTop="8dp"
         android:entries="@array/orderStatus"
         app:layout_constraintStart_toEndOf="@+id/lblNewOrderStatus"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPostalAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/edtNewAddress" />
 
     <Spinner
         android:id="@+id/spnPaymentMethod"
@@ -144,7 +144,7 @@
         android:layout_marginTop="8dp"
         android:text="Reset"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/spnPaymentMethod" />
+        app:layout_constraintTop_toBottomOf="@+id/edtTotalPrice" />
 
     <Button
         android:id="@+id/btnNewInsert"
@@ -155,5 +155,25 @@
         app:layout_constraintBottom_toBottomOf="@+id/btnReset"
         app:layout_constraintStart_toEndOf="@+id/btnReset"
         app:layout_constraintTop_toTopOf="@+id/btnReset" />
+
+    <TextView
+        android:id="@+id/lblTotalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Price: "
+        app:layout_constraintBottom_toBottomOf="@+id/edtTotalPrice"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/edtTotalPrice" />
+
+    <EditText
+        android:id="@+id/edtTotalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/spnPaymentMethod" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
