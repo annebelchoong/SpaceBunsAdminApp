@@ -24,38 +24,6 @@ class VoucherViewModel : ViewModel() {
 
     init {
         col.addSnapshotListener { value, _ -> vouchers.value = value?.toObjects() }
-
-//        viewModelScope.launch {
-//            val vouchers = VOUCHERS.get().await().toObjects<Voucher>()
-//
-//            VOUCHERS.addSnapshotListener { value, _ ->
-//                if (value == null) return@addSnapshotListener
-//                val vouchers = value.toObjects<Voucher>()
-//
-//                updateResult()
-//            }
-//        }
-//    }
-//
-//    private fun updateResult() {
-//        var list = vouchers
-//
-//        // TODO(23): Search + filter
-//        list = list.filter {
-//            it.voucherCode.contains(voucherCode, true) && // if contains the voucherCode
-//                    (voucherId == "" || voucherId == it.voucherId)
-//        }
-//
-//        // TODO(24): Sort
-//        list = when (field) {
-//            "voucherId" -> list.sortedBy { it.voucherId }
-//            "voucherCode" -> list.sortedBy { it.voucherCode }
-//            "discountPercentage" -> list.sortedBy { it.discountPercentage }
-//            else -> list
-//        }
-//        if (reverse) list = list.reversed() // reverse list order
-//
-//        result.value = list
     }
 
     fun init() = Unit // dummy
@@ -106,7 +74,7 @@ class VoucherViewModel : ViewModel() {
 
     fun getVoucherAttributes(): List<String> {
 //        return VOUCHERS.get().await().toObjects<Voucher>()
-        return listOf("voucherId", "usedCount", "discount %")
+        return listOf("ID", "Used", "%")
     }
 }
 
