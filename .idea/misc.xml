@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/drawable/bottom_side_rounded_rectangle_gold.xml" value="0.4275" />
         <entry key="app/src/main/res/drawable/bottom_side_rounded_rectangle_white.xml" value="0.4275" />
         <entry key="app/src/main/res/drawable/circular_progressbar.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.442" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.4275" />
         <entry key="app/src/main/res/drawable/rounded_rectangle.xml" value="0.4275" />
         <entry key="app/src/main/res/drawable/rounded_rectangle_gold.xml" value="0.4275" />
@@ -14,6 +15,8 @@
         <entry key="app/src/main/res/drawable/shadow.xml" value="0.4275" />
         <entry key="app/src/main/res/drawable/top_side_rounded_rectangle_gole.xml" value="0.4275" />
         <entry key="app/src/main/res/layout/fragment_donations.xml" value="0.4625908507909363" />
+        <entry key="app/src/main/res/layout/fragment_insert_voucher.xml" value="0.33190262405960647" />
+        <entry key="app/src/main/res/layout/fragment_update_voucher.xml" value="0.4625908507909363" />
         <entry key="app/src/main/res/layout/fragment_vouchers.xml" value="0.4625908507909363" />
         <entry key="app/src/main/res/layout/item_voucher.xml" value="0.46173578452330055" />
       </map>
