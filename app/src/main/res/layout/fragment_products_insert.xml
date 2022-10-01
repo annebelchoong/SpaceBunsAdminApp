@@ -46,7 +46,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/edtAge"
+        android:id="@+id/edtDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -72,7 +72,7 @@
         android:padding="1dp"
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/edtAge" />
+        app:layout_constraintTop_toBottomOf="@+id/edtDesc" />
 
     <Button
         android:id="@+id/btnReset"
@@ -118,13 +118,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:labelFor="@id/edtAge"
+        android:labelFor="@id/edtDesc"
         android:text="Description"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/edtAge"
+        app:layout_constraintBottom_toBottomOf="@+id/edtDesc"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/edtAge" />
+        app:layout_constraintTop_toTopOf="@+id/edtDesc" />
 
     <TextView
         android:layout_width="wrap_content"

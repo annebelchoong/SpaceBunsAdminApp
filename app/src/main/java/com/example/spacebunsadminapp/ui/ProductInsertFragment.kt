@@ -10,15 +10,18 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.example.spacebunsadminapp.data.Product
 import com.example.spacebunsadminapp.data.SpaceBunsViewModel
-import com.example.spacebunsadminapp.databinding.FragmentProductsListBinding
+import com.example.spacebunsadminapp.databinding.FragmentProductsInsertBinding
+import com.example.spacebunsadminapp.util.cropToBlob
+import com.example.spacebunsadminapp.util.errorDialog
 
 class ProductInsertFragment: Fragment() {
-    private lateinit var binding: FragmentProductsListBinding
+    private lateinit var binding: FragmentProductsInsertBinding
     private val nav by lazy { findNavController() }
     private val vm: SpaceBunsViewModel by activityViewModels()
 
-    //Get content launcher
+    // TODO: Get content launcher
     private val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         if (it.resultCode == Activity.RESULT_OK) {
             binding.imgPhoto.setImageURI(it.data?.data)  // result is path
@@ -30,7 +33,7 @@ class ProductInsertFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentInsertBinding.inflate(inflater, container, false)
+        binding = FragmentProductsInsertBinding.inflate(inflater, container, false)
 
         reset()
         binding.imgPhoto.setOnClickListener { select() }
@@ -52,16 +55,16 @@ class ProductInsertFragment: Fragment() {
     private fun reset() {
         binding.edtId.text.clear()
         binding.edtName.text.clear()
-        binding.edtAge.text.clear()
+        binding.edtDesc.text.clear()
         binding.imgPhoto.setImageDrawable(null)
         binding.edtId.requestFocus()
     }
 
     private fun submit() {
-        val f = Friend(
+        val f = Product(
             id = binding.edtId.text.toString().trim(),
             name = binding.edtName.text.toString().trim(),
-            age = binding.edtAge.text.toString().toIntOrNull() ?: 0,
+            desc = binding.edtDesc.text.toString().trim(),
             // TODO: Photo
             photo = binding.imgPhoto.cropToBlob(300, 300)
         )
