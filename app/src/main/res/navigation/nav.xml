@@ -55,4 +55,14 @@
         android:name="com.example.spacebunsadminapp.ui.VouchersFragment"
         android:label="Vouchers"
         tools:layout="@layout/fragment_vouchers" />
+    <fragment
+        android:id="@+id/insertVoucherFragment"
+        android:name="com.example.spacebunsadminapp.ui.InsertVoucherFragment"
+        android:label="Add New Voucher"
+        tools:layout="@layout/fragment_insert_voucher" />
+    <fragment
+        android:id="@+id/updateVoucherFragment"
+        android:name="com.example.spacebunsadminapp.ui.UpdateVoucherFragment"
+        android:label="Update Voucher Details"
+        tools:layout="@layout/fragment_update_voucher" />
 </navigation>
