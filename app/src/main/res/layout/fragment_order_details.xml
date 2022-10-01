@@ -5,6 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <view
+        android:id="@+id/view4"
+        class="androidx.constraintlayout.widget.ConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="-8dp"
+        android:background="@drawable/shadow_20"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <view
+        android:id="@+id/view3"
+        class="androidx.constraintlayout.widget.ConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="210dp"
+        android:background="@drawable/bottom_side_rounded_rectangle_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/lblOrderId"
         android:layout_width="wrap_content"
@@ -117,22 +138,12 @@
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/lblAddress" />
 
-    <View
-        android:id="@+id/divider3"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPaymentMethod" />
-
     <view
         android:id="@+id/view"
         class="androidx.constraintlayout.widget.ConstraintLayout"
         android:layout_width="0dp"
         android:layout_height="82dp"
-        android:background="@drawable/top_side_rounded_rectangle_gold"
+        android:background="@drawable/top_side_rounded_rectangle_gole"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -209,29 +220,16 @@
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider3"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
         tools:listitem="@layout/item_order_detail" />
-
-    <ScrollView
-        android:layout_width="14dp"
-        android:layout_height="6dp"
-        tools:layout_editor_absoluteX="395dp"
-        tools:layout_editor_absoluteY="320dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:text="Update status"
-        app:layout_constraintBottom_toTopOf="@+id/rvOrderDetails"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="152dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
