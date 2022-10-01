@@ -34,7 +34,7 @@ class InsertOrderFragment : Fragment() {
     private fun insert() {
         val o = Orders(
             orderId = binding.edtNewOrderId.text.toString().trim(),
-            customerId = binding.edtNewCustomerId.text.toString().trim(),
+//            customerId = binding.edtNewCustomerId.text.toString().trim(),
             address = binding.edtNewAddress.text.toString().trim(),
             orderStatus = binding.spnStatus.toString().trim(),
             paymentMethod = binding.spnPaymentMethod.toString().trim(),
