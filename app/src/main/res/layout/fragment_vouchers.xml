@@ -5,6 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dirty_white"
     tools:context=".ui.VouchersFragment">
 
     <view
@@ -67,17 +68,6 @@
         app:layout_constraintTop_toTopOf="@+id/cardShadowVouchers" />
 
     <TextView
-        android:id="@+id/lblVouchersList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:text="Vouchers"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardVouchers" />
-
-    <TextView
         android:id="@+id/lblVouchersId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -86,7 +76,7 @@
         android:text="ID"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblVouchersList" />
+        app:layout_constraintTop_toBottomOf="@+id/svVouchers" />
 
     <TextView
         android:id="@+id/lblVoucherCode"
@@ -103,7 +93,7 @@
         android:id="@+id/lblVoucherCode2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="48dp"
         android:text="%"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/lblVoucherCode"
@@ -125,11 +115,30 @@
         android:id="@+id/txtVoucherCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="16dp"
         android:text="00 Record(s)"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/lblVouchersList"
+        app:layout_constraintBottom_toBottomOf="@+id/svVouchers"
+        app:layout_constraintStart_toEndOf="@+id/svVouchers"
+        app:layout_constraintTop_toTopOf="@+id/svVouchers" />
+
+    <SearchView
+        android:id="@+id/svVouchers"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_rectangle_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardVouchers" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtVoucherCount"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/lblVouchersList" />
+        app:layout_constraintTop_toTopOf="@+id/txtVoucherCount" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
