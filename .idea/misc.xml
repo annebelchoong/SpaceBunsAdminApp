@@ -3,22 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/circle.xml" value="0.1565" />
-        <entry key="app/src/main/res/drawable/rounded_rectangle.xml" value="0.1825" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.13414634146341464" />
-        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.37604166666666666" />
-        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.3619791666666667" />
-        <entry key="app/src/main/res/layout/fragment_user.xml" value="0.3548717948717949" />
-        <entry key="app/src/main/res/layout/fragment_vouchers.xml" value="0.2740740740740741" />
-        <entry key="app/src/main/res/layout/header.xml" value="0.15492957746478872" />
-        <entry key="app/src/main/res/menu/drawer.xml" value="0.37025641025641026" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/bottom_side_rounded_rectangle_gold.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/bottom_side_rounded_rectangle_white.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/circular_progressbar.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/rounded_rectangle.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/rounded_rectangle_gold.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/rounded_rectangle_white.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/shadow.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/top_side_rounded_rectangle_gole.xml" value="0.4275" />
+        <entry key="app/src/main/res/layout/fragment_donations.xml" value="0.4625908507909363" />
+        <entry key="app/src/main/res/layout/fragment_vouchers.xml" value="0.4625908507909363" />
+        <entry key="app/src/main/res/layout/item_voucher.xml" value="0.46173578452330055" />
       </map>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/build/classes" />
+    <output url="file://$PROJECT_DIR$/out" />
   </component>
-  <component name="ProjectType">
-    <option name="id" value="Android" />
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.33190262405960647" />
+      </ProjectState>
+    </option>
   </component>
 </project>

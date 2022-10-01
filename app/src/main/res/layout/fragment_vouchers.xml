@@ -1,14 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dirty_white"
     tools:context=".ui.VouchersFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <view
+        android:id="@+id/cardShadowVouchers"
+        class="androidx.constraintlayout.widget.ConstraintLayout"
+        android:layout_width="350dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/shadow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <view
+        android:id="@+id/cardVouchers"
+        class="androidx.constraintlayout.widget.ConstraintLayout"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:background="@drawable/rounded_rectangle_white"
+        app:layout_constraintEnd_toEndOf="@id/cardShadowVouchers"
+        app:layout_constraintStart_toStartOf="@id/cardShadowVouchers"
+        app:layout_constraintTop_toTopOf="@id/cardShadowVouchers" />
+
+    <TextView
+        android:id="@+id/lblTotalSaved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Voucher Usage:"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/cardVouchers"
+        app:layout_constraintStart_toStartOf="@id/cardVouchers"
+        app:layout_constraintTop_toTopOf="@id/cardVouchers" />
+
+    <TextView
+        android:id="@+id/lblMyr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="4dp"
+        android:text="MYR"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotal" />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5483.50"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardVouchers"
+        app:layout_constraintEnd_toEndOf="@+id/cardVouchers"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/cardVouchers"
+        app:layout_constraintTop_toTopOf="@+id/cardShadowVouchers" />
+
+    <TextView
+        android:id="@+id/lblVouchersId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="16dp"
+        android:text="ID"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/svVouchers" />
+
+    <TextView
+        android:id="@+id/lblVoucherCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="Code"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/lblVouchersId"
+        app:layout_constraintStart_toEndOf="@+id/lblVouchersId"
+        app:layout_constraintTop_toTopOf="@+id/lblVouchersId" />
+
+    <TextView
+        android:id="@+id/lblVoucherCode2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:text="%"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/lblVoucherCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lblVoucherCode" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvVouchers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblVouchersId"
+        tools:listitem="@layout/item_voucher" />
+
+    <TextView
+        android:id="@+id/txtVoucherCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="00 Record(s)"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/svVouchers"
+        app:layout_constraintStart_toEndOf="@+id/svVouchers"
+        app:layout_constraintTop_toTopOf="@+id/svVouchers" />
+
+    <SearchView
+        android:id="@+id/svVouchers"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_rectangle_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardVouchers" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtVoucherCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtVoucherCount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
