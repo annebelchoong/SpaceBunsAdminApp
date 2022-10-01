@@ -56,7 +56,7 @@ class VouchersFragment : Fragment() {
         binding.spnVoucherAttributes.adapter = arrayAdapter
 
         val vouchers = vm.getVoucherAttributes()
-//        arrayAdapter.add("All")
+        arrayAdapter.add("All")
         arrayAdapter.addAll(vouchers)
 
         // TODO: Get all
@@ -66,31 +66,12 @@ class VouchersFragment : Fragment() {
         }
 
 //        updateVoucherUsage();
+
         return binding.root
     }
 
-//    private fun sort(field: String) {
-//        // TODO(26): Sort by [field] -> vm.sort(...)
-//        val reverse = vm.sort(field)
-//
-//        // TODO(27): Remove icon -> all buttons
-//        binding.btnId.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
-//        binding.btnName.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
-//        binding.btnPrice.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
-//
-//        // TODO(28): Set icon -> specific button
-//        val res = if (reverse) R.drawable.ic_down else R.drawable.ic_up
-//
-//        when (field) {
-//            "id" -> binding.btnId.setCompoundDrawablesWithIntrinsicBounds(0, 0, res, 0)
-//            "name" -> binding.btnName.setCompoundDrawablesWithIntrinsicBounds(0, 0, res, 0)
-//            "price" -> binding.btnPrice.setCompoundDrawablesWithIntrinsicBounds(0, 0, res, 0)
-//        }
-//    }
-
-
 //    private fun updateVoucherUsage() {
 //        binding.pbVoucher.progress = progr
-//        binding.txtProgress.text = "$progr.00%"
+//        binding.txtProgress.text = "$progr.00%"ƒ
 //    }
 }
