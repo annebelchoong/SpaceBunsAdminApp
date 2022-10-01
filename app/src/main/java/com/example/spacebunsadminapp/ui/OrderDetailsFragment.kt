@@ -14,6 +14,9 @@ class OrderDetailsFragment:Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentOrderDetailsBinding.inflate(inflater, container, false)
+
+        binding.btnUpdateStatus.setOnClickListener {  }
+
         return binding.root
     }
 }
