@@ -51,18 +51,18 @@
         android:label="Vouchers"
         tools:layout="@layout/fragment_vouchers" />
     <fragment
-        android:id="@+id/productListFragment"
+        android:id="@+id/productFragment"
         android:name="com.example.spacebunsadminapp.ui.ProductsFragment"
-        android:label="fragment_products_list"
+        android:label="Product List"
         tools:layout="@layout/fragment_products" />
     <fragment
         android:id="@+id/productInsertFragment"
         android:name="com.example.spacebunsadminapp.ui.ProductInsertFragment"
-        android:label="fragment_products_insert"
+        android:label="Add New Product"
         tools:layout="@layout/fragment_products_insert" />
     <fragment
         android:id="@+id/productUpdateFragment"
         android:name="com.example.spacebunsadminapp.ui.ProductUpdateFragment"
-        android:label="fragment_products_update"
+        android:label="Update Product"
         tools:layout="@layout/fragment_products_update" />
 </navigation>
