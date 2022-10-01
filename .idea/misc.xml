@@ -13,6 +13,7 @@
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/fragment_orders.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.3619791666666667" />
+        <entry key="app/src/main/res/layout/fragment_update_order_status.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/fragment_user.xml" value="0.3548717948717949" />
         <entry key="app/src/main/res/layout/fragment_vouchers.xml" value="0.2740740740740741" />
         <entry key="app/src/main/res/layout/header.xml" value="0.15492957746478872" />
