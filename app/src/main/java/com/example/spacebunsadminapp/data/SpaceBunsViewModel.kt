@@ -11,7 +11,7 @@ class SpaceBunsViewModel: ViewModel() {
     private val product = MutableLiveData<List<Product>>()
 
     // Initialization
-    private val col = Firebase.firestore.collection("Products")  // ref
+    private val col = Firebase.firestore.collection("products")  // ref
 
     init {  // code that will be executed in constructor
         col.addSnapshotListener { value, _ -> product.value = value?.toObjects() }
