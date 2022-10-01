@@ -59,4 +59,9 @@
         android:id="@+id/orderDetailsFragment"
         android:name="com.example.spacebunsadminapp.ui.OrderDetailsFragment"
         android:label="OrderDetailsFragment" />
+    <fragment
+        android:id="@+id/insertOrderFragment"
+        android:name="com.example.spacebunsadminapp.ui.InsertOrderFragment"
+        android:label="fragment_insert_order"
+        tools:layout="@layout/fragment_insert_order" />
 </navigation>
