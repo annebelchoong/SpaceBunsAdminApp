@@ -55,4 +55,19 @@
         android:name="com.example.spacebunsadminapp.ui.VouchersFragment"
         android:label="Vouchers"
         tools:layout="@layout/fragment_vouchers" />
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.example.spacebunsadminapp.ui.ProductListFragment"
+        android:label="fragment_products_list"
+        tools:layout="@layout/fragment_products_list" />
+    <fragment
+        android:id="@+id/productInsertFragment"
+        android:name="com.example.spacebunsadminapp.ui.ProductInsertFragment"
+        android:label="fragment_products_insert"
+        tools:layout="@layout/fragment_products_insert" />
+    <fragment
+        android:id="@+id/productUpdateFragment"
+        android:name="com.example.spacebunsadminapp.ui.ProductUpdateFragment"
+        android:label="fragment_products_update"
+        tools:layout="@layout/fragment_products_update" />
 </navigation>

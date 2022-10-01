@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.HomeFragment">
+    tools:context=".ui.ProductsFragment">
 
     <View
         android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_width="413dp"
+        android:layout_height="75dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,24 +34,6 @@
         android:text="Read"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
-
-    <Button
-        android:id="@+id/btnSet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:text="Set"
-        app:layout_constraintStart_toEndOf="@+id/btnRead"
-        app:layout_constraintTop_toTopOf="@+id/btnRead" />
-
-    <Button
-        android:id="@+id/btnUpdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:text="Update"
-        app:layout_constraintStart_toEndOf="@+id/btnSet"
-        app:layout_constraintTop_toTopOf="@+id/btnSet" />
 
     <TextView
         android:id="@+id/txtResult"
