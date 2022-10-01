@@ -8,4 +8,11 @@
         <item>Delivering</item>
         <item>Delivered</item>
     </string-array>
+
+    <string-array name="paymentMethod">
+        <item>Credit Card</item>
+        <item>E Wallet</item>
+        <item>Cash</item>
+    </string-array>
+
 </resources>
