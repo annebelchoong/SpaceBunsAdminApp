@@ -55,4 +55,8 @@
         android:name="com.example.spacebunsadminapp.ui.VouchersFragment"
         android:label="Vouchers"
         tools:layout="@layout/fragment_vouchers" />
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.example.spacebunsadminapp.ui.OrderDetailsFragment"
+        android:label="OrderDetailsFragment" />
 </navigation>
