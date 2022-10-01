@@ -3,6 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/guna1/SpaceBunsAdminApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.227" />
+        <entry key="..\:/Users/guna1/SpaceBunsAdminApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.227" />
+        <entry key="..\:/Users/guna1/SpaceBunsAdminApp/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.227" />
+        <entry key="..\:/Users/guna1/SpaceBunsAdminApp/app/src/main/res/drawable/rounded_rectangle.xml" value="0.227" />
+        <entry key="..\:/Users/guna1/SpaceBunsAdminApp/app/src/main/res/layout/fragment_insert.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/guna1/SpaceBunsAdminApp/app/src/main/res/layout/fragment_list.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/guna1/SpaceBunsAdminApp/app/src/main/res/layout/fragment_login.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/guna1/SpaceBunsAdminApp/app/src/main/res/layout/fragment_orders.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/guna1/SpaceBunsAdminApp/app/src/main/res/layout/fragment_product_item.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/guna1/SpaceBunsAdminApp/app/src/main/res/layout/fragment_products.xml" value="0.264" />
+        <entry key="..\:/Users/guna1/SpaceBunsAdminApp/app/src/main/res/layout/fragment_products_test.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/guna1/SpaceBunsAdminApp/app/src/main/res/layout/fragment_sales.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/guna1/SpaceBunsAdminApp/app/src/main/res/layout/fragment_update.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/drawable/circle.xml" value="0.1565" />
         <entry key="app/src/main/res/drawable/rounded_rectangle.xml" value="0.1825" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13414634146341464" />
