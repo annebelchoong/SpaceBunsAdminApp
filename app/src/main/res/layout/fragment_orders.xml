@@ -7,9 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.OrdersFragment">
 
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:background="@drawable/bottom_side_rounded_rectangle_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <SearchView
         android:id="@+id/svSearch"
-        android:layout_width="0dp"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -39,14 +49,16 @@
         app:layout_constraintTop_toTopOf="@+id/txtCount"
         app:layout_constraintVertical_bias="0.551" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="16dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnInsert" />
+    <Spinner
+        android:id="@+id/spnFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/svSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/svSearch"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvOrders"
