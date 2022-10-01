@@ -1,27 +1,25 @@
 package com.example.spacebunsadminapp.data
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObjects
+import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.tasks.await
 
 class OrderViewModel: ViewModel() {
 
+    private val orders = MutableLiveData<List<Orders>>()
+
+    private val col = Firebase.firestore.collection("orders")
+
+    init {
+        col.addSnapshotListener { value,_ -> orders.value = value?.toObjects() }
+    }
+
     fun init() = Unit
 
-    suspend fun getAll(): List<Orders> {
-        val orders = ORDERS
-            .get()
-            .await()
-            .toObjects<Orders>()
+    fun get(id:String) = orders.value?.find { it.orderId == id }
 
-        for(o in orders) {
-            o.count = ORDERS
-                .whereEqualTo("orderId", o.orderId)
-                .get()
-                .await()
-                .size()
-        }
-
-        return orders
-    }
+    fun getAll() = orders
 }
