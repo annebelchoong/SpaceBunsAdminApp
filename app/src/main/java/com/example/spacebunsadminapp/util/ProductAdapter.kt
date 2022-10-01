@@ -6,11 +6,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.spacebunsadminapp.data.Product
-import com.example.spacebunsadminapp.databinding.ProductItemBinding
+import com.example.spacebunsadminapp.databinding.FragmentProductItemBinding
 
 
 class ProductAdapter (
-    val fn: (RecyclerView.ViewHolder, Product) -> Unit = { _, _ -> }
+    val fn: (ViewHolder, Product) -> Unit = { _, _ -> }
 ) : ListAdapter<Product, ProductAdapter.ViewHolder>(DiffCallback){
 
     companion object DiffCallback : DiffUtil.ItemCallback<Product>() {
@@ -18,10 +18,10 @@ class ProductAdapter (
         override fun areContentsTheSame(a: Product, b: Product) = a == b
     }
 
-    class ViewHolder(val binding: ProductItemBinding) : RecyclerView.ViewHolder(binding.root)
+    class ViewHolder(val binding: FragmentProductItemBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = ProductItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = FragmentProductItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 

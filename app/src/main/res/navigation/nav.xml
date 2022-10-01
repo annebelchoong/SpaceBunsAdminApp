@@ -16,11 +16,6 @@
         android:label="Orders"
         tools:layout="@layout/fragment_orders" />
     <fragment
-        android:id="@+id/productFragment"
-        android:name="com.example.spacebunsadminapp.ui.ProductsFragment"
-        android:label="Products"
-        tools:layout="@layout/fragment_products" />
-    <fragment
         android:id="@+id/userFragment"
         android:name="com.example.spacebunsadminapp.ui.UserFragment"
         android:label="User"
@@ -57,9 +52,9 @@
         tools:layout="@layout/fragment_vouchers" />
     <fragment
         android:id="@+id/productListFragment"
-        android:name="com.example.spacebunsadminapp.ui.ProductListFragment"
+        android:name="com.example.spacebunsadminapp.ui.ProductsFragment"
         android:label="fragment_products_list"
-        tools:layout="@layout/fragment_products_list" />
+        tools:layout="@layout/fragment_products" />
     <fragment
         android:id="@+id/productInsertFragment"
         android:name="com.example.spacebunsadminapp.ui.ProductInsertFragment"

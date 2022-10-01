@@ -55,7 +55,6 @@
         android:importantForAccessibility="no"
         android:importantForAutofill="no"
         android:inputType="text"
-        android:maxLength="2"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/edtName"
