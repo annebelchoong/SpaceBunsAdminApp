@@ -20,13 +20,14 @@ class OrdersFragment : Fragment() {
 
     private lateinit var binding: FragmentOrdersBinding
     private val nav by lazy { findNavController() }
-    private val vm:OrderViewModel by activityViewModels()
+    private val vm: OrderViewModel by activityViewModels()
 
     private lateinit var  adapter: OrderAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentOrdersBinding.inflate(inflater, container, false)
 
+//        binding.btnInsert.setOnClickListener { nav.navigate(R.id.) }
 
         adapter = OrderAdapter {holder, order ->
             holder.binding.root.setOnClickListener{
@@ -39,8 +40,9 @@ class OrdersFragment : Fragment() {
 
         vm.getAll().observe(viewLifecycleOwner){
             adapter.submitList(it)
-            binding.txtCount.text = "${it.size} Order(s)"
+            binding.txtCount.text = "${it.size} order(s)"
         }
+
         return binding.root
     }
 
