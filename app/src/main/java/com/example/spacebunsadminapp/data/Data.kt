@@ -11,7 +11,7 @@ data class Orders(
     @DocumentId
     var orderId: String = "",
     var customerId: String = "",
-    var dateTime: LocalDateTime,
+    var date: Date = Date(),
     var address: String = "",
     var orderStatus: String = "",
     var paymentMethod: String = "",
