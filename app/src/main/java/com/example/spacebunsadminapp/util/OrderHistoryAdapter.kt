@@ -5,18 +5,17 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.spacebunsadminapp.data.Orders
-import com.example.spacebunsadminapp.databinding.ItemOrderBinding
+import com.example.spacebunsadminapp.data.OrdersHistory
 import com.example.spacebunsadminapp.databinding.ItemOrderHistoryBinding
 
 
 class OrderHistoryAdapter (
-    val fn: (ViewHolder, Orders) -> Unit ={ _, _ ->}
-    ): ListAdapter<Orders, OrderHistoryAdapter.ViewHolder>(DiffCallBack) {
+    val fn: (ViewHolder, OrdersHistory) -> Unit ={ _, _ ->}
+    ): ListAdapter<OrdersHistory, OrderHistoryAdapter.ViewHolder>(DiffCallBack) {
 
-    companion object DiffCallBack:DiffUtil.ItemCallback<Orders>(){
-        override fun areItemsTheSame(a: Orders, b: Orders) = a.orderId == b.orderId
-        override fun areContentsTheSame(a: Orders, b: Orders) = a == b
+    companion object DiffCallBack:DiffUtil.ItemCallback<OrdersHistory>(){
+        override fun areItemsTheSame(a: OrdersHistory, b: OrdersHistory) = a.orderId == b.orderId
+        override fun areContentsTheSame(a: OrdersHistory, b: OrdersHistory) = a == b
     }
     class ViewHolder(val binding: ItemOrderHistoryBinding): RecyclerView.ViewHolder(binding.root)
 
