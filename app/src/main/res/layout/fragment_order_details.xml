@@ -117,6 +117,67 @@
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/lblAddress" />
 
+    <TextView
+        android:id="@+id/lblPaymentMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Payment Method:"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/lblAddress" />
+
+    <TextView
+        android:id="@+id/edtPaymentMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="XXX"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/lblPaymentMethod"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/lblPaymentMethod" />
+
+    <TextView
+        android:id="@+id/lblOrderStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Status:"
+        app:layout_constraintBottom_toBottomOf="@+id/spnNewStatus"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/spnNewStatus" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvOrderDetails"
+            android:layout_width="409dp"
+            android:layout_height="423dp"
+            android:isScrollContainer="true"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3"
+            tools:listitem="@layout/item_order_detail" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnUpdateStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Update"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <view
         android:id="@+id/view"
         class="androidx.constraintlayout.widget.ConstraintLayout"
@@ -152,65 +213,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/lblTotal" />
 
-    <TextView
-        android:id="@+id/lblPaymentMethod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Payment Method:"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/lblAddress" />
-
-    <TextView
-        android:id="@+id/edtPaymentMethod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="XXX"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/lblPaymentMethod"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/lblPaymentMethod" />
-
-    <TextView
-        android:id="@+id/lblOrderStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Order Status:"
-        app:layout_constraintBottom_toBottomOf="@+id/spnNewStatus"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/spnNewStatus" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvOrderDetails"
-        android:layout_width="409dp"
-        android:layout_height="423dp"
-        android:isScrollContainer="true"
-        app:layout_constraintBottom_toTopOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view3"
-        tools:listitem="@layout/item_order_detail" />
-
-    <Button
-        android:id="@+id/btnUpdateStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Update"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <Spinner
         android:id="@+id/spnNewStatus"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:entries="@array/orderStatus"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/edtPaymentMethod" />
+<!--        android:entries="@array/orderStatus"-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
