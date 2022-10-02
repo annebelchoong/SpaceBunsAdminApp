@@ -6,21 +6,21 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.spacebunsadminapp.data.Orders
-import com.example.spacebunsadminapp.databinding.ItemCompletedOrdersBinding
+import com.example.spacebunsadminapp.databinding.*
 
 
-class CompleteOrdersAdapter (
+class OrdersAdapter (
     val fn: (ViewHolder, Orders) -> Unit ={ _, _ ->}
-    ): ListAdapter<Orders, CompleteOrdersAdapter.ViewHolder>(DiffCallBack) {
+    ): ListAdapter<Orders, OrdersAdapter.ViewHolder>(DiffCallBack) {
 
     companion object DiffCallBack:DiffUtil.ItemCallback<Orders>(){
         override fun areItemsTheSame(a: Orders, b: Orders) = a.orderId == b.orderId
         override fun areContentsTheSame(a: Orders, b: Orders) = a == b
     }
-    class ViewHolder(val binding: ItemCompletedOrdersBinding): RecyclerView.ViewHolder(binding.root)
+    class ViewHolder(val binding: ItemOrderLineBinding): RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = ItemCompletedOrdersBinding.inflate(
+        val binding = ItemOrderLineBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false
