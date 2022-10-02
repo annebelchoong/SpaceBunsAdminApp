@@ -11,13 +11,13 @@ import kotlinx.coroutines.tasks.await
 
 class VoucherViewModel : ViewModel() {
 
-    private var fruits = listOf<Voucher>() // Original data
+//    private var fruits = listOf<Voucher>() // Original data
     private val vouchers = MutableLiveData<List<Voucher>>() // Search + filter + sort result
 
-    private var voucherCode = ""       // Search
-    private var voucherId = "" // Filter
-    private var field = ""      // Sort
-    private var reverse = false // Sort
+//    private var voucherCode = ""       // Search
+//    private var voucherId = "" // Filter
+//    private var field = ""      // Sort
+//    private var reverse = false // Sort
 
 
     private val col = Firebase.firestore.collection("vouchers")
@@ -62,6 +62,7 @@ class VoucherViewModel : ViewModel() {
 
         e += if (v.voucherCode == "") "- VoucherCode is required.\n"
         else if (v.voucherCode.length < 3) "- VoucherCode is too short (at least 3 letters).\n"
+        else if (codeExists(v.voucherCode)) "- VoucherCode is duplicated.\n"
         else ""
 
 //        e += if (v.discountPercentage < 0.01 || v.discountPercentage > 1.00) "- DiscountPercentage must be within 0.01 to 1.00 only.\n"
