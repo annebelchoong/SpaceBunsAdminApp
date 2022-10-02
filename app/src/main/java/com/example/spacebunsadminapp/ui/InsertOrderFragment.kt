@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.spacebunsadminapp.data.OrderHistoryViewModel
+import com.example.spacebunsadminapp.data.CompleteOrdersViewModel
 import com.example.spacebunsadminapp.data.Orders
 import com.example.spacebunsadminapp.databinding.FragmentInsertOrderBinding
 
@@ -16,7 +16,7 @@ class InsertOrderFragment : Fragment() {
 
     private lateinit var binding: FragmentInsertOrderBinding
     private val nav by lazy { findNavController() }
-    private val vm: OrderHistoryViewModel by activityViewModels()
+    private val vm: CompleteOrdersViewModel by activityViewModels()
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {

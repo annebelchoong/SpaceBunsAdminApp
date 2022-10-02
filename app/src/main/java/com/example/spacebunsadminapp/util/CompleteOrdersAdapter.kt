@@ -9,9 +9,9 @@ import com.example.spacebunsadminapp.data.Orders
 import com.example.spacebunsadminapp.databinding.ItemOrderHistoryBinding
 
 
-class OrderHistoryAdapter (
+class CompleteOrdersAdapter (
     val fn: (ViewHolder, Orders) -> Unit ={ _, _ ->}
-    ): ListAdapter<Orders, OrderHistoryAdapter.ViewHolder>(DiffCallBack) {
+    ): ListAdapter<Orders, CompleteOrdersAdapter.ViewHolder>(DiffCallBack) {
 
     companion object DiffCallBack:DiffUtil.ItemCallback<Orders>(){
         override fun areItemsTheSame(a: Orders, b: Orders) = a.orderId == b.orderId
