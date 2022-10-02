@@ -7,20 +7,21 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.spacebunsadminapp.data.Orders
 import com.example.spacebunsadminapp.databinding.ItemOrderBinding
+import com.example.spacebunsadminapp.databinding.ItemOrderHistoryBinding
 
 
-class OrderAdapter (
+class OrderHistoryAdapter (
     val fn: (ViewHolder, Orders) -> Unit ={ _, _ ->}
-    ): ListAdapter<Orders, OrderAdapter.ViewHolder>(DiffCallBack) {
+    ): ListAdapter<Orders, OrderHistoryAdapter.ViewHolder>(DiffCallBack) {
 
     companion object DiffCallBack:DiffUtil.ItemCallback<Orders>(){
         override fun areItemsTheSame(a: Orders, b: Orders) = a.orderId == b.orderId
         override fun areContentsTheSame(a: Orders, b: Orders) = a == b
     }
-    class ViewHolder(val binding: ItemOrderBinding): RecyclerView.ViewHolder(binding.root)
+    class ViewHolder(val binding: ItemOrderHistoryBinding): RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = ItemOrderBinding.inflate(
+        val binding = ItemOrderHistoryBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false
