@@ -10,11 +10,11 @@ class CompleteOrdersViewModel: ViewModel() {
 
     private val orders = MutableLiveData<List<Orders>>()
 
-    private val col = Firebase.firestore.collection("orders")
+//    private val col = Firebase.firestore.collection("orders")
 //    private val col = Firebase.firestore.collection("usersTest").document("U001").collection("orders")
 
     init {
-        col.addSnapshotListener { value,_ -> orders.value = value?.toObjects() }
+        ORDERS.addSnapshotListener { value,_ -> orders.value = value?.toObjects() }
     }
 
     fun init() = Unit
@@ -24,14 +24,14 @@ class CompleteOrdersViewModel: ViewModel() {
     fun getAll() = orders
 
     fun delete(id: String){
-        col.document(id).delete()
+        ORDERS.document(id).delete()
     }
 
     fun deleteAll(){
-        orders.value?.forEach { col.document(it.orderId).delete() }
+        orders.value?.forEach { ORDERS.document(it.orderId).delete() }
     }
 
     fun set(o:Orders){
-        col.document(o.orderId).set(o)
+        ORDERS.document(o.orderId).set(o)
     }
 }
