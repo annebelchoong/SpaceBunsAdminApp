@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.core.os.bundleOf
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.spacebunsadminapp.R
@@ -23,6 +24,7 @@ import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.formatter.PercentFormatter
 import com.github.mikephil.charting.utils.MPPointF
+import kotlinx.coroutines.launch
 
 class DonationEventsFragment : Fragment() {
     private lateinit var binding: FragmentDonationEventsBinding
@@ -30,10 +32,8 @@ class DonationEventsFragment : Fragment() {
     private val vm: DonationEventViewModel by activityViewModels()
     private var progr = 70
 
-    private lateinit var adapter: DonationEventAdapter
-
+    //    private lateinit var adapter: DonationEventAdapter
     lateinit var pieChart: PieChart
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -45,7 +45,7 @@ class DonationEventsFragment : Fragment() {
 
 //        binding.pbDonations.setOnClickListener { nav.navigate(R.id.donationDetailFragment) }
         binding.fabtnAddDonationEvent.setOnClickListener { nav.navigate(R.id.InsertdonationEventsFragment) }
-        binding.pieChart.setOnClickListener { nav.navigate(R.id.donationsFragment) }
+//        binding.pieChart.setOnClickListener { nav.navigate(R.id.donationsFragment) }
 
         pieChart = binding.pieChart
 
@@ -130,7 +130,7 @@ class DonationEventsFragment : Fragment() {
         pieChart.invalidate()
 
 
-        adapter = DonationEventAdapter { holder, donationEvent ->
+        val adapter = DonationEventAdapter() { holder, donationEvent ->
             holder.binding.root.setOnClickListener {
                 nav.navigate(
                     R.id.donationsFragment,
@@ -145,6 +145,15 @@ class DonationEventsFragment : Fragment() {
                 DividerItemDecoration.VERTICAL
             )
         )
+
+        // -----------------------------------------------------------------------------------------
+
+//        // TODO(8): Load categories data into recycler view -> launch block
+//        lifecycleScope.launch {
+//            val donationEvents = vm.getAll()
+//            adapter.submitList(donationEvents)
+//            binding.txtDonationCount.text = "${donationEvents.size} Records(s)"
+//        }
 
         // -----------------------------------------------------------------------------------------
 
@@ -165,7 +174,6 @@ class DonationEventsFragment : Fragment() {
 
         return binding.root
     }
-
 
     private fun updateProgressBar() {
 //        binding.pbDonations.progress = progr

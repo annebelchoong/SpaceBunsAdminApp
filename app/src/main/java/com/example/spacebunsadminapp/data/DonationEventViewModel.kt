@@ -22,6 +22,23 @@ class DonationEventViewModel : ViewModel() {
 
     fun getAll() = donations // TODO
 
+    // TODO(7): Return all categories
+    //          Populate [count] field
+//    suspend fun getAll(): List<DonationEvent> {  // make function a suspend if use await()
+//        val donationEvent = DONATIONS_EVENT
+//            .get()
+//            .await()
+//            .toObjects<DonationEvent>()
+//        for (e in donationEvent) {
+//            e.count = DONATIONS
+//                .whereEqualTo("donationEventId", e.donationEventId)
+//                .get()
+//                .await()
+//                .size() // return the number of records
+//        }
+//        return donationEvent
+//    }
+
     fun delete(id: String) {
         col.document(id).delete()
     }

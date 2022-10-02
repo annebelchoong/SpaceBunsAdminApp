@@ -52,15 +52,15 @@
         android:text="5000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/txtDonationEventId"
-        app:layout_constraintEnd_toStartOf="@+id/txtDonationStartDate"
+        app:layout_constraintEnd_toStartOf="@+id/txtDonationCount"
         app:layout_constraintTop_toTopOf="@+id/txtDonationEventId" />
 
     <TextView
-        android:id="@+id/txtDonationStartDate"
+        android:id="@+id/txtDonationCount"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="2/10/2022"
+        android:text="40 Donations"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/txtDonationEventId"
         app:layout_constraintEnd_toEndOf="parent"
