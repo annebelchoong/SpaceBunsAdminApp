@@ -29,9 +29,13 @@ class NewOrdersAdapter (
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val order = getItem(position)
-
-        holder.binding.txtId.text = order.orderId
-        holder.binding.txtTotal.text = order.totalPrice.toString()
+//        if (order.orderStatus == "Processing"){
+            holder.binding.txtId.text = order.orderId
+            holder.binding.txtTotal.text = order.totalPrice.toString()
+//        }else{
+//            holder.binding.txtId.text = ""
+//            holder.binding.txtTotal.text = ""
+//        }
 
 //        holder.binding.txtCount.text = "${order.count} Order(s)"
 
