@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.spacebunsadminapp.data.OrderHistoryViewModel
-import com.example.spacebunsadminapp.data.OrdersHistory
+import com.example.spacebunsadminapp.data.Orders
 import com.example.spacebunsadminapp.databinding.FragmentInsertOrderBinding
 
 
@@ -29,7 +29,7 @@ class InsertOrderFragment : Fragment() {
 
     // for checkout purpose
     private fun insert() {
-        val o = OrdersHistory(
+        val o = Orders(
             orderId = binding.edtNewOrderId.text.toString().trim(),
 //            customerId = binding.edtNewCustomerId.text.toString().trim(),
             address = binding.edtNewAddress.text.toString().trim(),

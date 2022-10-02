@@ -7,7 +7,7 @@ import com.google.firebase.ktx.Firebase
 import java.time.LocalDateTime
 import java.util.*
 
-data class OrdersHistory(
+data class Orders(
     @DocumentId
     var orderId: String = "",
 //    var customerId: String = "",
