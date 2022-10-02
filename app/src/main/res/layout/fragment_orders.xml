@@ -6,207 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <view
-        android:id="@+id/view6"
-        class="androidx.constraintlayout.widget.ConstraintLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="-8dp"
-        android:background="@drawable/shadow"
-        app:layout_constraintBottom_toBottomOf="@+id/vCardNewOrder"
-        app:layout_constraintEnd_toEndOf="@+id/vCardNewOrder"
-        app:layout_constraintStart_toStartOf="@+id/vCardNewOrder"
-        app:layout_constraintTop_toBottomOf="@+id/cvNewOrder" />
-
-    <view
-        android:id="@+id/vCardNewOrder"
-        class="androidx.constraintlayout.widget.ConstraintLayout"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="16dp"
+    <TextView
+        android:id="@+id/txtCountOrders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/rounded_rectangle_white"
+        android:text="00 Orders"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/lblNewOrder"
-        android:layout_width="0dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/bottom_side_rounded_rectangle_gold"
-        android:paddingTop="5dp"
-        android:text="New Order"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/vCardNewOrder"
-        app:layout_constraintEnd_toEndOf="@+id/vCardNewOrder"
-        app:layout_constraintStart_toStartOf="@+id/vCardNewOrder"
-        app:layout_constraintTop_toBottomOf="@+id/cvNewOrder" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvNewOrder"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="40dp"
-        android:elevation="10dp"
-        app:cardCornerRadius="30dp"
-        app:cardPreventCornerOverlap="false"
-        app:layout_constraintBottom_toBottomOf="@+id/vCardNewOrder"
-        app:layout_constraintEnd_toEndOf="@+id/vCardNewOrder"
-        app:layout_constraintStart_toStartOf="@+id/vCardNewOrder"
-        app:layout_constraintTop_toTopOf="@+id/vCardNewOrder">
-
-        <ImageView
-            android:id="@+id/imgNewOrder"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/neworders" />
-    </androidx.cardview.widget.CardView>
-
-    <view
-        android:id="@+id/view7"
-        class="androidx.constraintlayout.widget.ConstraintLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="-8dp"
-        android:background="@drawable/shadow"
-        app:layout_constraintBottom_toBottomOf="@+id/vCardCompletedOrders"
-        app:layout_constraintEnd_toEndOf="@+id/vCardCompletedOrders"
-        app:layout_constraintStart_toStartOf="@+id/vCardCompletedOrders"
-        app:layout_constraintTop_toBottomOf="@+id/cvCompletedOrders" />
-
-    <view
-        android:id="@+id/vCardCompletedOrders"
-        class="androidx.constraintlayout.widget.ConstraintLayout"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/rounded_rectangle_white"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vCardNewOrder" />
-
-    <TextView
-        android:id="@+id/lblCompletedOrders"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/bottom_side_rounded_rectangle_gold"
-        android:paddingTop="5dp"
-        android:text="Completed Orders"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/vCardCompletedOrders"
-        app:layout_constraintEnd_toEndOf="@+id/vCardCompletedOrders"
-        app:layout_constraintStart_toStartOf="@+id/vCardCompletedOrders"
-        app:layout_constraintTop_toBottomOf="@+id/cvCompletedOrders" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvCompletedOrders"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="40dp"
-        android:elevation="10dp"
-        app:cardCornerRadius="30dp"
-        app:cardPreventCornerOverlap="false"
-        app:layout_constraintBottom_toBottomOf="@+id/vCardCompletedOrders"
-        app:layout_constraintEnd_toEndOf="@+id/vCardCompletedOrders"
-        app:layout_constraintStart_toStartOf="@+id/vCardCompletedOrders"
-        app:layout_constraintTop_toTopOf="@+id/vCardCompletedOrders">
-
-        <ImageView
-            android:id="@+id/imgCompletedOrders"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/neworders"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="201dp" />
-
-    </androidx.cardview.widget.CardView>
-
-    <view
-        android:id="@+id/view5"
-        class="androidx.constraintlayout.widget.ConstraintLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="-8dp"
-        android:background="@drawable/shadow"
-        app:layout_constraintBottom_toBottomOf="@+id/vCardCancelOrder"
-        app:layout_constraintEnd_toEndOf="@+id/vCardCancelOrder"
-        app:layout_constraintStart_toStartOf="@+id/vCardCancelOrder"
-        app:layout_constraintTop_toBottomOf="@+id/cvCancelOrder" />
-
-    <view
-        android:id="@+id/vCardCancelOrder"
-        class="androidx.constraintlayout.widget.ConstraintLayout"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/rounded_rectangle_white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vCardCompletedOrders" />
-
-    <TextView
-        android:id="@+id/lblCancelOrder"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/bottom_side_rounded_rectangle_gold"
-        android:paddingTop="5dp"
-        android:text="Cancelled Orders"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/vCardCancelOrder"
-        app:layout_constraintEnd_toEndOf="@+id/vCardCancelOrder"
-        app:layout_constraintStart_toStartOf="@+id/vCardCancelOrder"
-        app:layout_constraintTop_toBottomOf="@+id/cvCancelOrder" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvCancelOrder"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="40dp"
-        android:elevation="10dp"
-        app:cardCornerRadius="30dp"
-        app:cardPreventCornerOverlap="false"
-        app:layout_constraintBottom_toBottomOf="@+id/vCardCancelOrder"
-        app:layout_constraintEnd_toEndOf="@+id/vCardCancelOrder"
-        app:layout_constraintStart_toStartOf="@+id/vCardCancelOrder"
-        app:layout_constraintTop_toTopOf="@+id/vCardCancelOrder">
-
-        <ImageView
-            android:id="@+id/imgCancelOrder"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/neworders"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="201dp" />
-
-    </androidx.cardview.widget.CardView>
-
+        app:layout_constraintTop_toBottomOf="@+id/txtCountOrders"
+        tools:listitem="@layout/item_order" />
 </androidx.constraintlayout.widget.ConstraintLayout>
