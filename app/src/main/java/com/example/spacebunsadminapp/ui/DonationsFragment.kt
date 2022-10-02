@@ -34,7 +34,7 @@ class DonationsFragment : Fragment() {
         binding = FragmentDonationsBinding.inflate(inflater, container, false)
         updateProgressBar();
 
-        binding.pbDonations.setOnClickListener { nav.navigate(R.id.insertVoucherFragment) }
+        binding.pbDonations.setOnClickListener { nav.navigate(R.id.donationDetailFragment) }
 
         adapter = DonationAdapter { holder, donation ->
             holder.binding.root.setOnClickListener {

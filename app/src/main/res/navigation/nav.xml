@@ -65,4 +65,9 @@
         android:name="com.example.spacebunsadminapp.ui.VoucherUpdateFragment"
         android:label="Update Voucher Details"
         tools:layout="@layout/fragment_voucher_update" />
+    <fragment
+        android:id="@+id/donationDetailFragment"
+        android:name="com.example.spacebunsadminapp.ui.DonationDetailFragment"
+        android:label="fragment_donation_detail"
+        tools:layout="@layout/fragment_donation_detail" />
 </navigation>
