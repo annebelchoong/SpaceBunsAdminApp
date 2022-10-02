@@ -4,7 +4,6 @@ import com.google.firebase.firestore.DocumentId
 import com.google.firebase.firestore.Exclude
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import java.time.LocalDateTime
 import java.util.*
 
 data class Orders(
@@ -26,6 +25,16 @@ data class Orders(
     var orderStatus: OrderStatus = OrderStatus()
 }
 
+data class OrderStatus(
+    @DocumentId
+    var id:  String ="",
+    var name: String = "",
+){
+    @get:Exclude
+    var count: Int = 0
+    override fun toString() = name
+}
+
 data class OrderDetails(
     @DocumentId
     var id: String = "",
@@ -39,15 +48,6 @@ data class OrderDetails(
     var totalPrice: Double = 0.00
 }
 
-data class OrderStatus(
-    @DocumentId
-    var id:  String ="",
-    var name: String = "",
-){
-    @get:Exclude
-    var count: Int = 0
-    override fun toString() = name
-}
 
 val ORDERS = Firebase.firestore.collection("orders")
 val ORDERSTATUS = Firebase.firestore.collection("orderStatus")
