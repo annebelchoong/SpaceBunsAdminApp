@@ -68,6 +68,6 @@
     <fragment
         android:id="@+id/donationDetailFragment"
         android:name="com.example.spacebunsadminapp.ui.DonationDetailFragment"
-        android:label="fragment_donation_detail"
+        android:label="Donation Details"
         tools:layout="@layout/fragment_donation_detail" />
 </navigation>
