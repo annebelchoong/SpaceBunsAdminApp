@@ -8,7 +8,7 @@ import com.google.firebase.ktx.Firebase
 
 class OrderHistoryViewModel: ViewModel() {
 
-    private val orders = MutableLiveData<List<Orders>>()
+    private val orders = MutableLiveData<List<OrdersHistory>>()
 
 //    private val col = Firebase.firestore.collection("orders")
     private val col = Firebase.firestore.collection("usersTest").document("U001").collection("orders")
@@ -31,7 +31,7 @@ class OrderHistoryViewModel: ViewModel() {
         orders.value?.forEach { col.document(it.orderId).delete() }
     }
 
-    fun set(o:Orders){
+    fun set(o:OrdersHistory){
         col.document(o.orderId).set(o)
     }
 }
