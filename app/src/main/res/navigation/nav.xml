@@ -64,16 +64,6 @@
         android:name="com.example.spacebunsadminapp.ui.InsertOrderFragment"
         android:label="Insert Order"
         tools:layout="@layout/fragment_insert_order" />
-    <fragment
-        android:id="@+id/newOrderFragment"
-        android:name="com.example.spacebunsadminapp.ui.NewOrderFragment"
-        android:label="New Order"
-        tools:layout="@layout/fragment_new_order" />
-    <fragment
-        android:id="@+id/completeOrdersFragment"
-        android:name="com.example.spacebunsadminapp.ui.CompletedOrdersFragment"
-        android:label="Completed Orders"
-        tools:layout="@layout/fragment_complete_orders" />
     <dialog
         android:id="@+id/updateOrderStatusFragment"
         android:name="com.example.spacebunsadminapp.ui.UpdateOrderStatusFragment"
@@ -81,7 +71,12 @@
         tools:layout="@layout/fragment_update_order_status" />
     <fragment
         android:id="@+id/cancelledOrdersFragment"
-        android:name="com.example.spacebunsadminapp.ui.CancelledOrdersFragment"
+        android:name="com.example.spacebunsadminapp.ui.OrderStatusDetailsFragment"
         android:label="Cancelled Orders"
-        tools:layout="@layout/fragment_cancelled_orders" />
+        tools:layout="@layout/fragment_order_status_details" />
+    <fragment
+        android:id="@+id/orderStatusDetailsFragment"
+        android:name="com.example.spacebunsadminapp.ui.OrderStatusDetailsFragment"
+        android:label="fragment_order_status_details"
+        tools:layout="@layout/fragment_order_status_details" />
 </navigation>
