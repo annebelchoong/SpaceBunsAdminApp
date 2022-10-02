@@ -22,7 +22,10 @@
         <entry key="app/src/main/res/layout/fragment_voucher_insert.xml" value="0.45673279864921906" />
         <entry key="app/src/main/res/layout/fragment_voucher_update.xml" value="0.45673279864921906" />
         <entry key="app/src/main/res/layout/fragment_vouchers.xml" value="0.4625908507909363" />
+        <entry key="app/src/main/res/layout/item_donation.xml" value="0.4625908507909363" />
         <entry key="app/src/main/res/layout/item_voucher.xml" value="0.46173578452330055" />
+        <entry key="app/src/main/res/layout/testmain.xml" value="0.23262279888785914" />
+        <entry key="app/src/main/res/layout/testrun.xml" value="0.4558885605740819" />
       </map>
     </option>
   </component>
