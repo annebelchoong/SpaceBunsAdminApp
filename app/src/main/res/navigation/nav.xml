@@ -70,13 +70,18 @@
         android:label="New Order"
         tools:layout="@layout/fragment_new_order" />
     <fragment
-        android:id="@+id/orderHistoryFragment"
-        android:name="com.example.spacebunsadminapp.ui.OrderHistoryFragment"
-        android:label="Order History"
-        tools:layout="@layout/fragment_order_history" />
+        android:id="@+id/completeOrdersFragment"
+        android:name="com.example.spacebunsadminapp.ui.CompletedOrdersFragment"
+        android:label="Completed Orders"
+        tools:layout="@layout/fragment_complete_orders" />
     <dialog
         android:id="@+id/updateOrderStatusFragment"
         android:name="com.example.spacebunsadminapp.ui.UpdateOrderStatusFragment"
         android:label="fragment_update_order_status"
         tools:layout="@layout/fragment_update_order_status" />
+    <fragment
+        android:id="@+id/cancelledOrdersFragment"
+        android:name="com.example.spacebunsadminapp.ui.CancelledOrdersFragment"
+        android:label="Cancelled Orders"
+        tools:layout="@layout/fragment_cancelled_orders" />
 </navigation>
