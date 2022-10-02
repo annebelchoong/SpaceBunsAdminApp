@@ -11,20 +11,20 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.spacebunsadminapp.R
 import com.example.spacebunsadminapp.data.CompleteOrdersViewModel
-import com.example.spacebunsadminapp.databinding.FragmentOrderHistoryBinding
+import com.example.spacebunsadminapp.databinding.FragmentCompleteOrdersBinding
 import com.example.spacebunsadminapp.util.CompleteOrdersAdapter
 
 
 class CompletedOrdersFragment : Fragment() {
 
-    private lateinit var binding: FragmentOrderHistoryBinding
+    private lateinit var binding: FragmentCompleteOrdersBinding
     private val nav by lazy { findNavController() }
     private val vm: CompleteOrdersViewModel by activityViewModels()
 
     private lateinit var  adapter: CompleteOrdersAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        binding = FragmentOrderHistoryBinding.inflate(inflater, container, false)
+        binding = FragmentCompleteOrdersBinding.inflate(inflater, container, false)
 
         binding.btnInsert.setOnClickListener { nav.navigate(R.id.insertOrderFragment) }
 
@@ -34,8 +34,8 @@ class CompletedOrdersFragment : Fragment() {
             }
         }
 
-        binding.rvOrders.adapter = adapter
-        binding.rvOrders.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
+        binding.rvNewOrders.adapter = adapter
+        binding.rvNewOrders.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
 
         vm.getAll().observe(viewLifecycleOwner){
             adapter.submitList(it)
