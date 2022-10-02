@@ -10,8 +10,8 @@ class CompleteOrdersViewModel: ViewModel() {
 
     private val orders = MutableLiveData<List<Orders>>()
 
-//    private val col = Firebase.firestore.collection("orders")
-    private val col = Firebase.firestore.collection("usersTest").document("U001").collection("orders")
+    private val col = Firebase.firestore.collection("orders")
+//    private val col = Firebase.firestore.collection("usersTest").document("U001").collection("orders")
 
     init {
         col.addSnapshotListener { value,_ -> orders.value = value?.toObjects() }
