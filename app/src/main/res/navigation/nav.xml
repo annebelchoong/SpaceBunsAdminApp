@@ -31,10 +31,10 @@
         android:label="Contacts"
         tools:layout="@layout/fragment_contacts" />
     <fragment
-        android:id="@+id/donationsFragment"
-        android:name="com.example.spacebunsadminapp.ui.DonationsFragment"
-        android:label="Donations"
-        tools:layout="@layout/fragment_donations" />
+        android:id="@+id/donationEventsFragment"
+        android:name="com.example.spacebunsadminapp.ui.DonationEventsFragment"
+        android:label="Donation Events"
+        tools:layout="@layout/fragment_donation_events" />
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.spacebunsadminapp.ui.LoginFragment"
@@ -66,8 +66,8 @@
         android:label="Update Voucher Details"
         tools:layout="@layout/fragment_voucher_update" />
     <fragment
-        android:id="@+id/donationDetailFragment"
-        android:name="com.example.spacebunsadminapp.ui.DonationDetailFragment"
+        android:id="@+id/donationEventDetailFragment"
+        android:name="com.example.spacebunsadminapp.ui.DonationEventDetailFragment"
         android:label="Donation Details"
-        tools:layout="@layout/fragment_donation_detail" />
+        tools:layout="@layout/fragment_donation_event_detail" />
 </navigation>

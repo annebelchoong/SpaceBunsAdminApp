@@ -18,6 +18,7 @@
         <entry key="app/src/main/res/drawable/top_side_rounded_rectangle_gole.xml" value="0.4275" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.4625908507909363" />
         <entry key="app/src/main/res/layout/fragment_donation_detail.xml" value="0.33190262405960647" />
+        <entry key="app/src/main/res/layout/fragment_donation_event_detail.xml" value="0.33190262405960647" />
         <entry key="app/src/main/res/layout/fragment_donations.xml" value="0.4625908507909363" />
         <entry key="app/src/main/res/layout/fragment_donations_copy.xml" value="0.4625908507909363" />
         <entry key="app/src/main/res/layout/fragment_insert_voucher.xml" value="0.33190262405960647" />

@@ -17,7 +17,7 @@ class Dashboard : Fragment() {
         binding = FragmentDashboardBinding.inflate(inflater, container, false)
 
         binding.btnVouchersPage.setOnClickListener { nav.navigate(R.id.vouchersFragment) }
-        binding.btnDonationsPage.setOnClickListener { nav.navigate(R.id.donationsFragment) }
+        binding.btnDonationsPage.setOnClickListener { nav.navigate(R.id.donationEventsFragment) }
 
         return binding.root
     }

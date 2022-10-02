@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.DonationDetailFragment">
+    android:isScrollContainer="true"
+    tools:context=".ui.DonationEventDetailFragment">
 
     <view
         android:id="@+id/cardShadowProgress1"
@@ -187,6 +189,27 @@
         android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/lblChangeDonationGoal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardProgress5">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDonations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:isScrollContainer="true"
+            app:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/item_donation_event_details">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

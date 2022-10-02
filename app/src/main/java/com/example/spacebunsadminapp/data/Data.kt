@@ -20,11 +20,21 @@ data class Voucher(
 
 val VOUCHERS = Firebase.firestore.collection("vouchers")
 
-data class Donation(
+data class DonationEvent(
     @DocumentId
-    var donationId: String = "",
+    var donationEventId: String = "",
+    var donationEventName: String = "",
+    var donationGoal: Double = 0.00,
+
+    var donationStartDate: Date = Date() // current Date
+)
+
+data class DonationEventDetail(
+    @DocumentId
+    var donationEventDetail: String = "",
+    var donationEventDetailId: String = "",
     var donorName: String = "",
     var donationAmount: Double = 0.00,
-//    var donationDate: LocalDateTime = LocalDateTime.now(),
+
     var donationDate: Date = Date() // current Date
 )
