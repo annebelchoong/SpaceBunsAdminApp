@@ -19,6 +19,8 @@
         <entry key="app/src/main/res/layout/fragment_insert_voucher.xml" value="0.33190262405960647" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.24003707136237257" />
         <entry key="app/src/main/res/layout/fragment_update_voucher.xml" value="0.4625908507909363" />
+        <entry key="app/src/main/res/layout/fragment_voucher_insert.xml" value="0.45673279864921906" />
+        <entry key="app/src/main/res/layout/fragment_voucher_update.xml" value="0.45673279864921906" />
         <entry key="app/src/main/res/layout/fragment_vouchers.xml" value="0.4625908507909363" />
         <entry key="app/src/main/res/layout/item_voucher.xml" value="0.46173578452330055" />
       </map>
