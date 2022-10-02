@@ -21,7 +21,8 @@ class OrdersFragment : Fragment() {
         binding = FragmentOrdersBinding.inflate(inflater, container, false)
 
         binding.vCardNewOrder.setOnClickListener{ nav.navigate(R.id.newOrderFragment) }
-        binding.vCardOrderHistory.setOnClickListener{ nav.navigate(R.id.orderHistoryFragment) }
+        binding.vCardCompletedOrders.setOnClickListener{ nav.navigate(R.id.completeOrdersFragment) }
+        binding.vCardCancelOrder.setOnClickListener { nav.navigate(R.id.cancelledOrdersFragment) }
         return binding.root
     }
 
