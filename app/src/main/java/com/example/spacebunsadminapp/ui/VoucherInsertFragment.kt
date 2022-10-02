@@ -9,21 +9,20 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.spacebunsadminapp.data.Voucher
 import com.example.spacebunsadminapp.data.VoucherViewModel
-import com.example.spacebunsadminapp.databinding.FragmentUpdateVoucherBinding
+import com.example.spacebunsadminapp.databinding.FragmentVoucherInsertBinding
 import com.example.spacebunsadminapp.util.errorDialog
 
-class UpdateVoucherFragment : Fragment() {
-    private lateinit var binding: FragmentUpdateVoucherBinding
+class VoucherInsertFragment : Fragment() {
+    private lateinit var binding: FragmentVoucherInsertBinding
     private val nav by lazy { findNavController() }
     private val vm: VoucherViewModel by activityViewModels()
-    private val voucherId by lazy { arguments?.getString("voucherId") ?: "" }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentUpdateVoucherBinding.inflate(inflater, container, false)
+        binding = FragmentVoucherInsertBinding.inflate(inflater, container, false)
 
         reset()
         binding.btnReset.setOnClickListener { reset() }
@@ -33,35 +32,27 @@ class UpdateVoucherFragment : Fragment() {
     }
 
     private fun reset() {
-        // TODO: Get
-        val v = vm.get(voucherId)
-
-        if (v == null) {
-            nav.navigateUp()
-            return
-        }
-
-        binding.txtVoucherIdFixed.text = v.voucherId
-        binding.edtVoucherCode.setText(v.voucherCode)
-        binding.edtDiscountPercentage.setText(v.discountPercentage.toString())
-
-        binding.edtVoucherCode.requestFocus()
+        binding.edtVoucherId.text.clear()
+        binding.edtVoucherCode.text.clear()
+        binding.edtDiscountPercentage.text.clear()
+        binding.edtVoucherId.requestFocus()
     }
 
     private fun submit() {
         val v = Voucher(
-            voucherId = binding.txtVoucherIdFixed.text.toString().trim(),
+            voucherId = binding.edtVoucherId.text.toString().trim(),
             voucherCode = binding.edtVoucherCode.text.toString().trim().uppercase(),
             discountPercentage = binding.edtDiscountPercentage.text.toString().toDoubleOrNull()
                 ?: 0.00,
         )
 
-        val err = vm.validate(v, false)
+        val err = vm.validate(v)
         if (err != "") {
             errorDialog(err)
             return
         }
 
+        // TODO: Set (insert)
         vm.set(v)
 
         nav.navigateUp()

@@ -24,8 +24,6 @@ class VouchersFragment : Fragment() {
 
     private lateinit var adapter: VoucherAdapter
 
-//    private var progr = 70
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -65,13 +63,7 @@ class VouchersFragment : Fragment() {
             binding.txtVoucherCount.text = "${it.size} voucher(s)"
         }
 
-//        updateVoucherUsage();
-
         return binding.root
     }
 
-//    private fun updateVoucherUsage() {
-//        binding.pbVoucher.progress = progr
-//        binding.txtProgress.text = "$progr.00%"ƒ
-//    }
 }

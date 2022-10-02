@@ -74,7 +74,7 @@ class VoucherViewModel : ViewModel() {
 
     fun getVoucherAttributes(): List<String> {
 //        return VOUCHERS.get().await().toObjects<Voucher>()
-        return listOf("ID", "Used", "%")
+        return listOf("ID", "%", "Used")
     }
 }
 
