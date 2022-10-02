@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.spacebunsadminapp.data.Orders
-import com.example.spacebunsadminapp.databinding.ItemOrderHistoryBinding
+import com.example.spacebunsadminapp.databinding.ItemCompletedOrdersBinding
 
 
 class CompleteOrdersAdapter (
@@ -17,10 +17,10 @@ class CompleteOrdersAdapter (
         override fun areItemsTheSame(a: Orders, b: Orders) = a.orderId == b.orderId
         override fun areContentsTheSame(a: Orders, b: Orders) = a == b
     }
-    class ViewHolder(val binding: ItemOrderHistoryBinding): RecyclerView.ViewHolder(binding.root)
+    class ViewHolder(val binding: ItemCompletedOrdersBinding): RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = ItemOrderHistoryBinding.inflate(
+        val binding = ItemCompletedOrdersBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false
