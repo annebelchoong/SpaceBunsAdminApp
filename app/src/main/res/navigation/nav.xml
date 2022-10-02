@@ -58,21 +58,21 @@
     <fragment
         android:id="@+id/orderDetailsFragment"
         android:name="com.example.spacebunsadminapp.ui.OrderDetailsFragment"
-        android:label="OrderDetailsFragment" />
+        android:label="Order Details" />
     <fragment
         android:id="@+id/insertOrderFragment"
         android:name="com.example.spacebunsadminapp.ui.InsertOrderFragment"
-        android:label="fragment_insert_order"
+        android:label="Insert Order"
         tools:layout="@layout/fragment_insert_order" />
     <fragment
         android:id="@+id/newOrderFragment"
         android:name="com.example.spacebunsadminapp.ui.NewOrderFragment"
-        android:label="fragment_new_order"
+        android:label="New Order"
         tools:layout="@layout/fragment_new_order" />
     <fragment
         android:id="@+id/orderHistoryFragment"
         android:name="com.example.spacebunsadminapp.ui.OrderHistoryFragment"
-        android:label="fragment_order_history"
+        android:label="Order History"
         tools:layout="@layout/fragment_order_history" />
     <dialog
         android:id="@+id/updateOrderStatusFragment"
