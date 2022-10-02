@@ -1,19 +1,15 @@
 package com.example.spacebunsadminapp.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.spacebunsadminapp.R
 import com.example.spacebunsadminapp.data.CompleteOrdersViewModel
 import com.example.spacebunsadminapp.data.Orders
 import com.example.spacebunsadminapp.databinding.FragmentOrderDetailsBinding
-import com.example.spacebunsadminapp.util.CompleteOrdersAdapter
 import com.example.spacebunsadminapp.util.OrderDetailsAdapter
 import java.text.DecimalFormat
 
@@ -50,7 +46,7 @@ class OrderDetailsFragment:Fragment() {
 
     private fun update() {
         val o = Orders(
-            orderStatus = binding.spnNewStatus.selectedItem as String,
+//            orderStatus = binding.spnNewStatus.selectedItem as String,
             orderId = binding.edtOrderId.text.toString().trim(),
             totalPrice = binding.edtTotal.text.toString().toDoubleOrNull() ?: 0.0,
             address = binding.edtAddress.text.toString().trim(),
