@@ -5,8 +5,8 @@
 
     <string-array name="orderStatus">
         <item>Processing</item>
-        <item>Delivering</item>
         <item>Delivered</item>
+        <item>Cancelled</item>
     </string-array>
 
     <string-array name="paymentMethod">
