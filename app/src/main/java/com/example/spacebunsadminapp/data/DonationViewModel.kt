@@ -6,9 +6,9 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObjects
 import com.google.firebase.ktx.Firebase
 
-class DonationEventDetailViewModel : ViewModel() {
+class DonationViewModel : ViewModel() {
     private val donations =
-        MutableLiveData<List<DonationEventDetail>>() // Search + filter + sort result
+        MutableLiveData<List<Donation>>() // Search + filter + sort result
 
     private val col = Firebase.firestore.collection("donations")
 
@@ -18,7 +18,7 @@ class DonationEventDetailViewModel : ViewModel() {
 
     fun init() = Unit // dummy
 
-    fun get(id: String) = donations.value?.find { it.donationEventDetailId == id }
+    fun get(id: String) = donations.value?.find { it.donationId == id }
 
     fun getAll() = donations // TODO
 
@@ -27,27 +27,27 @@ class DonationEventDetailViewModel : ViewModel() {
     }
 
     fun deleteAll() {
-        donations.value?.forEach { col.document(it.donationEventDetailId).delete() }
+        donations.value?.forEach { col.document(it.donationId).delete() }
     }
 
-    fun set(d: DonationEventDetail) {
-        col.document(d.donationEventDetailId).set(d)
+    fun set(d: Donation) {
+        col.document(d.donationId).set(d)
     }
 
     //----------------------------------------------------------------------------------------------
 
     private fun idExists(id: String) =
-        donations.value?.any { it.donationEventDetailId == id } ?: false
+        donations.value?.any { it.donationId == id } ?: false
 //    private fun codeExists(code: String) = donations.value?.any { it.voucherCode == code } ?: false
 
-    fun validate(d: DonationEventDetail, insert: Boolean = true): String {
+    fun validate(d: Donation, insert: Boolean = true): String {
         val regexId = Regex("""^[A-Z][A-Z]\d{2}$""")
         var e = ""
 
         if (insert) {
-            e += if (d.donationEventDetailId == "") "- Id is required.\n"
-            else if (!d.donationEventDetailId.matches(regexId)) "- Id format is invalid (format: XX99).\n"
-            else if (idExists(d.donationEventDetailId)) "- Id is duplicated.\n"
+            e += if (d.donationId == "") "- Id is required.\n"
+            else if (!d.donationId.matches(regexId)) "- Id format is invalid (format: XX99).\n"
+            else if (idExists(d.donationId)) "- Id is duplicated.\n"
             else ""
         }
 

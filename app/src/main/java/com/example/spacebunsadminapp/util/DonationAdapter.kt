@@ -5,21 +5,21 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.spacebunsadminapp.data.DonationEventDetail
-import com.example.spacebunsadminapp.databinding.ItemDonationEventDetailsBinding
+import com.example.spacebunsadminapp.data.Donation
+import com.example.spacebunsadminapp.databinding.ItemDonationBinding
 
-class DonationEventDetailAdapter(
-    val dn: (ViewHolder, DonationEventDetail) -> Unit = { _, _ -> }
-) : ListAdapter<DonationEventDetail, DonationEventDetailAdapter.ViewHolder>(DiffCallback) {
+class DonationAdapter(
+    val dn: (ViewHolder, Donation) -> Unit = { _, _ -> }
+) : ListAdapter<Donation, DonationAdapter.ViewHolder>(DiffCallback) {
 
-    companion object DiffCallback : DiffUtil.ItemCallback<DonationEventDetail>() {
-        override fun areItemsTheSame(a: DonationEventDetail, b: DonationEventDetail) =
-            a.donationEventDetailId == b.donationEventDetailId
+    companion object DiffCallback : DiffUtil.ItemCallback<Donation>() {
+        override fun areItemsTheSame(a: Donation, b: Donation) =
+            a.donationId == b.donationId
 
-        override fun areContentsTheSame(a: DonationEventDetail, b: DonationEventDetail) = a == b
+        override fun areContentsTheSame(a: Donation, b: Donation) = a == b
     }
 
-    class ViewHolder(val binding: ItemDonationEventDetailsBinding) :
+    class ViewHolder(val binding: ItemDonationBinding) :
         RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(
@@ -27,7 +27,7 @@ class DonationEventDetailAdapter(
         viewType: Int
     ): ViewHolder {
         val binding =
-            ItemDonationEventDetailsBinding.inflate(
+            ItemDonationBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
@@ -38,7 +38,7 @@ class DonationEventDetailAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val donationDetail = getItem(position)
 
-        holder.binding.txtDonationId.text = donationDetail.donationEventDetailId
+        holder.binding.txtDonationId.text = donationDetail.donationId
         holder.binding.txtDonorName.text = donationDetail.donorName
         holder.binding.txtDonationAmount.text = (donationDetail.donationAmount).toString()
 //        holder.binding.txtUsedCount.text = donation.usedCount.toString() + " times" // count

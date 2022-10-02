@@ -43,67 +43,65 @@ class DonationEventsFragment : Fragment() {
         binding = FragmentDonationEventsBinding.inflate(inflater, container, false)
         updateProgressBar();
 
-
 //        binding.pbDonations.setOnClickListener { nav.navigate(R.id.donationDetailFragment) }
-        binding.pieChart.setOnClickListener { nav.navigate(R.id.donationEventDetailFragment) }
+        binding.fabtnAddDonationEvent.setOnClickListener { nav.navigate(R.id.InsertdonationEventsFragment) }
+        binding.pieChart.setOnClickListener { nav.navigate(R.id.donationsFragment) }
 
         pieChart = binding.pieChart
 
-        // on below line we are setting user percent value,
+        // setting user percent value,
         // setting description as enabled and offset for pie chart
         pieChart.setUsePercentValues(true)
         pieChart.getDescription().setEnabled(false)
         pieChart.setExtraOffsets(5f, 10f, 5f, 5f)
 
-        // on below line we are setting drag for our pie chart
+        // setting drag for our pie chart
         pieChart.setDragDecelerationFrictionCoef(0.95f)
 
-        // on below line we are setting hole
-        // and hole color for pie chart
+        // setting hole and hole color for pie chart
         pieChart.setDrawHoleEnabled(true)
         pieChart.setHoleColor(Color.WHITE)
 
-        // on below line we are setting circle color and alpha
+        // setting circle color and alpha
         pieChart.setTransparentCircleColor(Color.WHITE)
         pieChart.setTransparentCircleAlpha(110)
 
-        // on  below line we are setting hole radius
+        // setting hole radius
         pieChart.setHoleRadius(58f)
         pieChart.setTransparentCircleRadius(61f)
 
-        // on below line we are setting center text
+        // setting center text
         pieChart.setDrawCenterText(true)
 
-        // on below line we are setting
-        // rotation for our pie chart
+        // setting rotation for our pie chart
         pieChart.setRotationAngle(0f)
 
         // enable rotation of the pieChart by touch
         pieChart.setRotationEnabled(true)
         pieChart.setHighlightPerTapEnabled(true)
 
-        // on below line we are setting animation for our pie chart
+        // setting animation for our pie chart
         pieChart.animateY(1400, Easing.EaseInOutQuad)
 
-        // on below line we are disabling our legend for pie chart
+        // disabling our legend for pie chart
         pieChart.legend.isEnabled = false
         pieChart.setEntryLabelColor(Color.WHITE)
         pieChart.setEntryLabelTextSize(12f)
 
-        // on below line we are creating array list and
+        // creating array list and
         // adding data to it to display in pie chart
         val entries: ArrayList<PieEntry> = ArrayList()
         entries.add(PieEntry(70f))
         entries.add(PieEntry(20f))
         entries.add(PieEntry(10f))
 
-        // on below line we are setting pie data set
+        // setting pie data set
         val dataSet = PieDataSet(entries, "Mobile OS")
 
-        // on below line we are setting icons.
+        // setting icons.
         dataSet.setDrawIcons(false)
 
-        // on below line we are setting slice for pie
+        // setting slice for pie
         dataSet.sliceSpace = 3f
         dataSet.iconsOffset = MPPointF(0f, 40f)
         dataSet.selectionShift = 5f
@@ -112,18 +110,18 @@ class DonationEventsFragment : Fragment() {
         val colors: ArrayList<Int> = ArrayList()
         colors.add(resources.getColor(R.color.purple_200))
         colors.add(resources.getColor(R.color.yellow))
-        colors.add(resources.getColor(R.color.red))
+        colors.add(resources.getColor(R.color.teal_200))
 
-        // on below line we are setting colors.
+        // setting colors.
         dataSet.colors = colors
 
-        // on below line we are setting pie data set
+        // setting pie data set
         val data = PieData(dataSet)
         data.setValueFormatter(PercentFormatter())
         data.setValueTextSize(15f)
         data.setValueTypeface(Typeface.DEFAULT_BOLD)
         data.setValueTextColor(Color.WHITE)
-        pieChart.setData(data)
+        pieChart.data = data
 
         // undo all highlights
         pieChart.highlightValues(null)
@@ -135,7 +133,7 @@ class DonationEventsFragment : Fragment() {
         adapter = DonationEventAdapter { holder, donationEvent ->
             holder.binding.root.setOnClickListener {
                 nav.navigate(
-                    R.id.donationEventDetailFragment,
+                    R.id.donationsFragment,
                     bundleOf("donationEventId" to donationEvent.donationEventId)
                 )
             }

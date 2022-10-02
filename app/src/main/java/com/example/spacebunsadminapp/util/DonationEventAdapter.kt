@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.spacebunsadminapp.data.DonationEvent
-import com.example.spacebunsadminapp.databinding.ItemDonationEventsBinding
+import com.example.spacebunsadminapp.databinding.ItemDonationEventBinding
 
 class DonationEventAdapter(
     val dn: (ViewHolder, DonationEvent) -> Unit = { _, _ -> }
@@ -17,11 +17,11 @@ class DonationEventAdapter(
         override fun areContentsTheSame(a: DonationEvent, b: DonationEvent) = a == b
     }
 
-    class ViewHolder(val binding: ItemDonationEventsBinding) : RecyclerView.ViewHolder(binding.root)
+    class ViewHolder(val binding: ItemDonationEventBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DonationEventAdapter.ViewHolder {
         val binding =
-            ItemDonationEventsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemDonationEventBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return DonationEventAdapter.ViewHolder(binding)
     }
 

@@ -29,12 +29,16 @@ data class DonationEvent(
     var donationStartDate: Date = Date() // current Date
 )
 
-data class DonationEventDetail(
+val DONATIONS_EVENT = Firebase.firestore.collection("donationEvents")
+
+
+data class Donation(
     @DocumentId
-    var donationEventDetail: String = "",
-    var donationEventDetailId: String = "",
+    var donationId: String = "",
     var donorName: String = "",
     var donationAmount: Double = 0.00,
 
     var donationDate: Date = Date() // current Date
 )
+
+val DONATIONS = Firebase.firestore.collection("donations")

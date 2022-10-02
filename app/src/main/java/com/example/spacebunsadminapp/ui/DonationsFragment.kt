@@ -7,35 +7,37 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.spacebunsadminapp.R
-import com.example.spacebunsadminapp.data.DonationEventDetailViewModel
-import com.example.spacebunsadminapp.databinding.FragmentDonationEventDetailBinding
-import com.example.spacebunsadminapp.util.DonationEventDetailAdapter
+import com.example.spacebunsadminapp.data.DonationViewModel
+import com.example.spacebunsadminapp.databinding.FragmentDonationsBinding
+import com.example.spacebunsadminapp.util.DonationAdapter
+import kotlinx.coroutines.launch
 
-class DonationEventDetailFragment : Fragment() {
-    private lateinit var binding: FragmentDonationEventDetailBinding
+class DonationsFragment : Fragment() {
+    private lateinit var binding: FragmentDonationsBinding
     private val nav by lazy { findNavController() }
-    private val vm: DonationEventDetailViewModel by activityViewModels()
+    private val vm: DonationViewModel by activityViewModels()
     private var progr = 70
 
-    private lateinit var adapter: DonationEventDetailAdapter
-
+    private lateinit var adapter: DonationAdapter
+    private val id by lazy { arguments?.getString("id") ?: "" }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentDonationEventDetailBinding.inflate(inflater, container, false)
+        binding = FragmentDonationsBinding.inflate(inflater, container, false)
         updateProgressBar()
 
-        adapter = DonationEventDetailAdapter { holder, donationEventDetail ->
+        adapter = DonationAdapter { holder, donation ->
             holder.binding.root.setOnClickListener {
                 nav.navigate(
-                    R.id.donationEventDetailFragment,
-                    bundleOf("donationEventDetailId" to donationEventDetail.donationEventDetailId)
+                    R.id.donationsFragment,
+                    bundleOf("donationId" to donation.donationId)
                 )
             }
         }
