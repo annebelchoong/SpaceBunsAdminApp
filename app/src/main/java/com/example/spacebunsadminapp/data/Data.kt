@@ -13,7 +13,7 @@ data class Orders(
 //    var customerId: String = "",
     var date: Date = Date(),
     var address: String = "",
-    var orderStatus: String = "",
+    var orderStatusId: String = "",
     var paymentMethod: String = "",
     var subtotal: Double = 0.00,
     var totalPrice: Double = 0.00,
@@ -23,6 +23,7 @@ data class Orders(
 ) {
     @get:Exclude
     var count : Int = 0
+    var orderStatus: OrderStatus = OrderStatus()
 }
 
 data class OrderDetails(
@@ -38,4 +39,15 @@ data class OrderDetails(
     var totalPrice: Double = 0.00
 }
 
+data class OrderStatus(
+    @DocumentId
+    var id:  String ="",
+    var name: String = "",
+){
+    @get:Exclude
+    var count: Int = 0
+    override fun toString() = name
+}
+
 val ORDERS = Firebase.firestore.collection("orders")
+val ORDERSTATUS = Firebase.firestore.collection("orderStatus")
