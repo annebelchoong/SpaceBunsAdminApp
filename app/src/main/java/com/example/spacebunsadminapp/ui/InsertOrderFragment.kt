@@ -33,8 +33,8 @@ class InsertOrderFragment : Fragment() {
             orderId = binding.edtNewOrderId.text.toString().trim(),
 //            customerId = binding.edtNewCustomerId.text.toString().trim(),
             address = binding.edtNewAddress.text.toString().trim(),
-            orderStatus = binding.spnStatus.toString().trim(),
-            paymentMethod = binding.spnPaymentMethod.toString().trim(),
+            orderStatus = binding.spnStatus.selectedItem as String,
+            paymentMethod = binding.spnPaymentMethod.selectedItem as String,
             totalPrice = binding.edtTotalPrice.text.toString().toDoubleOrNull() ?: 0.00
         )
 
