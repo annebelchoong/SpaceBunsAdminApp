@@ -9,18 +9,19 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 
-class NewOrdersViewModel: ViewModel() {
+class OrdersViewModel: ViewModel() {
 
     private var o = listOf<Orders>()
     private val orders = MutableLiveData<List<Orders>>()
 
     private var orderStatusId =""
 
+    private val col = Firebase.firestore.collection("orders")
 
     init {
 //        col.addSnapshotListener { value,_ -> orders.value = value?.toObjects() }
         viewModelScope.launch {
-            val orderStatus= ORDERSTATUS.get().await().toObjects<OrderStatus>()
+            val orderStatus= col.get().await().toObjects<OrderStatus>()
             //Move inside snapshot listener if required if there is any changes pn categories
 
             ORDERS.addSnapshotListener { value, _ ->
@@ -56,7 +57,7 @@ class NewOrdersViewModel: ViewModel() {
 //    }
 
     suspend fun getOrderStatus(): List<OrderStatus> {
-        return ORDERSTATUS.get().await().toObjects<OrderStatus>()
+        return col.get().await().toObjects<OrderStatus>()
     }
 
     fun delete(id: String){
