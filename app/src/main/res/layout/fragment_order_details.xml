@@ -20,7 +20,7 @@
         android:id="@+id/view3"
         class="androidx.constraintlayout.widget.ConstraintLayout"
         android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_height="210dp"
         android:background="@drawable/bottom_side_rounded_rectangle_white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -159,7 +159,7 @@
         android:layout_marginTop="8dp"
         android:text="Payment Method:"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/lblOrderStatus" />
+        app:layout_constraintTop_toBottomOf="@+id/lblAddress" />
 
     <TextView
         android:id="@+id/edtPaymentMethod"
@@ -176,26 +176,16 @@
         android:id="@+id/lblOrderStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="Order Status:"
+        app:layout_constraintBottom_toBottomOf="@+id/spnNewStatus"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/lblAddress" />
-
-    <TextView
-        android:id="@+id/txtOrderStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="XXX"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/lblOrderStatus"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/lblOrderStatus" />
+        app:layout_constraintTop_toTopOf="@+id/spnNewStatus" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvOrderDetails"
         android:layout_width="409dp"
         android:layout_height="423dp"
+        android:isScrollContainer="true"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -208,8 +198,19 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Update status"
+        android:text="Update"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Spinner
+        android:id="@+id/spnNewStatus"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/orderStatus"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/edtPaymentMethod" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
