@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.userFragment,
                 R.id.productFragment,
                 R.id.vouchersFragment,
-                R.id.donationsFragment,
+                R.id.donationEventsFragment,
                 R.id.orderFragment,
                 R.id.salesFragment,
                 R.id.contactsFragment,
