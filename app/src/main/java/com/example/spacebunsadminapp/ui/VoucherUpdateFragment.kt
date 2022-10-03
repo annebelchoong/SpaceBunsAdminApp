@@ -28,6 +28,7 @@ class VoucherUpdateFragment : Fragment() {
         reset()
         binding.btnReset.setOnClickListener { reset() }
         binding.btnSubmit.setOnClickListener { submit() }
+        binding.btnDelete2.setOnClickListener { delete() }
 
         return binding.root
     }
@@ -63,6 +64,13 @@ class VoucherUpdateFragment : Fragment() {
         }
 
         vm.set(v)
+
+        nav.navigateUp()
+    }
+
+    private fun delete() {
+        // TODO: Delete
+        vm.delete(voucherId)
 
         nav.navigateUp()
     }

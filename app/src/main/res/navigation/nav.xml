@@ -103,4 +103,8 @@
         android:name="com.example.spacebunsadminapp.ui.VoucherInsertFragment"
         android:label="Create Vouchers"
         tools:layout="@layout/fragment_voucher_insert" />
+    <fragment
+        android:id="@+id/donationEventsUpdateFragment"
+        android:name="com.example.spacebunsadminapp.ui.DonationEventsUpdateFragment"
+        android:label="Edit Donation Event" />
 </navigation>

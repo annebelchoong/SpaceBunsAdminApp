@@ -10,6 +10,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
+import com.example.spacebunsadminapp.R
 import com.example.spacebunsadminapp.data.DonationEventViewModel
 import com.example.spacebunsadminapp.databinding.FragmentDonationsBinding
 import com.example.spacebunsadminapp.util.DonationAdapter
@@ -30,6 +31,14 @@ class DonationsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentDonationsBinding.inflate(inflater, container, false)
+
+        binding.btnEditDonationEvent.setOnClickListener {
+            nav.navigate(
+                R.id.donationEventsUpdateFragment,
+                bundleOf("donationEventId" to id)
+            )
+        }
+
         updateProgressBar()
 
         val adapter = DonationAdapter()
@@ -45,7 +54,7 @@ class DonationsFragment : Fragment() {
             val donationEvents = vm.get(id)!!
             binding.txtTitle.text = "${donationEvents.donationEventName}"
 
-            val donations = vm.getDonations(id)
+            val donations = vm.getDonationsFromId(id)
             adapter.submitList(donations)
 //            binding.txtUsedCountFIxed.text = "${donations.size} Donation(s)"
         }

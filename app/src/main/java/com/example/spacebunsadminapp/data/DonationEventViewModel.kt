@@ -35,11 +35,13 @@ class DonationEventViewModel : ViewModel() {
                 .await()
                 .size() // return the number of records
         }
-
         return donationEvents
     }
 
 //    fun get(id: String) = donations.value?.find { it.donationEventId == id }
+
+    fun getDonations(id: String) = donations.value?.find { it.donationEventId == id }
+
 
     // TODO(10): Return a specific category
     suspend fun get(id: String): DonationEvent? {
@@ -52,7 +54,7 @@ class DonationEventViewModel : ViewModel() {
 
     // TODO(11): Return all fruits under a specific category
     //           Populate [category] field
-    suspend fun getDonations(id: String): List<Donation> {
+    suspend fun getDonationsFromId(id: String): List<Donation> {
         val donations = DONATIONS
             .whereEqualTo("donationEventId", id)
             .get()

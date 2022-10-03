@@ -22,6 +22,7 @@
         <entry key="app/src/main/res/layout/fragment_donation_event_detail.xml" value="0.33190262405960647" />
         <entry key="app/src/main/res/layout/fragment_donation_events.xml" value="0.44655385885266197" />
         <entry key="app/src/main/res/layout/fragment_donation_events_insert.xml" value="0.4625908507909363" />
+        <entry key="app/src/main/res/layout/fragment_donation_events_update.xml" value="0.4625908507909363" />
         <entry key="app/src/main/res/layout/fragment_donations.xml" value="0.4625908507909363" />
         <entry key="app/src/main/res/layout/fragment_donations_copy.xml" value="0.4625908507909363" />
         <entry key="app/src/main/res/layout/fragment_insert_voucher.xml" value="0.33190262405960647" />
