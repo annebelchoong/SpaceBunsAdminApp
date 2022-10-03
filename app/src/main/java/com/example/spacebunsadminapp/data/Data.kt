@@ -52,9 +52,6 @@ data class OrderDetails(
 val ORDERS = Firebase.firestore.collection("orders")
 val ORDERSTATUS = Firebase.firestore.collection("orderStatus")
 
-import java.time.LocalDateTime
-import java.util.*
-
 data class Data(
     var id: String = ""
 )

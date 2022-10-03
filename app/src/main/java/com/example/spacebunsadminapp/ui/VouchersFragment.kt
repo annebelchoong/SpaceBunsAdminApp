@@ -31,7 +31,7 @@ class VouchersFragment : Fragment() {
     ): View {
         binding = FragmentVouchersBinding.inflate(inflater, container, false)
 
-        binding.fabtnAddVoucher.setOnClickListener { nav.navigate(R.id.insertVoucherFragment) }
+        binding.fabtnAddVoucher.setOnClickListener { nav.navigate(R.id.voucherInsertFragment) }
 
         adapter = VoucherAdapter { holder, voucher ->
             holder.binding.root.setOnClickListener {
