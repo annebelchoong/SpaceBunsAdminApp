@@ -35,6 +35,10 @@ class OrderDetailsFragment:Fragment() {
             binding.edtAddress.text = "${orders?.address}"
             binding.edtPaymentMethod.text = "${orders?.paymentMethod}"
             binding.edtTotal.text = "RM ${orders?.totalPrice}"
+            when(orders.orderStatusId){
+                "D" -> binding.txtOrderStatus.text = "Delivered"
+                "C" -> binding.txtOrderStatus.text = "Cancelled"
+            }
 //        }
 
         }
@@ -48,28 +52,7 @@ class OrderDetailsFragment:Fragment() {
 //            "Cancelled" -> binding.spnNewStatus.selectedItemPosition == 2
 //        }
 
-        binding.btnUpdateStatus.setOnClickListener { update() }
-
         return binding.root
     }
 
-    private fun update() {
-        val o = Orders()
-
-        when(binding.spnNewStatus.selectedItem as String){
-            "Processing" -> o.orderStatusId = "P"
-            "Delivered" -> o.orderStatusId = "D"
-            "Cancelled" -> o.orderStatusId = "C"
-        }
-
-        o.orderId = binding.edtOrderId.text.toString().trim()
-        o.totalPrice = binding.edtTotal.text.toString().toDoubleOrNull() ?: 0.0
-        o.address = binding.edtAddress.text.toString().trim()
-        o.paymentMethod = binding.edtPaymentMethod.text.toString().trim()
-
-        vm.set(o)
-
-        nav.navigateUp()
-
-    }
 }
