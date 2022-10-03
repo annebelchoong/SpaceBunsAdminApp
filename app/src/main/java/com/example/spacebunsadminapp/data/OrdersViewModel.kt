@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.firestore.ktx.toObjects
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.launch
@@ -18,33 +19,43 @@ class OrdersViewModel: ViewModel() {
 
     private val col = Firebase.firestore.collection("orders")
 
-    init {
-//        col.addSnapshotListener { value,_ -> orders.value = value?.toObjects() }
-        viewModelScope.launch {
-            val orderStatus= col.get().await().toObjects<OrderStatus>()
-            //Move inside snapshot listener if required if there is any changes pn categories
+//    init {
+////        col.addSnapshotListener { value,_ -> orders.value = value?.toObjects() }
+//        viewModelScope.launch {
+//            val orderStatus= col.get().await().toObjects<OrderStatus>()
+//            //Move inside snapshot listener if required if there is any changes pn categories
+//
+//            ORDERS.addSnapshotListener { value, _ ->
+//                if (value == null) return@addSnapshotListener
+//
+//                o = value.toObjects<Orders>()
+//
+//                //provide category information from fruit
+//                for (f in o){
+//                    f.orderStatus = orderStatus.find{ it.id == f.orderStatusId}!! // prefer
+////                    f.category = categories.find{ it.id == f.categoryId } ?: Category()
+//                }
+//
+//                updateResult()
+//            }
+//        }
 
-            ORDERS.addSnapshotListener { value, _ ->
-                if (value == null) return@addSnapshotListener
 
-                o = value.toObjects<Orders>()
-
-                //provide category information from fruit
-                for (f in o){
-                    f.orderStatus = orderStatus.find{ it.id == f.orderStatusId}!! // prefer
-//                    f.category = categories.find{ it.id == f.categoryId } ?: Category()
-                }
-
-                updateResult()
-            }
-        }
-
-
-    }
+//    }
 
     fun init() = Unit
 
-    fun get(id:String) = orders.value?.find { it.orderId == id }
+//    fun get(id: String): Orders? {
+//        return o.find { it.orderId == id }
+//    }
+
+    suspend fun get(id: String): Orders? {
+        return ORDERS // do not have count, only id and name
+            .document(id)
+            .get()
+            .await()
+            .toObject<Orders>()
+    }
 
     fun getAll() = orders
 
