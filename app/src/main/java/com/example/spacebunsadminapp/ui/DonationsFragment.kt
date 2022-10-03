@@ -47,7 +47,7 @@ class DonationsFragment : Fragment() {
 
             val donations = vm.getDonations(id)
             adapter.submitList(donations)
-            binding.txtUsedCountFIxed.text = "${donations.size} Donation(s)"
+//            binding.txtUsedCountFIxed.text = "${donations.size} Donation(s)"
         }
         return binding.root
     }

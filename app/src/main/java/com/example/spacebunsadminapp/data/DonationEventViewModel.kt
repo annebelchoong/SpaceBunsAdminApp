@@ -23,7 +23,7 @@ class DonationEventViewModel : ViewModel() {
     // TODO(7): Return all categories
     //          Populate [count] field
     suspend fun getAll(): List<DonationEvent> {  // make function a suspend if use await()
-        val donationEvents = DONATIONEVENTS
+        val donationEvents = DONATION_EVENTS
             .get()
             .await()
             .toObjects<DonationEvent>()
@@ -43,7 +43,7 @@ class DonationEventViewModel : ViewModel() {
 
     // TODO(10): Return a specific category
     suspend fun get(id: String): DonationEvent? {
-        return DONATIONEVENTS
+        return DONATION_EVENTS
             .document(id)
             .get()
             .await()
@@ -57,7 +57,7 @@ class DonationEventViewModel : ViewModel() {
             .whereEqualTo("donationEventId", id)
             .get()
             .await()
-            .toObjects<Donation>() // return fruits record
+            .toObjects<Donation>() // return donation record
 
         val donationEvent = get(id)
         for (d in donations) {
@@ -68,7 +68,7 @@ class DonationEventViewModel : ViewModel() {
     }
 
     fun delete(id: String) {
-        DONATIONEVENTS.document(id).delete()
+        DONATION_EVENTS.document(id).delete()
     }
 
 //    fun deleteAll() {
@@ -76,7 +76,7 @@ class DonationEventViewModel : ViewModel() {
 //    }
 
     fun set(d: DonationEvent) {
-        DONATIONEVENTS.document(d.donationEventId).set(d)
+        DONATION_EVENTS.document(d.donationEventId).set(d)
     }
 
     //----------------------------------------------------------------------------------------------

@@ -5,26 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/frameLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.DonationEventsFragment">
 
-        <!--    <androidx.core.widget.NestedScrollView-->
-        <!--        android:id="@+id/root_leyaut"-->
+        <!--        &lt;!&ndash; Nested Scroll view &ndash;&gt;-->
+        <!--        <androidx.core.widget.NestedScrollView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent">-->
+
+        <!--    <ScrollView-->
         <!--        android:layout_width="match_parent"-->
         <!--        android:layout_height="wrap_content"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
         <!--        app:layout_constraintStart_toStartOf="parent"-->
-        <!--        app:layout_constraintTop_toTopOf="parent" >-->
+        <!--        app:layout_constraintTop_toTopOf="parent">-->
 
         <TextView
             android:id="@+id/pcTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:layout_marginTop="16dp"
             android:gravity="center"
             android:padding="4dp"
             android:text="Donation Events"
@@ -35,6 +41,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/pieChart"
@@ -184,7 +191,6 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_begin="415dp" />
 
-        <!--    </androidx.core.widget.NestedScrollView>-->
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabtnAddDonationEvent"
@@ -197,6 +203,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <!--    </androidx.core.widget.NestedScrollView>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -81,7 +81,7 @@
             android:id="@+id/cardShadowProgress5"
             class="androidx.constraintlayout.widget.ConstraintLayout"
             android:layout_width="350dp"
-            android:layout_height="260dp"
+            android:layout_height="200dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/shadow"
             app:layout_constraintEnd_toEndOf="parent"
@@ -93,7 +93,7 @@
             android:id="@+id/cardProgress5"
             class="androidx.constraintlayout.widget.ConstraintLayout"
             android:layout_width="350dp"
-            android:layout_height="250dp"
+            android:layout_height="190dp"
             android:background="@drawable/rounded_rectangle_white"
             app:layout_constraintBottom_toBottomOf="@+id/cardShadowProgress5"
             app:layout_constraintEnd_toEndOf="@+id/cardShadowProgress5"
@@ -101,16 +101,6 @@
             app:layout_constraintStart_toStartOf="@+id/cardShadowProgress5"
             app:layout_constraintTop_toTopOf="@+id/cardShadowProgress5"
             app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/txtUsedCountFIxed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:text="51 times"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
 
         <Button
             android:id="@+id/btnSubmit"
@@ -128,12 +118,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="16dp"
             android:background="@android:color/transparent"
             android:text="Reset"
             android:textColor="@android:color/holo_red_dark"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/txtUsedCountFIxed" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
 
         <TextView
             android:id="@+id/lblVoucherCode"
@@ -146,19 +135,6 @@
             app:layout_constraintBottom_toBottomOf="@+id/editTextNumber"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@+id/editTextNumber" />
-
-        <TextView
-            android:id="@+id/lblUsedCount1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:editable="false"
-            android:labelFor="@id/edtDiscountPercentage"
-            android:text="Number of \n Donations"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/txtUsedCountFIxed"
-            app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/txtUsedCountFIxed" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline3"

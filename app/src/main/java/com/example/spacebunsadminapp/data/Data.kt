@@ -81,7 +81,7 @@ data class DonationEvent(
     override fun toString() = donationEventName     // for spinner
 }
 
-val DONATIONEVENTS = Firebase.firestore.collection("donationEvents")
+val DONATION_EVENTS = Firebase.firestore.collection("donationEvents")
 
 data class Donation(
     @DocumentId
