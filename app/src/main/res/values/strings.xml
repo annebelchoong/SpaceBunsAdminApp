@@ -2,4 +2,17 @@
     <string name="app_name">SpaceBuns Admin App</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="orderStatus">
+        <item>Processing</item>
+        <item>Delivered</item>
+        <item>Cancelled</item>
+    </string-array>
+
+    <string-array name="paymentMethod">
+        <item>Credit Card</item>
+        <item>E Wallet</item>
+        <item>Cash</item>
+    </string-array>
+
 </resources>
