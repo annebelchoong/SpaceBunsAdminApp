@@ -29,7 +29,12 @@ class OrderStatusDetailsFragment : Fragment() {
 
         val adapter = OrdersAdapter{holder, orders ->
             holder.binding.root.setOnClickListener {
-                nav.navigate(R.id.orderDetailsFragment, bundleOf("orderId" to orders.orderId))
+                if (orders.orderStatusId == "P"){
+                    nav.navigate(R.id.orderDetailUpdateFragment, bundleOf("orderId" to orders.orderId))
+                } else{
+                    nav.navigate(R.id.orderDetailsFragment, bundleOf("orderId" to orders.orderId))
+
+                }
             }
         }
         binding.rvNewOrders.adapter = adapter
