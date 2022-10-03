@@ -56,6 +56,29 @@
         android:label="Vouchers"
         tools:layout="@layout/fragment_vouchers" />
     <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.example.spacebunsadminapp.ui.OrderDetailsFragment"
+        android:label="Order Details" />
+    <fragment
+        android:id="@+id/insertOrderFragment"
+        android:name="com.example.spacebunsadminapp.ui.InsertOrderFragment"
+        android:label="Insert Order"
+        tools:layout="@layout/fragment_insert_order" />
+    <dialog
+        android:id="@+id/updateOrderStatusFragment"
+        android:name="com.example.spacebunsadminapp.ui.UpdateOrderStatusFragment"
+        android:label="fragment_update_order_status"
+        tools:layout="@layout/fragment_update_order_status" />
+    <fragment
+        android:id="@+id/cancelledOrdersFragment"
+        android:name="com.example.spacebunsadminapp.ui.OrderStatusDetailsFragment"
+        android:label="Cancelled Orders"
+        tools:layout="@layout/fragment_order_status_details" />
+    <fragment
+        android:id="@+id/orderStatusDetailsFragment"
+        android:name="com.example.spacebunsadminapp.ui.OrderStatusDetailsFragment"
+        android:label="fragment_order_status_details"
+        tools:layout="@layout/fragment_order_status_details" />
         android:id="@+id/insertVoucherFragment"
         android:name="com.example.spacebunsadminapp.ui.VoucherInsertFragment"
         android:label="Add New Voucher"
@@ -75,4 +98,9 @@
         android:name="com.example.spacebunsadminapp.ui.DonationEventsInsertFragment"
         android:label="Create Donation Event"
         tools:layout="@layout/fragment_donation_events_insert" />
+    <fragment
+        android:id="@+id/voucherInsertFragment"
+        android:name="com.example.spacebunsadminapp.ui.VoucherInsertFragment"
+        android:label="Create Vouchers"
+        tools:layout="@layout/fragment_voucher_insert" />
 </navigation>
