@@ -10,7 +10,7 @@ import com.example.spacebunsadminapp.databinding.ItemVoucherBinding
 
 
 class VoucherAdapter(
-    val vn: (ViewHolder, Voucher) -> Unit = { _, _ -> }
+    val fn: (ViewHolder, Voucher) -> Unit = { _, _ -> }
 ) : ListAdapter<Voucher, VoucherAdapter.ViewHolder>(DiffCallback) {
 
     companion object DiffCallback : DiffUtil.ItemCallback<Voucher>() {
@@ -33,7 +33,7 @@ class VoucherAdapter(
         holder.binding.txtDiscountPercentage.text = (voucher.discountPercentage).toString()
         holder.binding.txtUsedCount.text = voucher.usedCount.toString() + " times" // count
 
-        vn(holder, voucher)
+        fn(holder, voucher)
     }
 
 }

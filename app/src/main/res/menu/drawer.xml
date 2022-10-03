@@ -25,7 +25,7 @@
         android:id="@+id/vouchersFragment"
         android:title="Vouchers" />
     <item
-        android:id="@+id/donationsFragment"
+        android:id="@+id/donationEventsFragment"
         android:title="Donations" />
     <group android:id="@+id/orderSection">
         <item
