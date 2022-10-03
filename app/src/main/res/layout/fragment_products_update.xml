@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.ProductUpdateFragment">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/edtName"
+        android:text="Category"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinCat"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/spinCat" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -38,7 +50,7 @@
         android:maxLength="50"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/txtId"
+        app:layout_constraintTop_toBottomOf="@+id/spinCat"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
@@ -121,6 +133,7 @@
         app:layout_constraintTop_toTopOf="@+id/txtId" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:labelFor="@id/edtName"
@@ -163,5 +176,15 @@
         app:layout_constraintBottom_toBottomOf="@+id/txtDate"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/txtDate" />
+
+    <Spinner
+        android:id="@+id/spinCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/Category"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/txtId" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

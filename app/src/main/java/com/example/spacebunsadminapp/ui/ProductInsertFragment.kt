@@ -54,6 +54,7 @@ class ProductInsertFragment: Fragment() {
 
     private fun reset() {
         binding.edtId.text.clear()
+        binding.spinnerCat.setSelection(0)
         binding.edtName.text.clear()
         binding.edtDesc.text.clear()
         binding.imgPhoto.setImageDrawable(null)
@@ -63,6 +64,7 @@ class ProductInsertFragment: Fragment() {
     private fun submit() {
         val f = Product(
             id = binding.edtId.text.toString().trim(),
+            cat = binding.spinnerCat.selectedItem as String,
             name = binding.edtName.text.toString().trim(),
             desc = binding.edtDesc.text.toString().trim(),
             // TODO: Photo

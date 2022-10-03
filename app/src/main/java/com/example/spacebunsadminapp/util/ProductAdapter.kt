@@ -29,6 +29,7 @@ class ProductAdapter (
         val product = getItem(position)
 
         holder.binding.txtId.text   = product.id
+        holder.binding.txtCat.text = ("--> " + product.cat + " <--")
         holder.binding.txtName.text = product.name
         holder.binding.txtDesc.text  = product.desc
 

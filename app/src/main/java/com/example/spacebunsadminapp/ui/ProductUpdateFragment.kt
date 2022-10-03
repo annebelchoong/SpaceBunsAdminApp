@@ -61,6 +61,7 @@ class ProductUpdateFragment: Fragment() {
         }
 
         binding.txtId.text = f.id
+        binding.spinCat.setSelection(0)
         binding.edtName.setText(f.name)
         binding.edtDesc.setText(f.desc)
 
@@ -74,6 +75,7 @@ class ProductUpdateFragment: Fragment() {
     private fun submit() {
         val f = Product(
             id   = binding.txtId.text.toString().trim(),
+            cat = binding.spinCat.selectedItem as String,
             name = binding.edtName.text.toString().trim(),
             desc = binding.edtDesc.text.toString().trim(),
             // TODO: Photo
