@@ -3,8 +3,10 @@ package com.example.spacebunsadminapp.data
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.firestore.ktx.toObjects
 import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.tasks.await
 
 class DonationViewModel : ViewModel() {
     private val donations =
@@ -18,7 +20,16 @@ class DonationViewModel : ViewModel() {
 
     fun init() = Unit // dummy
 
-    fun get(id: String) = donations.value?.find { it.donationId == id }
+//    fun get(id: String) = donations.value?.find { it.donationId == id }
+
+//    // TODO(10): Return a specific category
+//    suspend fun get(id: String): Donation? {
+//        return DONATIONS
+//            .document(id)
+//            .get()
+//            .await()
+//            .toObject<Donation>()
+//    }
 
     fun getAll() = donations // TODO
 

@@ -41,12 +41,41 @@ class DonationEventsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentDonationEventsBinding.inflate(inflater, container, false)
-        updateProgressBar();
-
 //        binding.pbDonations.setOnClickListener { nav.navigate(R.id.donationDetailFragment) }
         binding.fabtnAddDonationEvent.setOnClickListener { nav.navigate(R.id.InsertdonationEventsFragment) }
 //        binding.pieChart.setOnClickListener { nav.navigate(R.id.donationsFragment) }
 
+        updateProgressBar()
+        drawPieChart()
+
+        val adapter = DonationEventAdapter() { holder, donationEvent ->
+            holder.binding.root.setOnClickListener {
+                nav.navigate(
+                    R.id.donationsFragment,
+                    bundleOf("donationEventId" to donationEvent.donationEventId)
+                )
+            }
+        }
+
+        binding.rvDonations.adapter = adapter
+        binding.rvDonations.addItemDecoration(
+            DividerItemDecoration(
+                context,
+                DividerItemDecoration.VERTICAL
+            )
+        )
+
+        // TODO(8): Load categories data into recycler view -> launch block
+        lifecycleScope.launch {
+            val donationEvents = vm.getAll()
+            adapter.submitList(donationEvents)
+            binding.txtDonationCount.text = "${donationEvents.size} Records(s)"
+        }
+
+        return binding.root
+    }
+
+    private fun drawPieChart() {
         pieChart = binding.pieChart
 
         // setting user percent value,
@@ -128,51 +157,6 @@ class DonationEventsFragment : Fragment() {
 
         // loading chart
         pieChart.invalidate()
-
-
-        val adapter = DonationEventAdapter() { holder, donationEvent ->
-            holder.binding.root.setOnClickListener {
-                nav.navigate(
-                    R.id.donationsFragment,
-                    bundleOf("donationEventId" to donationEvent.donationEventId)
-                )
-            }
-        }
-        binding.rvDonations.adapter = adapter
-        binding.rvDonations.addItemDecoration(
-            DividerItemDecoration(
-                context,
-                DividerItemDecoration.VERTICAL
-            )
-        )
-
-        // -----------------------------------------------------------------------------------------
-
-//        // TODO(8): Load categories data into recycler view -> launch block
-//        lifecycleScope.launch {
-//            val donationEvents = vm.getAll()
-//            adapter.submitList(donationEvents)
-//            binding.txtDonationCount.text = "${donationEvents.size} Records(s)"
-//        }
-
-        // -----------------------------------------------------------------------------------------
-
-        val arrayAdapter =
-            ArrayAdapter<String>(requireContext(), android.R.layout.simple_spinner_item)
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        binding.spnDonationAttributes.adapter = arrayAdapter
-
-        val donations = vm.getDonationAttributes()
-        arrayAdapter.add("All")
-        arrayAdapter.addAll(donations)
-
-        // TODO: Get all
-        vm.getAll().observe(viewLifecycleOwner) {
-            adapter.submitList(it)
-            binding.txtDonationCount.text = "${it.size} donation(s)"
-        }
-
-        return binding.root
     }
 
     private fun updateProgressBar() {
