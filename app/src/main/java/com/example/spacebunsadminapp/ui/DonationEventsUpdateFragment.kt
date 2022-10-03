@@ -9,7 +9,9 @@ import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
+import com.example.spacebunsadminapp.R
 import com.example.spacebunsadminapp.data.DonationEvent
 import com.example.spacebunsadminapp.data.DonationEventViewModel
 import com.example.spacebunsadminapp.databinding.FragmentDonationEventsUpdateBinding
@@ -82,7 +84,7 @@ class DonationEventsUpdateFragment : Fragment() {
 
     private fun submit() {
         val dE = DonationEvent(
-            donationEventId = binding.txtId.text.toString().trim(),
+            donationEventId = binding.txtId.text.toString().uppercase().trim(),
             donationEventName = binding.edtName.text.toString().trim(),
             donationGoal = binding.edtAge.text.toString().toDoubleOrNull() ?: 0.00,
             // TODO: Photo
@@ -105,7 +107,9 @@ class DonationEventsUpdateFragment : Fragment() {
         // TODO: Delete
         vm.delete(donationEventId)
 
-        nav.navigateUp()
+//        nav.navigateUp()
+//        nav.navigateUp()
+        Navigation.findNavController(binding.root).popBackStack(R.id.donationEventsFragment,false)
     }
 
 }

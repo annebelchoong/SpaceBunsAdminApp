@@ -61,10 +61,9 @@ class DonationEventsInsertFragment : Fragment() {
 
     private fun submit() {
         val v = DonationEvent(
-            donationEventId = binding.edtDonationEventId.text.toString().trim(),
+            donationEventId = binding.edtDonationEventId.text.toString().uppercase().trim(),
             donationEventName = binding.edtDonationEventName.text.toString().trim(),
-            donationGoal = binding.edtDonationGoal.text.toString().toDoubleOrNull()
-                ?: 0.00,
+            donationGoal = binding.edtDonationGoal.text.toString().toDoubleOrNull() ?: 0.00,
             donationEventPhoto = binding.imgDonationEventPhoto.cropToBlob(300, 300)
         )
 
