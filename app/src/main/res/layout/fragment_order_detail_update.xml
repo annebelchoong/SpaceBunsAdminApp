@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.OrderDetailUpdateFragment" >
+
+    <view
+        android:id="@+id/view5"
+        class="androidx.constraintlayout.widget.ConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="-8dp"
+        android:background="@drawable/shadow_20"
+        app:layout_constraintBottom_toBottomOf="@+id/view6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <view
+        android:id="@+id/view6"
+        class="androidx.constraintlayout.widget.ConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="210dp"
+        android:background="@drawable/bottom_side_rounded_rectangle_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblOrderId2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Order ID:"
+        android:textAlignment="viewEnd"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="123dp" />
+
+    <TextView
+        android:id="@+id/lblCustomerId2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Customer ID:"
+        android:textAlignment="viewEnd"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/lblOrderId2" />
+
+    <TextView
+        android:id="@+id/lblDate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Date:"
+        android:textAlignment="viewEnd"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/lblCustomerId2" />
+
+    <TextView
+        android:id="@+id/lblAddress2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Address:"
+        android:textAlignment="viewEnd"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/lblDate2" />
+
+    <TextView
+        android:id="@+id/edtOrderId2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="XXX"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/lblOrderId2"
+        app:layout_constraintStart_toEndOf="@+id/lblOrderId2"
+        app:layout_constraintTop_toTopOf="@+id/lblOrderId2" />
+
+    <TextView
+        android:id="@+id/edtCustomerId2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="XXX"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/lblDate2"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/lblOrderId2" />
+
+    <TextView
+        android:id="@+id/edtDate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="XXX"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/lblDate2"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/lblDate2" />
+
+    <TextView
+        android:id="@+id/edtAddress2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="XXX"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/lblAddress2"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/lblDate2" />
+
+    <TextView
+        android:id="@+id/lblPaymentMethod2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Payment Method:"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/lblAddress2" />
+
+    <TextView
+        android:id="@+id/edtPaymentMethod2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="XXX"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/lblPaymentMethod2"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/lblPaymentMethod" />
+
+    <TextView
+        android:id="@+id/lblOrderStatus2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Status:"
+        app:layout_constraintBottom_toBottomOf="@+id/spnNewStatus2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/view7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view6"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvOrderDetails"
+            android:layout_width="409dp"
+            android:layout_height="423dp"
+            android:isScrollContainer="true"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3"
+            tools:listitem="@layout/item_order_detail" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnUpdateStatus2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Update"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/view6"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <view
+        android:id="@+id/view7"
+        class="androidx.constraintlayout.widget.ConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="82dp"
+        android:background="@drawable/top_side_rounded_rectangle_gole"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblTotal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total: "
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <TextView
+        android:id="@+id/edtTotal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="RM 00.00"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/lblTotal2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lblTotal2" />
+
+    <Spinner
+        android:id="@+id/spnNewStatus2"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/orderStatus"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/edtPaymentMethod2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
