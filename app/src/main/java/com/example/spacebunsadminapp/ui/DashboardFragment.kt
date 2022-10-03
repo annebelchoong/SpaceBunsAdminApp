@@ -15,6 +15,10 @@ class Dashboard : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentDashboardBinding.inflate(inflater, container, false)
+
+        binding.btnVouchersPage.setOnClickListener { nav.navigate(R.id.vouchersFragment) }
+        binding.btnDonationsPage.setOnClickListener { nav.navigate(R.id.donationEventsFragment) }
+
         return binding.root
     }
 }
