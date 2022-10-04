@@ -6,6 +6,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.*
 
+// need have one more is the order type - delivery/pickup
 data class Orders(
     @DocumentId
     var orderId: String = "",
