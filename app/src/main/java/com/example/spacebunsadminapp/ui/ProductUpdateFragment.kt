@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.spacebunsadminapp.data.Product
-import com.example.spacebunsadminapp.data.SpaceBunsViewModel
+import com.example.spacebunsadminapp.data.ProductViewModel
 import com.example.spacebunsadminapp.databinding.FragmentProductsUpdateBinding
 import com.example.spacebunsadminapp.util.cropToBlob
 import com.example.spacebunsadminapp.util.errorDialog
@@ -22,7 +22,7 @@ import java.util.*
 class ProductUpdateFragment: Fragment() {
     private lateinit var binding: FragmentProductsUpdateBinding
     private val nav by lazy { findNavController() }
-    private val vm: SpaceBunsViewModel by activityViewModels()
+    private val vm: ProductViewModel by activityViewModels()
 
     private val id by lazy { arguments?.getString("id") ?: "" }
     private val formatter = SimpleDateFormat("dd MMMM yyyy '-' hh:mm:ss a", Locale.getDefault())

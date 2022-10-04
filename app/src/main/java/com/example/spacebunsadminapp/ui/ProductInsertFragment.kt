@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.spacebunsadminapp.data.Product
-import com.example.spacebunsadminapp.data.SpaceBunsViewModel
+import com.example.spacebunsadminapp.data.ProductViewModel
 import com.example.spacebunsadminapp.databinding.FragmentProductsInsertBinding
 import com.example.spacebunsadminapp.util.cropToBlob
 import com.example.spacebunsadminapp.util.errorDialog
@@ -19,7 +19,7 @@ import com.example.spacebunsadminapp.util.errorDialog
 class ProductInsertFragment: Fragment() {
     private lateinit var binding: FragmentProductsInsertBinding
     private val nav by lazy { findNavController() }
-    private val vm: SpaceBunsViewModel by activityViewModels()
+    private val vm: ProductViewModel by activityViewModels()
 
     // TODO: Get content launcher
     private val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {

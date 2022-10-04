@@ -6,7 +6,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObjects
 import com.google.firebase.ktx.Firebase
 
-class SpaceBunsViewModel: ViewModel() {
+class ProductViewModel: ViewModel() {
 
     private val product = MutableLiveData<List<Product>>()
 

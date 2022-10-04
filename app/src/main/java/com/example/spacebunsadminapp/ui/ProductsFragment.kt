@@ -10,7 +10,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.spacebunsadminapp.R
-import com.example.spacebunsadminapp.data.SpaceBunsViewModel
+import com.example.spacebunsadminapp.data.ProductViewModel
 import com.example.spacebunsadminapp.databinding.FragmentProductsBinding
 import com.example.spacebunsadminapp.util.ProductAdapter
 
@@ -19,7 +19,7 @@ class ProductsFragment : Fragment() {
 
     private lateinit var binding: FragmentProductsBinding
     private val nav by lazy { findNavController() }
-    private val vm: SpaceBunsViewModel by activityViewModels()
+    private val vm: ProductViewModel by activityViewModels()
 
     private lateinit var adapter: ProductAdapter
 
