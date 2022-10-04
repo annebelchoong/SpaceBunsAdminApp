@@ -59,6 +59,9 @@ class ProductViewModel: ViewModel() {
         e += if (f.photo.toBytes().isEmpty()) "- Photo is required.\n"
         else ""
 
+        e += if (f.price == 0.00) "- Price is required.\n"
+        else ""
+
         return e
     }
 

@@ -11,6 +11,7 @@ data class Product(
     var cat: String = "",
     var name: String = "",
     var desc: String = "",
+    var price: Double = 0.00,
     var photo: Blob = Blob.fromBytes(ByteArray(0)),  // empty bytes
     var date: Date = Date() // current Date
 )

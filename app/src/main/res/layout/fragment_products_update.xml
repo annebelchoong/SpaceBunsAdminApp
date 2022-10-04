@@ -7,6 +7,18 @@
     tools:context=".ui.ProductUpdateFragment">
 
     <TextView
+        android:id="@+id/txtCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/txtId"
+        tools:text="XXX" />
+
+    <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,9 +26,9 @@
         android:text="Category"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/spinCat"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCat"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/spinCat" />
+        app:layout_constraintTop_toTopOf="@+id/txtCat" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -50,7 +62,7 @@
         android:maxLength="50"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/spinCat"
+        app:layout_constraintTop_toBottomOf="@+id/txtCat"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
@@ -66,6 +78,21 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/edtName"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/edtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:importantForAccessibility="no"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/imgPhoto"
         tools:ignore="TouchTargetSizeCheck" />
 
     <ImageView
@@ -86,11 +113,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/imgPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/edtPrice"
         tools:text="XXX" />
 
     <Button
@@ -169,6 +196,18 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:labelFor="@id/imgPhoto"
+        android:text="Price"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/edtPrice"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/edtPrice"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:labelFor="@id/txtDate"
         android:text="Date"
         android:textColor="@color/black"
@@ -176,15 +215,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/txtDate"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/txtDate" />
-
-    <Spinner
-        android:id="@+id/spinCat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:entries="@array/Category"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/txtId" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

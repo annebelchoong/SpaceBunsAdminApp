@@ -61,9 +61,10 @@ class ProductUpdateFragment: Fragment() {
         }
 
         binding.txtId.text = f.id
-        binding.spinCat.setSelection(0)
+        binding.txtCat.text = f.cat
         binding.edtName.setText(f.name)
         binding.edtDesc.setText(f.desc)
+        binding.edtPrice.setText(f.price.toString())
 
         // TODO: Load photo and date
         binding.imgPhoto.setImageBlob(f.photo)
@@ -75,9 +76,10 @@ class ProductUpdateFragment: Fragment() {
     private fun submit() {
         val f = Product(
             id   = binding.txtId.text.toString().trim(),
-            cat = binding.spinCat.selectedItem as String,
+            cat = binding.txtCat.text.toString().trim(),
             name = binding.edtName.text.toString().trim(),
             desc = binding.edtDesc.text.toString().trim(),
+            price = binding.edtPrice.text.toString().toDoubleOrNull() ?:0.00,
             // TODO: Photo
             photo = binding.imgPhoto.cropToBlob(300,300)
         )

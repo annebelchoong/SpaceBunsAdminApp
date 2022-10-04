@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.spacebunsadminapp.data.Product
 import com.example.spacebunsadminapp.data.ProductViewModel
 import com.example.spacebunsadminapp.databinding.FragmentProductsInsertBinding
+
 import com.example.spacebunsadminapp.util.cropToBlob
 import com.example.spacebunsadminapp.util.errorDialog
 
@@ -58,6 +59,7 @@ class ProductInsertFragment: Fragment() {
         binding.edtName.text.clear()
         binding.edtDesc.text.clear()
         binding.imgPhoto.setImageDrawable(null)
+        binding.edtPrice.text.clear()
         binding.edtId.requestFocus()
     }
 
@@ -67,6 +69,7 @@ class ProductInsertFragment: Fragment() {
             cat = binding.spinnerCat.selectedItem as String,
             name = binding.edtName.text.toString().trim(),
             desc = binding.edtDesc.text.toString().trim(),
+            price = binding.edtPrice.text.toString().toDoubleOrNull() ?:0.00,
             // TODO: Photo
             photo = binding.imgPhoto.cropToBlob(300, 300)
         )

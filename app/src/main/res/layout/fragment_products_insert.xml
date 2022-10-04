@@ -7,6 +7,18 @@
     tools:context=".ui.ProductInsertFragment">
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/imgPhoto"
+        android:text="Price"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/edtPrice"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/edtPrice"
+        app:layout_constraintVertical_bias="0.476" />
+
+    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,6 +84,21 @@
         app:layout_constraintTop_toBottomOf="@+id/edtName"
         tools:ignore="TouchTargetSizeCheck" />
 
+    <EditText
+        android:id="@+id/edtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:importantForAccessibility="no"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/imgPhoto"
+        tools:ignore="TouchTargetSizeCheck" />
+
     <ImageView
         android:id="@+id/imgPhoto"
         android:layout_width="200dp"
@@ -90,10 +117,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="Reset"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/imgPhoto" />
+        app:layout_constraintTop_toBottomOf="@+id/edtPrice" />
 
     <Button
         android:id="@+id/btnSubmit"
