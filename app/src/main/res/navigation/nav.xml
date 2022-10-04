@@ -36,11 +36,6 @@
         android:label="Donations"
         tools:layout="@layout/fragment_donations" />
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.spacebunsadminapp.ui.LoginFragment"
-        android:label="Login"
-        tools:layout="@layout/fragment_login" />
-    <fragment
         android:id="@+id/salesFragment"
         android:name="com.example.spacebunsadminapp.ui.SalesFragment"
         android:label="Sales"
@@ -55,4 +50,19 @@
         android:name="com.example.spacebunsadminapp.ui.VouchersFragment"
         android:label="Vouchers"
         tools:layout="@layout/fragment_vouchers" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.spacebunsadminapp.ui.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/changeEmailActivity"
+        android:name="com.example.spacebunsadminapp.ui.ChangeEmailActivity"
+        android:label="activity_change_email"
+        tools:layout="@layout/activity_change_email" />
+    <activity
+        android:id="@+id/resetPasswordActivity"
+        android:name="com.example.spacebunsadminapp.ui.ResetPasswordActivity"
+        android:label="activity_reset_password"
+        tools:layout="@layout/activity_reset_password" />
 </navigation>
