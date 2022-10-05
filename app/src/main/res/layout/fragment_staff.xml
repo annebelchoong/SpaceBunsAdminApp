@@ -12,8 +12,10 @@
         android:layout_height="18dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
         android:text="Name"
         android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/rvStaff"
         app:layout_constraintStart_toEndOf="@+id/lblStaffId"
         app:layout_constraintTop_toBottomOf="@+id/svStaff" />
 
@@ -21,21 +23,29 @@
         android:id="@+id/lblStaffEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="60dp"
+        android:layout_marginBottom="8dp"
         android:text="Email"
         android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/rvStaff"
         app:layout_constraintEnd_toStartOf="@+id/lblSalary"
+        app:layout_constraintStart_toEndOf="@+id/lblStaffName"
         app:layout_constraintTop_toBottomOf="@+id/svStaff" />
 
     <TextView
         android:id="@+id/lblSalary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="8dp"
         android:text="RM"
         android:textColor="@color/black"
-        tools:layout_editor_absoluteX="346dp"
-        tools:layout_editor_absoluteY="93dp" />
+        app:layout_constraintBottom_toTopOf="@+id/rvStaff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/svStaff" />
 
     <TextView
         android:id="@+id/lblStaffId"
@@ -43,8 +53,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
         android:text="ID"
         android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/rvStaff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/svStaff" />
 
