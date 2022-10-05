@@ -13,7 +13,10 @@ import androidx.navigation.fragment.findNavController
 import com.example.spacebunsadminapp.R
 import com.example.spacebunsadminapp.data.Customer
 import com.example.spacebunsadminapp.data.CustomerViewModel
+import com.example.spacebunsadminapp.data.Staff
+import com.example.spacebunsadminapp.data.StaffViewModal
 import com.example.spacebunsadminapp.databinding.FragmentUpdateProfileBinding
+import com.example.spacebunsadminapp.util.cropToBlob
 import com.example.spacebunsadminapp.util.errorDialog
 import java.text.SimpleDateFormat
 import java.util.*
@@ -22,9 +25,8 @@ import java.util.*
 class UpdateProfileFragment : Fragment() {
     private lateinit var binding: FragmentUpdateProfileBinding
     private val nav by lazy { findNavController() }
-    private val vm: CustomerViewModel by activityViewModels()
-
-    private val id by lazy { arguments?.getString("id") ?: "" }
+    private val vm: StaffViewModal by activityViewModels()
+    private val staffId by lazy { arguments?.getString("staffId") ?: "" }
     private val formatter = SimpleDateFormat("dd MMMM yyyy '-' hh:mm:ss a", Locale.getDefault())
 
     private val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
@@ -51,41 +53,43 @@ class UpdateProfileFragment : Fragment() {
     }
 
     private fun reset() {
-        val c = vm.get(id)
+        val s = vm.get(staffId)
 
-        if (c == null) {
+        if (s == null) {
             nav.navigateUp()
             return
         }
 
-        binding.edtName.setText(c.name)
-        binding.edtPhone.setText(c.phone.toString())
-        binding.edtAddress.setText(c.address.toString())
+
 
         //binding.imgUser.setImageBlob(c.photo)
         binding.edtName.requestFocus()
+
+        binding.edtName.setText(s.staffName)
+        binding.edtPhone.setText(s.staffPhone)
+        binding.edtAddress.setText(s.staffAddress)
     }
 
     private fun submit() {
-        val c = Customer(
-            name = binding.edtName.text.toString().trim(),
-            phone= binding.edtPhone.text.toString(),
-            address = binding.edtAddress.text.toString().trim(),
-            //photo = binding.imgUser.cropToBlob(300,300)
+        val s = Staff(
+            staffName = binding.edtName.text.toString().trim(),
+            staffPhone = binding.edtPhone.text.toString(),
+            staffAddress = binding.edtAddress.text.toString().trim(),
+            staffPhoto = binding.imgUser.cropToBlob(300,300)
         )
 
-        val err = vm.validate(c, false)
+        val err = vm.validate(s, false)
         if (err != "") {
             errorDialog(err)
             return
         }
 
-        vm.set(c)
+        vm.set(s)
         nav.navigateUp()
     }
 
     private fun delete() {
-        vm.delete(id)
+        vm.delete(staffId)
         nav.navigateUp()
     }
 }

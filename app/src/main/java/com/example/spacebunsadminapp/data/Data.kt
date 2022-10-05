@@ -38,6 +38,7 @@ data class Customer (
     var cusAddress : String = "",
     var cusPhoto   : Blob = Blob.fromBytes(ByteArray(0)),
     var date : Date = Date(),
+    var cusCount: Int = 0,
 )
 
 data class Staff(
@@ -46,7 +47,10 @@ data class Staff(
     var staffName: String = "",
     var staffEmail: String = "",
     var salary: Double = 0.00,
-    var Count: Int = 0,
+    var staffCount: Int = 0,
+    var staffPhone   : String = "",
+    var staffAddress : String = "",
+    var staffPhoto   : Blob = Blob.fromBytes(ByteArray(0)),
 )
 
 val STAFFS = Firebase.firestore.collection("staffs")

@@ -36,8 +36,8 @@ class StaffFragment : Fragment() {
                 nav.navigate(R.id.userUpdateFragment, bundleOf("staffId" to staff.staffId))
             }
         }
-        binding.rvStaffs.adapter = adapter
-        binding.rvStaffs.addItemDecoration(
+        binding.rvStaff.adapter = adapter
+        binding.rvStaff.addItemDecoration(
             DividerItemDecoration(
                 context,
                 DividerItemDecoration.VERTICAL
@@ -49,7 +49,7 @@ class StaffFragment : Fragment() {
         val arrayAdapter =
             ArrayAdapter<String>(requireContext(), android.R.layout.simple_spinner_item)
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        binding.spnStaffAttributes.adapter = arrayAdapter
+        binding.spnStaffAttribute.adapter = arrayAdapter
 
         val staffs = vm.getStaffAttributes()
         arrayAdapter.add("All")

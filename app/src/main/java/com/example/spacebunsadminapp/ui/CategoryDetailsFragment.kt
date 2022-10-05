@@ -37,7 +37,7 @@ class CategoryDetailsFragment : Fragment() {
         //           Load all fruits under a specific category
         lifecycleScope.launch {
             val category = vm.get(id)!!
-            binding.txtName.text = "${category.name} ($id)"
+            //binding.txtName.text = "${category.name} ($id)"
 
             val fruits = vm.getFruits(id)
             adapter.submitList(fruits)

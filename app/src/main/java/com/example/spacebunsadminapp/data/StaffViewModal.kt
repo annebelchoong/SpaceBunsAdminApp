@@ -72,6 +72,17 @@ class StaffViewModal : ViewModel() {
         else if (s.salary == 0.00) "- salary cannot be zero.\n"
         else ""
 
+        e += if (s.staffPhone == "") "- Phone no is required.\n"
+        else if (s.staffPhone.length < 11) "- Phone no is invalid.\n"
+        else ""
+
+        e += if (s.staffAddress == "") "- Address is required.\n"
+        else if (s.staffAddress.length < 50) "- Address is invalid.\n"
+        else ""
+
+        e += if (s.staffPhoto.toBytes().isEmpty()) "- Photo is required.\n"
+        else ""
+
         return e
     }
 
