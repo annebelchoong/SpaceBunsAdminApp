@@ -19,7 +19,7 @@
             app:layout_constraintGuide_begin="110dp" />
 
         <TextView
-            android:id="@+id/txtId"
+            android:id="@+id/txtUserId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -39,7 +39,7 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/txtId"
+            app:layout_constraintTop_toBottomOf="@+id/txtUserId"
             tools:text="XXX" />
 
         <TextView
@@ -76,10 +76,10 @@
             android:textAlignment="textEnd"
             android:textColor="#333"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/txtId"
+            app:layout_constraintBottom_toBottomOf="@+id/txtUserId"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/txtId" />
+            app:layout_constraintTop_toTopOf="@+id/txtUserId" />
 
         <TextView
             android:layout_width="0dp"

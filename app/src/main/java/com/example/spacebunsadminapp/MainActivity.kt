@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.userDetailsFragment,
                 R.id.changeEmailActivity,
                 R.id.resetPasswordActivity,
+                R.id.profileFragment,
             ),
             binding.drawerLayout
         )

@@ -108,7 +108,7 @@ class UserFragment : Fragment() {
         when (field) {
             "id"    -> binding.btnId.setCompoundDrawablesWithIntrinsicBounds(0, 0, res, 0)
             "name"  -> binding.btnName.setCompoundDrawablesWithIntrinsicBounds(0, 0, res, 0)
-            "price" -> binding.btnEmail.setCompoundDrawablesWithIntrinsicBounds(0, 0, res, 0)
+            "email" -> binding.btnEmail.setCompoundDrawablesWithIntrinsicBounds(0, 0, res, 0)
         }
     }
 }

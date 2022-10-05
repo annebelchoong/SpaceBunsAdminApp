@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Patterns
 import android.view.View
 import android.widget.Toast
+import com.example.spacebunsadminapp.databinding.ActivityChangeEmailBinding
 import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
@@ -70,17 +71,17 @@ class ChangeEmailActivity : AppCompatActivity() {
                 return@newEmail
             }
 
-            user?.let {
-                user.updateEmail(newEmail).addOnCompleteListener {
-                    if (it.isSuccessful) {
-                        Toast.makeText(this, "Email successfully change", Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this, AccountFragment::class.java))
-                        finish()
-                    } else {
-                        Toast.makeText(this, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
-                    }
-                }
-            }
+//            user?.let {
+//                user.updateEmail(newEmail).addOnCompleteListener {
+//                    if (it.isSuccessful) {
+//                        Toast.makeText(this, "Email successfully change", Toast.LENGTH_SHORT).show()
+//                        startActivity(Intent(this, AccountFragment::class.java))
+//                        finish()
+//                    } else {
+//                        Toast.makeText(this, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
+//                    }
+//                }
+//            }
 
         }
 

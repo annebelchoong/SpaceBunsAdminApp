@@ -1,5 +1,6 @@
 package com.example.spacebunsadminapp.data
 
+import com.google.firebase.firestore.Blob
 import com.google.firebase.firestore.DocumentId
 import com.google.firebase.firestore.Exclude
 import com.google.firebase.firestore.ktx.firestore
@@ -26,6 +27,26 @@ data class User(
     var category: Category = Category()
 }                           //empty file
 
+data class Customer (
+    @DocumentId
+    var id      : String = "",
+    var email   : String = "",
+    var password: String = "",
+    var name    : String = "",
+    var phone   : String = "",
+    var address : String = "",
+    var photo   : Blob = Blob.fromBytes(ByteArray(0)),
+)
+
+data class Staff(
+    @DocumentId
+    var staffId: String = "",
+    var staffEmail: String = "",
+    var salary: Double = 0.00,
+    var Count: Int = 0,
+)
+
+val STAFFS = Firebase.firestore.collection("staffs")
 // -------------------------------------------------------------------------------------------------
 
 val CATEGORIES = Firebase.firestore.collection("categories")

@@ -80,4 +80,9 @@
         android:name="com.example.spacebunsadminapp.ui.UserDetailsFragment"
         android:label="fragment_user_details"
         tools:layout="@layout/fragment_user_details" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.spacebunsadminapp.ui.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
