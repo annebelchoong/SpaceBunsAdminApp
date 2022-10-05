@@ -5,22 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.SearchView
-import androidx.core.os.bundleOf
-import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.spacebunsadminapp.R
-import com.example.spacebunsadminapp.data.Category
-import com.example.spacebunsadminapp.data.UserViewModal
-import com.example.spacebunsadminapp.databinding.FragmentProductsBinding
-import com.example.spacebunsadminapp.databinding.FragmentStaffInsertBinding
 import com.example.spacebunsadminapp.databinding.FragmentUserBinding
-import com.example.spacebunsadminapp.util.UserAdapter
-import kotlinx.coroutines.launch
 
 class UserFragment : Fragment() {
     private lateinit var binding: FragmentUserBinding

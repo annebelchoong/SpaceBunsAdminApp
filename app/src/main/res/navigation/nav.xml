@@ -75,11 +75,6 @@
         android:name="com.example.spacebunsadminapp.ui.CategoryDetailsFragment"
         android:label="fragment_category_details"
         tools:layout="@layout/fragment_category_details" />
-    <dialog
-        android:id="@+id/userDetailsFragment"
-        android:name="com.example.spacebunsadminapp.ui.UserDetailsFragment"
-        android:label="fragment_user_details"
-        tools:layout="@layout/fragment_user_details" />
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.spacebunsadminapp.ui.ProfileFragment"

@@ -15,52 +15,52 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/txtCusIdItem"
-            android:layout_width="45dp"
+            android:id="@+id/txtStaffIdItem"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:text="XXX"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="XXXX" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/txtCusNameItem"
-            android:layout_width="58dp"
-            android:layout_height="19dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCusIdItem"
-            tools:text="XXXXXX" />
-
-        <TextView
-            android:id="@+id/txtCusEmailItem"
+            android:id="@+id/txtStaffNameItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
+            android:text="XXXXXXXXX"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCusNameItem"
-            tools:text="email@mail" />
+            app:layout_constraintTop_toBottomOf="@+id/txtStaffIdItem" />
 
         <TextView
-            android:id="@+id/txtCusPasswordItem"
+            android:id="@+id/txtStaffEmailItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
+            android:text="XXXXX"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtStaffNameItem" />
+
+        <TextView
+            android:id="@+id/txtSalaryItem"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:text="0.0"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCusEmailItem" />
+            app:layout_constraintTop_toBottomOf="@+id/txtStaffEmailItem" />
 
         <Button
             android:id="@+id/btnDelete"

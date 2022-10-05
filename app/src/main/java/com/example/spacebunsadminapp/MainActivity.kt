@@ -5,10 +5,9 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.*
-import com.example.spacebunsadminapp.data.CategoryViewModel
-import com.example.spacebunsadminapp.data.UserViewModal
+import com.example.spacebunsadminapp.data.CustomerViewModel
+import com.example.spacebunsadminapp.data.StaffViewModal
 import com.example.spacebunsadminapp.databinding.ActivityMainBinding
-import com.example.spacebunsadminapp.databinding.HeaderBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,8 +16,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var abc: AppBarConfiguration
 
     // View models
-    private val categoryVM: CategoryViewModel by viewModels()
-    private val userVM: UserViewModal by viewModels()
+    private val cusVM: CustomerViewModel by viewModels()
+    private val staffVM: StaffViewModal by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +39,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.settingsFragment,
                 R.id.categoryFragment,
                 R.id.categoryDetailsFragment,
-                R.id.userDetailsFragment,
                 R.id.changeEmailActivity,
                 R.id.resetPasswordActivity,
                 R.id.profileFragment,
@@ -62,8 +60,8 @@ class MainActivity : AppCompatActivity() {
         binding.navView.setupWithNavController(nav)
 
         // Initialize view models
-        categoryVM.init()
-        userVM.init()
+        cusVM.init()
+        staffVM.init()
     }
 
     override fun onSupportNavigateUp(): Boolean {

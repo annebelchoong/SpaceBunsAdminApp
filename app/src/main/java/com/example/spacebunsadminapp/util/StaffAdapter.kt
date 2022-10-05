@@ -28,9 +28,9 @@ class StaffAdapter (
             val staff = getItem(position)
 
             holder.binding.txtStaffIdItem.text = staff.staffId
-            holder.binding.txtStaffName.text = staff.staffName
-            holder.binding.txtEmailItemList.text = staff.staffEmail
-            holder.binding.txtSalary.text = (staff.salary).toString()
+            holder.binding.txtStaffNameItem.text = staff.staffName
+            holder.binding.txtStaffEmailItem.text = staff.staffEmail
+            holder.binding.txtSalaryItem.text = (staff.salary).toString()
             //holder.binding.txtCount.text = staff.Count.toString() + " times" // count
 
             fn(holder, staff)
