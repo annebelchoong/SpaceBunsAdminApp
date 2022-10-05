@@ -31,7 +31,7 @@ class StaffFragment : Fragment() {
 
         binding.fabtnAddVoucher.setOnClickListener { nav.navigate(R.id.staffInsertFragment) }
 
-        adapter = VoucherAdapter { holder, staff ->
+        adapter = StaffAdapter { holder, staff ->
             holder.binding.root.setOnClickListener {
                 nav.navigate(R.id.userUpdateFragment, bundleOf("staffId" to staff.staffId))
             }

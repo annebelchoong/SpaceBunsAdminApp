@@ -30,11 +30,11 @@ class StaffListFragment : Fragment() {
         adapter = StaffAdapter { holder, staff ->
             // Item click -> navigate to UpdateFragment (id)
             holder.binding.root.setOnClickListener {
-                nav.navigate(R.id.staffUpdateFragment, bundleOf("id" to staff.id))
+                nav.navigate(R.id.staffUpdateFragment, bundleOf("id" to staff.staffId))
             }
             // Delete button click -> delete record
             holder.binding.btnDelete.setOnClickListener {
-                delete(staff.id)
+                delete(staff.staffId)
             }
         }
         binding.rv.adapter = adapter

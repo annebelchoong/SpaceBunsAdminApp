@@ -3,11 +3,12 @@ package com.example.spacebunsadminapp.util
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.spacebunsadminapp.data.Staff
 import com.example.spacebunsadminapp.databinding.ItemStaffBinding
 
-class StaffAdapter {
+class StaffAdapter (
         val fn: (ViewHolder, Staff) -> Unit = { _, _ -> }
     ) : ListAdapter<Staff, StaffAdapter.ViewHolder>(DiffCallback) {
 
