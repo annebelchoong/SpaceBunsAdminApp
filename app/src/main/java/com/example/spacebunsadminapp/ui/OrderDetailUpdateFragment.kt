@@ -9,6 +9,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.spacebunsadminapp.R
+import com.example.spacebunsadminapp.data.OrderStatusViewModel
 import com.example.spacebunsadminapp.data.Orders
 import com.example.spacebunsadminapp.data.OrdersViewModel
 import com.example.spacebunsadminapp.databinding.FragmentOrderDetailUpdateBinding
@@ -21,8 +22,8 @@ class OrderDetailUpdateFragment : Fragment() {
     private lateinit var binding: FragmentOrderDetailUpdateBinding
     private val nav by lazy { findNavController() }
     private val vm: OrdersViewModel by activityViewModels()
+    private val vmO: OrderStatusViewModel by activityViewModels()
 
-    private lateinit var adapter: OrderDetailsAdapter // for products
     private val id by lazy {arguments?.getString("orderId","")?: ""}
     private val formatter = DecimalFormat("0.00")
 
@@ -36,7 +37,7 @@ class OrderDetailUpdateFragment : Fragment() {
             binding.edtDate2.text = "${orders?.date}"
             binding.edtAddress2.text = "${orders?.address}"
             binding.edtPaymentMethod2.text = "${orders?.paymentMethod}"
-            binding.edtTotal2.text = "RM ${orders?.totalPrice}"
+            binding.edtTotal2.text = "RM ${"%.2f".format(orders?.totalPrice)}"
 //        }
 
         }
@@ -51,6 +52,16 @@ class OrderDetailUpdateFragment : Fragment() {
 //        }
 
         binding.btnUpdateStatus2.setOnClickListener { update() }
+
+        val adapter = OrderDetailsAdapter()
+        binding.rvOrderDetails2.adapter = adapter
+
+        lifecycleScope.launch{
+            val orderD = vmO.getOrderDetails(id)
+            adapter.submitList(orderD)
+
+        }
+
 
         return binding.root
     }

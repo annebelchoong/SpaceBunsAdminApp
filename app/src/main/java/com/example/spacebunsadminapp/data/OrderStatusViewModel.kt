@@ -53,4 +53,22 @@ class OrderStatusViewModel: ViewModel() {
         return orders
     }
 
+    suspend fun getOrderId(id:String): Orders?{
+        return ORDERDETAILS.document(id).get().await().toObject<Orders>()
+    }
+
+    suspend fun getOrderDetails(orderId: String): List<OrderDetails>{
+        val orderD = ORDERDETAILS
+            .get()
+            .await()
+            .toObjects<OrderDetails>()
+
+//        val orders = getOrderId(orderId)
+//
+//        for (o in orderD){
+//            o.order = orders!!
+//        }
+        return orderD
+    }
+
 }

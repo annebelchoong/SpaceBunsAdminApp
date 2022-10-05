@@ -23,6 +23,7 @@
         android:layout_height="210dp"
         android:background="@drawable/bottom_side_rounded_rectangle_white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -146,29 +147,17 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/lblPaymentMethod" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvOrderDetails"
+        android:layout_width="409dp"
+        android:layout_height="423dp"
+        android:isScrollContainer="true"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view3">
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvOrderDetails"
-            android:layout_width="409dp"
-            android:layout_height="423dp"
-            android:isScrollContainer="true"
-            app:layout_constraintBottom_toTopOf="@+id/view"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view3"
-            tools:listitem="@layout/item_order_detail" />
-    </ScrollView>
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        tools:listitem="@layout/item_order_detail" />
 
     <view
         android:id="@+id/view"

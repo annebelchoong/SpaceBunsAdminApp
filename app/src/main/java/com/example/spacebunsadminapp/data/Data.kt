@@ -1,11 +1,13 @@
 package com.example.spacebunsadminapp.data
 
+import com.google.firebase.firestore.Blob
 import com.google.firebase.firestore.DocumentId
 import com.google.firebase.firestore.Exclude
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.*
 
+// need have one more is the order type - delivery/pickup
 data class Orders(
     @DocumentId
     var orderId: String = "",
@@ -41,14 +43,16 @@ data class OrderDetails(
     var orderId: String = "",
     var productId: String = "",
     var productName: String = "",
-    var quantity: String = "",
-    var price: String = "",
+    var quantity: Int = 0,
+    var price: Double = 0.00,
+    var photo: Blob = Blob.fromBytes(ByteArray(0)),
 ){
     @get:Exclude
     var totalPrice: Double = 0.00
+    var order: Orders = Orders()
 }
 
-
+val ORDERDETAILS = Firebase.firestore.collection("orderDetails")
 val ORDERS = Firebase.firestore.collection("orders")
 val ORDERSTATUS = Firebase.firestore.collection("orderStatus")
 
