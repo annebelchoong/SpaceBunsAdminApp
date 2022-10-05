@@ -2,30 +2,33 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout3"
+    android:id="@+id/frameLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.VoucherUpdateFragment">
+    android:isScrollContainer="true"
+    tools:context=".ui.DonationsFragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="117dp" />
+        app:layout_constraintGuide_begin="103dp" />
 
     <TextView
-        android:id="@+id/txtVoucherIdFixed"
+        android:id="@+id/txtId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="30dp"
-        android:text="V001"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="XX99" />
 
     <EditText
-        android:id="@+id/edtVoucherCode"
+        android:id="@+id/edtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -33,17 +36,16 @@
         android:ems="10"
         android:importantForAccessibility="no"
         android:importantForAutofill="no"
-        android:inputType="none|textCapWords"
+        android:inputType="textCapWords"
         android:maxLength="50"
         android:textSize="16sp"
-        android:tooltipText="SAVE20"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/txtVoucherIdFixed"
+        app:layout_constraintTop_toBottomOf="@+id/txtId"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/edtDiscountPercentage"
-        android:layout_width="50dp"
+        android:id="@+id/edtAge"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -51,28 +53,55 @@
         android:importantForAccessibility="no"
         android:importantForAutofill="no"
         android:inputType="number"
-        android:maxLength="4"
+        android:maxLength="10"
         android:textSize="16sp"
-        android:tooltipText="20"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/edtVoucherCode"
+        app:layout_constraintTop_toBottomOf="@+id/edtName"
         tools:ignore="TouchTargetSizeCheck" />
 
+    <ImageView
+        android:id="@+id/imgPhoto"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#CCC"
+        android:cropToPadding="true"
+        android:padding="1dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/edtAge" />
+
     <TextView
-        android:id="@+id/txtUsedCountFIxed"
+        android:id="@+id/txtDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:text="51 times"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/edtDiscountPercentage" />
+        app:layout_constraintTop_toBottomOf="@+id/imgPhoto"
+        tools:text="XXX" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/grey"
+        android:text="Reset"
+        android:textColor="@android:color/white"
+        app:cornerRadius="50dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/txtDate" />
 
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/rounded_rectangle_gold"
         android:text="Update"
@@ -80,77 +109,71 @@
         app:layout_constraintTop_toTopOf="@+id/btnReset" />
 
     <Button
-        android:id="@+id/btnReset"
-        android:layout_width="wrap_content"
-        android:layout_height="56dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/grey"
-        android:text="Reset"
-        app:cornerRadius="50dp"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/txtUsedCountFIxed" />
-
-    <Button
-        android:id="@+id/btnDelete2"
+        android:id="@+id/btnDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="48dp"
         android:background="@android:color/transparent"
-        android:text="Delete This Voucher"
+        android:text="Delete This Event"
         android:textColor="@color/red"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/btnReset" />
 
     <TextView
-        android:id="@+id/lblId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:labelFor="@id/edtVoucherId"
+        android:labelFor="@id/txtId"
         android:text="Id"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/txtVoucherIdFixed"
+        app:layout_constraintBottom_toBottomOf="@+id/txtId"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/txtVoucherIdFixed" />
+        app:layout_constraintTop_toTopOf="@+id/txtId" />
 
     <TextView
-        android:id="@+id/lblVoucherCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:labelFor="@id/edtVoucherCode"
-        android:text="Voucher Code"
+        android:labelFor="@id/edtName"
+        android:text="Donation \nEvent Name"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/edtVoucherCode"
+        app:layout_constraintBottom_toBottomOf="@+id/edtName"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/edtVoucherCode" />
+        app:layout_constraintTop_toTopOf="@+id/edtName" />
 
     <TextView
-        android:id="@+id/lblDiscountPercentage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:labelFor="@id/edtDiscountPercentage"
-        android:text="Discount %"
+        android:labelFor="@id/edtAge"
+        android:text="Donation \nGoal (RM)"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/edtDiscountPercentage"
+        app:layout_constraintBottom_toBottomOf="@+id/edtAge"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/edtDiscountPercentage" />
+        app:layout_constraintTop_toTopOf="@+id/edtAge" />
 
     <TextView
-        android:id="@+id/lblUsedCount1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:editable="false"
-        android:labelFor="@id/edtDiscountPercentage"
-        android:text="Used"
+        android:labelFor="@id/imgPhoto"
+        android:text="Event\nPhoto"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/txtUsedCountFIxed"
+        app:layout_constraintBottom_toBottomOf="@+id/imgPhoto"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/txtUsedCountFIxed" />
+        app:layout_constraintTop_toTopOf="@+id/imgPhoto" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:labelFor="@id/txtDate"
+        android:text="Creation\nDate"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtDate"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/txtDate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,20 +13,24 @@
         android:layout_height="match_parent"
         tools:context=".ui.DonationEventsFragment">
 
-        <!--    <androidx.core.widget.NestedScrollView-->
-        <!--        android:id="@+id/root_leyaut"-->
+        <!--        &lt;!&ndash; Nested Scroll view &ndash;&gt;-->
+        <!--        <androidx.core.widget.NestedScrollView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent">-->
+
+        <!--    <ScrollView-->
         <!--        android:layout_width="match_parent"-->
         <!--        android:layout_height="wrap_content"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
         <!--        app:layout_constraintStart_toStartOf="parent"-->
-        <!--        app:layout_constraintTop_toTopOf="parent" >-->
+        <!--        app:layout_constraintTop_toTopOf="parent">-->
 
         <TextView
             android:id="@+id/pcTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:layout_marginTop="16dp"
             android:gravity="center"
             android:padding="4dp"
             android:text="Donation Events"
@@ -37,6 +41,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/pieChart"
@@ -119,7 +124,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="64dp"
-            android:text="Donor"
+            android:text="Donation Event"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/lblDonationEventId"
             app:layout_constraintEnd_toStartOf="@+id/lblDonationAmount"
@@ -130,24 +135,12 @@
             android:id="@+id/lblDonationAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="54dp"
-            android:text="Amount (RM)"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="@+id/lblDonationEventId"
-            app:layout_constraintEnd_toStartOf="@+id/lblUsedCount"
-            app:layout_constraintTop_toTopOf="@+id/lblDonationEventId" />
-
-        <TextView
-            android:id="@+id/lblUsedCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="28dp"
-            android:text="Date"
+            android:layout_marginEnd="24dp"
+            android:text="Goal (RM)"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/lblDonationEventId"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/lblDonationEventId"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="@+id/lblDonationEventId" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvDonations"
@@ -198,7 +191,6 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_begin="415dp" />
 
-        <!--    </androidx.core.widget.NestedScrollView>-->
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabtnAddDonationEvent"
@@ -211,6 +203,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <!--    </androidx.core.widget.NestedScrollView>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

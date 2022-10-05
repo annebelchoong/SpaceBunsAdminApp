@@ -21,17 +21,17 @@ data class Orders(
     var voucherId: String = "",
     val deliveryFee: Double = 3.00,
 
-) {
+    ) {
     @get:Exclude
-    var count : Int = 0
+    var count: Int = 0
     var orderStatus: OrderStatus = OrderStatus()
 }
 
 data class OrderStatus(
     @DocumentId
-    var id:  String ="",
+    var id: String = "",
     var name: String = "",
-){
+) {
     @get:Exclude
     var count: Int = 0
     override fun toString() = name
@@ -46,7 +46,9 @@ data class OrderDetails(
     var quantity: Int = 0,
     var price: Double = 0.00,
     var photo: Blob = Blob.fromBytes(ByteArray(0)),
-){
+    var quantity: String = "",
+    var price: String = "",
+) {
     @get:Exclude
     var totalPrice: Double = 0.00
     var order: Orders = Orders()
@@ -75,6 +77,7 @@ data class DonationEvent(
     var donationEventId: String = "",
     var donationEventName: String = "",
     var donationGoal: Double = 0.00,
+    var donationEventPhoto: Blob = Blob.fromBytes(ByteArray(0)),
     var donationStartDate: Date = Date() // current Date
 ) {
     // TODO(1): Additional field: [count] and [toString]
@@ -83,16 +86,21 @@ data class DonationEvent(
     override fun toString() = donationEventName     // for spinner
 }
 
-val DONATIONS_EVENT = Firebase.firestore.collection("donationEvents")
+val DONATION_EVENTS = Firebase.firestore.collection("donationEvents")
 
 data class Donation(
     @DocumentId
     var donationId: String = "",
     var donorName: String = "",
     var donationAmount: Double = 0.00,
-
+    var donationEventId: String = "",
     var donationDate: Date = Date() // current Date
-)
+) {
+    // TODO(2): Additional field: [dEvent]
+
+    @get: Exclude
+    var donationEvent: DonationEvent = DonationEvent()
+}
 
 val DONATIONS = Firebase.firestore.collection("donations")
 

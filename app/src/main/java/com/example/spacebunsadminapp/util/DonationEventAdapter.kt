@@ -41,6 +41,9 @@ class DonationEventAdapter(
         holder.binding.txtDonationEventName.text = donationEvent.donationEventName
         holder.binding.txtDonationGoal.text = (donationEvent.donationGoal).toString()
 
+        // TODO: Load photo blob (use extension method)
+        holder.binding.imgDonationEvent.setImageBlob(donationEvent.donationEventPhoto)
+
         // TODO(9): Display [count] field
         holder.binding.txtDonationCount.text = "${donationEvent.count} Donation(s)"
 

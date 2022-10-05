@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+
         <entry key="app/src/main/res/drawable/bottom_side_rounded_rectangle_gold.xml" value="0.2015" />
         <entry key="app/src/main/res/drawable/bottom_side_rounded_rectangle_white.xml" value="0.2015" />
         <entry key="app/src/main/res/drawable/circle.xml" value="0.1565" />
@@ -47,6 +48,44 @@
         <entry key="app/src/main/res/layout/order_details.xml" value="0.375" />
         <entry key="app/src/main/res/layout/update_order_status.xml" value="0.375" />
         <entry key="app/src/main/res/menu/drawer.xml" value="0.5835391861353165" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/bottom_side_rounded_rectangle_gold.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/bottom_side_rounded_rectangle_white.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/circular_progressbar.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/circular_progressbar_mini.xml" value="0.337" />
+        <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.442" />
+        <entry key="app/src/main/res/drawable/ic_down.xml" value="0.1955" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/rounded_rectangle.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/rounded_rectangle_gold.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/rounded_rectangle_white.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/shadow.xml" value="0.4275" />
+        <entry key="app/src/main/res/drawable/top_side_rounded_rectangle_gole.xml" value="0.4275" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.4625908507909363" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.4625908507909363" />
+        <entry key="app/src/main/res/layout/fragment_donation_detail.xml" value="0.33190262405960647" />
+        <entry key="app/src/main/res/layout/fragment_donation_event_detail.xml" value="0.33190262405960647" />
+        <entry key="app/src/main/res/layout/fragment_donation_events.xml" value="0.44655385885266197" />
+        <entry key="app/src/main/res/layout/fragment_donation_events_insert.xml" value="0.4625908507909363" />
+        <entry key="app/src/main/res/layout/fragment_donation_events_update.xml" value="0.4625908507909363" />
+        <entry key="app/src/main/res/layout/fragment_donations.xml" value="0.4625908507909363" />
+        <entry key="app/src/main/res/layout/fragment_donations_copy.xml" value="0.4625908507909363" />
+        <entry key="app/src/main/res/layout/fragment_insert_voucher.xml" value="0.33190262405960647" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.24003707136237257" />
+        <entry key="app/src/main/res/layout/fragment_update_voucher.xml" value="0.4625908507909363" />
+        <entry key="app/src/main/res/layout/fragment_voucher_insert.xml" value="0.45673279864921906" />
+        <entry key="app/src/main/res/layout/fragment_voucher_update.xml" value="0.45673279864921906" />
+        <entry key="app/src/main/res/layout/fragment_vouchers.xml" value="0.4625908507909363" />
+        <entry key="app/src/main/res/layout/header.xml" value="0.4625908507909363" />
+        <entry key="app/src/main/res/layout/item_donation.xml" value="0.4625908507909363" />
+        <entry key="app/src/main/res/layout/item_donation_event.xml" value="0.4625908507909363" />
+        <entry key="app/src/main/res/layout/item_donation_event_details.xml" value="0.35032437442076" />
+        <entry key="app/src/main/res/layout/item_donation_events.xml" value="0.46173578452330055" />
+        <entry key="app/src/main/res/layout/item_order.xml" value="0.4625908507909363" />
+        <entry key="app/src/main/res/layout/item_voucher.xml" value="0.46173578452330055" />
+        <entry key="app/src/main/res/layout/testmain.xml" value="0.23262279888785914" />
+        <entry key="app/src/main/res/layout/testrun.xml" value="0.4558885605740819" />
+        <entry key="app/src/main/res/menu/drawer.xml" value="0.4625908507909363" />
       </map>
     </option>
   </component>
@@ -55,12 +94,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.375" />
-      </ProjectState>
-    </option>
   </component>
 </project>

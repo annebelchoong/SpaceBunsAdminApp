@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
+import com.example.spacebunsadminapp.R
 import com.example.spacebunsadminapp.data.Voucher
 import com.example.spacebunsadminapp.data.VoucherViewModel
 import com.example.spacebunsadminapp.databinding.FragmentVoucherUpdateBinding
@@ -28,6 +30,7 @@ class VoucherUpdateFragment : Fragment() {
         reset()
         binding.btnReset.setOnClickListener { reset() }
         binding.btnSubmit.setOnClickListener { submit() }
+        binding.btnDelete2.setOnClickListener { delete() }
 
         return binding.root
     }
@@ -65,6 +68,20 @@ class VoucherUpdateFragment : Fragment() {
         vm.set(v)
 
         nav.navigateUp()
+    }
+
+//    private fun delete() {
+//        // TODO: Delete
+//        vm.delete(voucherId)
+//
+//        nav.navigateUp()
+//    }
+
+    private fun delete() {
+        vm.delete(voucherId)
+
+        nav.navigateUp()
+//        Navigation.findNavController(binding.root).popBackStack(R.id.vouchersFragment, false)
     }
 }
 

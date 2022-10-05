@@ -23,8 +23,8 @@
         android:ems="10"
         android:importantForAccessibility="no"
         android:importantForAutofill="no"
-        android:inputType="textCapCharacters"
         android:maxLength="4"
+        android:textAllCaps="true"
         android:textSize="16sp"
         android:tooltipText="V001"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -37,11 +37,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:capitalize="words"
         android:ems="10"
         android:importantForAccessibility="no"
         android:importantForAutofill="no"
-        android:inputType="none|textCapWords"
+        android:inputType="none"
         android:maxLength="50"
+        android:textAllCaps="false"
         android:textSize="16sp"
         android:tooltipText="SAVE20"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -65,23 +67,38 @@
         app:layout_constraintTop_toBottomOf="@+id/edtDonationEventName"
         tools:ignore="TouchTargetSizeCheck" />
 
+    <ImageView
+        android:id="@+id/imgDonationEventPhoto"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#CCC"
+        android:cropToPadding="true"
+        android:padding="1dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/edtDonationGoal" />
+
     <Button
         android:id="@+id/btnReset"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:background="@android:color/transparent"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/grey"
         android:text="Reset"
-        android:textColor="@android:color/holo_red_dark"
+        android:textColor="@color/white"
+        app:cornerRadius="50dp"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/edtDonationGoal" />
+        app:layout_constraintTop_toBottomOf="@+id/imgDonationEventPhoto" />
 
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:background="@drawable/rounded_rectangle_gold"
         android:text="Create"
         app:layout_constraintStart_toEndOf="@+id/btnReset"
@@ -122,5 +139,17 @@
         app:layout_constraintBottom_toBottomOf="@+id/edtDonationGoal"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/edtDonationGoal" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/imgPhoto"
+        android:text="Event Photo"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgDonationEventPhoto"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/edtDonationGoal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
