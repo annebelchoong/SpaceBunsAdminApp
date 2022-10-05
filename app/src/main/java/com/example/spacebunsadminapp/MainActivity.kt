@@ -44,6 +44,10 @@ class MainActivity : AppCompatActivity() {
                 R.id.changeEmailActivity,
                 R.id.resetPasswordActivity,
                 R.id.profileFragment,
+                R.id.userUpdateFragment,
+                R.id.staffFragment,
+                R.id.staffInsertFragment,
+
             ),
             binding.drawerLayout
         )

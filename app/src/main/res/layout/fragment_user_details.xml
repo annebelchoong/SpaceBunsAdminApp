@@ -19,7 +19,7 @@
             app:layout_constraintGuide_begin="110dp" />
 
         <TextView
-            android:id="@+id/txtUserId"
+            android:id="@+id/txtStaffId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -31,7 +31,7 @@
             tools:text="XXX" />
 
         <TextView
-            android:id="@+id/txtName"
+            android:id="@+id/txtStaffName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -39,7 +39,7 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/txtUserId"
+            app:layout_constraintTop_toBottomOf="@+id/txtStaffId"
             tools:text="XXX" />
 
         <TextView
@@ -51,7 +51,7 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/txtName"
+            app:layout_constraintTop_toBottomOf="@+id/txtStaffName"
             tools:text="XXX" />
 
         <TextView
@@ -76,10 +76,10 @@
             android:textAlignment="textEnd"
             android:textColor="#333"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/txtUserId"
+            app:layout_constraintBottom_toBottomOf="@+id/txtStaffId"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/txtUserId" />
+            app:layout_constraintTop_toTopOf="@+id/txtStaffId" />
 
         <TextView
             android:layout_width="0dp"
@@ -91,10 +91,10 @@
             android:textAlignment="textEnd"
             android:textColor="#333"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/txtName"
+            app:layout_constraintBottom_toBottomOf="@+id/txtStaffName"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/txtName" />
+            app:layout_constraintTop_toTopOf="@+id/txtStaffName" />
 
         <TextView
             android:layout_width="0dp"

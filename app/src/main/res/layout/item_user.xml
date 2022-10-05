@@ -11,7 +11,7 @@
         android:padding="4dp">
 
         <TextView
-            android:id="@+id/txtUserId"
+            android:id="@+id/txtStaffId"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
@@ -22,7 +22,7 @@
             tools:text="XXX" />
 
         <TextView
-            android:id="@+id/txtName"
+            android:id="@+id/txtStaffName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -31,7 +31,7 @@
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/txtCategory"
-            app:layout_constraintStart_toEndOf="@+id/txtUserId"
+            app:layout_constraintStart_toEndOf="@+id/txtStaffId"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="XXXXXX" />
 

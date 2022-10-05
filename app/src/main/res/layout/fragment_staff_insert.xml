@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.UserUpdateFragment" >
+    tools:context=".ui.StaffInsertFragment" >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.UpdateFragment">
+        tools:context=".ui.InsertFragment"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="-59dp">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
@@ -18,20 +20,8 @@
             android:orientation="vertical"
             app:layout_constraintGuide_begin="80dp" />
 
-        <TextView
-            android:id="@+id/txtStaffId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="XXX" />
-
         <EditText
-            android:id="@+id/edtStaffName"
+            android:id="@+id/edtStaffIdInsert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -39,15 +29,31 @@
             android:ems="10"
             android:importantForAccessibility="no"
             android:importantForAutofill="no"
-            android:inputType="textCapWords"
-            android:maxLength="50"
+            android:inputType="textCapCharacters"
+            android:maxLength="4"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/txtStaffId"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
-            android:id="@+id/edtStaffEmail"
+            android:id="@+id/edtStaffNameInsert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:importantForAccessibility="no"
+            android:importantForAutofill="no"
+            android:inputType="none|textCapWords"
+            android:maxLength="50"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/edtStaffIdInsert"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/edtEmailInsert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -59,43 +65,17 @@
             android:maxLength="2"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/edtStaffName"
+            app:layout_constraintTop_toBottomOf="@+id/edtStaffNameInsert"
             tools:ignore="TouchTargetSizeCheck" />
-
-        <ImageView
-            android:id="@+id/imgPhoto"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="#CCC"
-            android:cropToPadding="true"
-            android:padding="1dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/edtStaffEmail" />
-
-        <TextView
-            android:id="@+id/txtDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/imgPhoto"
-            tools:text="XXX" />
 
         <Button
             android:id="@+id/btnReset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:text="Reset"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/txtDate" />
+            tools:layout_editor_absoluteY="368dp" />
 
         <Button
             android:id="@+id/btnSubmit"
@@ -106,69 +86,60 @@
             app:layout_constraintStart_toEndOf="@+id/btnReset"
             app:layout_constraintTop_toTopOf="@+id/btnReset" />
 
-        <Button
-            android:id="@+id/btnDelete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="Delete"
-            app:layout_constraintStart_toEndOf="@+id/btnSubmit"
-            app:layout_constraintTop_toTopOf="@+id/btnSubmit" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:labelFor="@id/txtStaffId"
+            android:labelFor="@id/edtStaffIdInsert"
             android:text="Id"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/txtStaffId"
+            app:layout_constraintBottom_toBottomOf="@+id/edtStaffIdInsert"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/txtStaffId" />
+            app:layout_constraintTop_toTopOf="@+id/edtStaffIdInsert" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:labelFor="@id/edtStaffName"
+            android:labelFor="@id/edtStaffNameInsert"
             android:text="Name"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/edtStaffName"
+            app:layout_constraintBottom_toBottomOf="@+id/edtStaffNameInsert"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/edtStaffName" />
+            app:layout_constraintTop_toTopOf="@+id/edtStaffNameInsert" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:labelFor="@id/edtStaffEmail"
+            android:labelFor="@id/edtEmailInsert"
             android:text="Email"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/edtStaffEmail"
+            app:layout_constraintBottom_toBottomOf="@+id/edtEmailInsert"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/edtStaffEmail" />
+            app:layout_constraintTop_toTopOf="@+id/edtEmailInsert" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:labelFor="@id/imgPhoto"
-            android:text="Photo"
+            android:text="Salary"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imgPhoto"
+            app:layout_constraintBottom_toBottomOf="@+id/edtSalaryInsert"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/imgPhoto" />
+            app:layout_constraintTop_toTopOf="@+id/edtSalaryInsert" />
 
-        <TextView
+        <EditText
+            android:id="@+id/edtSalaryInsert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:labelFor="@id/txtDate"
-            android:text="Date"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/txtDate"
-            app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/txtDate" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/edtEmailInsert" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

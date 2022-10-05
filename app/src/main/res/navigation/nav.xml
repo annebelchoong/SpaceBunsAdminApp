@@ -85,4 +85,29 @@
         android:name="com.example.spacebunsadminapp.ui.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/staffFragment"
+        android:name="com.example.spacebunsadminapp.ui.StaffFragment"
+        android:label="fragment_staff"
+        tools:layout="@layout/fragment_staff" />
+    <fragment
+        android:id="@+id/staffUpdateFragment"
+        android:name="com.example.spacebunsadminapp.ui.StaffUpdateFragment"
+        android:label="fragment_staff_update"
+        tools:layout="@layout/fragment_staff_update" />
+    <fragment
+        android:id="@+id/updateProfileFragment"
+        android:name="com.example.spacebunsadminapp.ui.UpdateProfileFragment"
+        android:label="fragment_update_profile"
+        tools:layout="@layout/fragment_update_profile" />
+    <fragment
+        android:id="@+id/userUpdateFragment"
+        android:name="com.example.spacebunsadminapp.ui.UserUpdateFragment"
+        android:label="fragment_user_update"
+        tools:layout="@layout/fragment_user_update" />
+    <fragment
+        android:id="@+id/staffInsertFragment"
+        android:name="com.example.spacebunsadminapp.ui.StaffInsertFragment"
+        android:label="fragment_staff_insert"
+        tools:layout="@layout/fragment_staff_insert" />
 </navigation>

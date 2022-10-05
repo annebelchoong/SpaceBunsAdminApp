@@ -41,6 +41,7 @@ data class Customer (
 data class Staff(
     @DocumentId
     var staffId: String = "",
+    var staffName: String = "",
     var staffEmail: String = "",
     var salary: Double = 0.00,
     var Count: Int = 0,

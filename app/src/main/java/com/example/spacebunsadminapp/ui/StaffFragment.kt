@@ -29,11 +29,11 @@ class StaffFragment : Fragment() {
     ): View {
         binding = FragmentStaffBinding.inflate(inflater, container, false)
 
-        binding.fabtnAddVoucher.setOnClickListener { nav.navigate(R.id.voucherInsertFragment) }
+        binding.fabtnAddVoucher.setOnClickListener { nav.navigate(R.id.staffInsertFragment) }
 
         adapter = VoucherAdapter { holder, staff ->
             holder.binding.root.setOnClickListener {
-                nav.navigate(R.id.updateVoucherFragment, bundleOf("staffId" to staff.staffId))
+                nav.navigate(R.id.userUpdateFragment, bundleOf("staffId" to staff.staffId))
             }
         }
         binding.rvVouchers.adapter = adapter

@@ -1,11 +1,14 @@
 package com.example.spacebunsadminapp.util
 
 import android.view.LayoutInflater
+import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.RecyclerView
 import com.example.spacebunsadminapp.data.Staff
+import com.example.spacebunsadminapp.databinding.ItemStaffBinding
 
 class StaffAdapter {
-    val fn: (ViewHolder, Staff) -> Unit = { _, _ -> }
+        val fn: (ViewHolder, Staff) -> Unit = { _, _ -> }
     ) : ListAdapter<Staff, StaffAdapter.ViewHolder>(DiffCallback) {
 
         companion object DiffCallback : DiffUtil.ItemCallback<Staff>() {
@@ -13,20 +16,23 @@ class StaffAdapter {
             override fun areContentsTheSame(a: Staff, b: Staff) = a == b
         }
 
-        class ViewHolder(val binding: ItemVoucherBinding) : RecyclerView.ViewHolder(binding.root)
+        class ViewHolder(val binding: ItemStaffBinding) : RecyclerView.ViewHolder(binding.root)
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-            val binding = ItemVoucherBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            val binding = ItemStaffBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             return ViewHolder(binding)
         }
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            val voucher = getItem(position)
+            val staff = getItem(position)
 
-            holder.binding.txtVoucherId.text = voucher.voucherId
-            holder.binding.txtVoucherCode.text = voucher.voucherCode
-            holder.binding.txtDiscountPercentage.text = (voucher.discountPercentage).toString()
-            holder.binding.txtUsedCount.text = voucher.usedCount.toString() + " times" // count
+            holder.binding.txtStaffIdItem.text = staff.staffId
+            holder.binding.txtStaffName.text = staff.staffName
+            holder.binding.txtEmailItemList.text = staff.staffEmail
+            holder.binding.txtSalary.text = (staff.salary).toString()
+            //holder.binding.txtCount.text = staff.Count.toString() + " times" // count
 
-            fn(holder, voucher
-}
+            fn(holder, staff)
+        }
+
+    }

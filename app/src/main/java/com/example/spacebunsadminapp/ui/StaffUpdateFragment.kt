@@ -8,14 +8,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.spacebunsadminapp.R
+import com.example.spacebunsadminapp.data.Staff
 import com.example.spacebunsadminapp.data.StaffViewModal
 import com.example.spacebunsadminapp.databinding.FragmentStaffUpdateBinding
+import com.example.spacebunsadminapp.util.errorDialog
 
 class StaffUpdateFragment : Fragment() {
     private lateinit var binding: FragmentStaffUpdateBinding
     private val nav by lazy { findNavController() }
     private val vm: StaffViewModal by activityViewModels()
-    private val voucherId by lazy { arguments?.getString("voucherId") ?: "" }
+    private val staffId by lazy { arguments?.getString("staffId") ?: "" }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,35 +36,37 @@ class StaffUpdateFragment : Fragment() {
 
     private fun reset() {
         // TODO: Get
-        val v = vm.get(voucherId)
+        val s = vm.get(staffId)
 
-        if (v == null) {
+        if (s == null) {
             nav.navigateUp()
             return
         }
 
-        binding.txtVoucherIdFixed.text = v.voucherId
-        binding.edtVoucherCode.setText(v.voucherCode)
-        binding.edtDiscountPercentage.setText(v.discountPercentage.toString())
+        binding.txtStaffId.text = s.staffId
+        binding.edtStaffName.setText(s.staffName)
+        binding.edtStaffEmail.setText(s.staffEmail)
+        binding.edtSalary.setText(s.salary.toString())
 
-        binding.edtVoucherCode.requestFocus()
+        binding.edtStaffName.requestFocus()
     }
 
     private fun submit() {
-        val v = Voucher(
-            voucherId = binding.txtVoucherIdFixed.text.toString().trim(),
-            voucherCode = binding.edtVoucherCode.text.toString().trim().uppercase(),
-            discountPercentage = binding.edtDiscountPercentage.text.toString().toDoubleOrNull()
+        val s = Staff(
+            staffId = binding.txtStaffId.text.toString().trim(),
+            staffName = binding.edtStaffName.text.toString().trim(),
+            staffEmail = binding.edtStaffEmail.text.toString().trim(),
+            salary = binding.edtSalary.text.toString().toDoubleOrNull()
                 ?: 0.00,
         )
 
-        val err = vm.validate(v, false)
+        val err = vm.validate(s, false)
         if (err != "") {
             errorDialog(err)
             return
         }
 
-        vm.set(v)
+        vm.set(s)
 
         nav.navigateUp()
     }
@@ -75,7 +79,7 @@ class StaffUpdateFragment : Fragment() {
 //    }
 
     private fun delete() {
-        vm.delete(voucherId)
+        vm.delete(staffId)
 
         nav.navigateUp()
 //        Navigation.findNavController(binding.root).popBackStack(R.id.vouchersFragment, false)

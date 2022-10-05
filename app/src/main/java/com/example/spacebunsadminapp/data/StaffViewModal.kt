@@ -44,7 +44,7 @@ class StaffViewModal : ViewModel() {
     //----------------------------------------------------------------------------------------------
 
     private fun idExists(id: String) = staffs.value?.any { it.staffId == id } ?: false
-    private fun emailExists(code: String) = staffs.value?.any { it.staffEmail == email } ?: false
+    private fun emailExists(email: String) = staffs.value?.any { it.staffEmail == email } ?: false
 
     fun validate(s: Staff, insert: Boolean = true): String {
         val regexId = Regex("""^[A-Z]\d{3}$""")
@@ -63,6 +63,10 @@ class StaffViewModal : ViewModel() {
         else if (emailExists(s.staffEmail)) "- Email is duplicated.\n"
         else ""
 
+        e += if (s.staffName == "") "- Name is required.\n"
+        else if (s.staffName.length < 1) "- Name is too short (at least 3 letters).\n"
+        else ""
+
 //        e += if (v.discountPercentage < 0.01 || v.discountPercentage > 1.00) "- DiscountPercentage must be within 0.01 to 1.00 only.\n"
         e += if (s.salary < 1 ) "- salary must be more than 1.\n"
         else if (s.salary == 0.00) "- salary cannot be zero.\n"
@@ -73,6 +77,6 @@ class StaffViewModal : ViewModel() {
 
     fun getStaffAttributes(): List<String> {
 //        return STAFFS.get().await().toObjects<Staff>()
-        return listOf("ID", "Email", "Salary")
+        return listOf("ID", "Email", "Name", "Salary")
     }
 }
