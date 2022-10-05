@@ -47,6 +47,12 @@ class MainActivity : AppCompatActivity() {
                 R.id.userUpdateFragment,
                 R.id.staffFragment,
                 R.id.staffInsertFragment,
+                R.id.staffUpdateFragment,
+                R.id.staffListFragment,
+                R.id.customerFragment,
+                R.id.customerListFragment,
+                R.id.customerInsertFragment,
+                R.id.customerUpdateFragment,
 
             ),
             binding.drawerLayout

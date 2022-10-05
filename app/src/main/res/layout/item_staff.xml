@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/txtStaffIdItem"
+            android:id="@+id/txtCusIdItem"
             android:layout_width="45dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -27,7 +27,7 @@
             tools:text="XXXX" />
 
         <TextView
-            android:id="@+id/txtStaffName"
+            android:id="@+id/txtCusNameItem"
             android:layout_width="58dp"
             android:layout_height="19dp"
             android:layout_marginStart="8dp"
@@ -35,11 +35,11 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtStaffIdItem"
+            app:layout_constraintTop_toBottomOf="@+id/txtCusIdItem"
             tools:text="XXXXXX" />
 
         <TextView
-            android:id="@+id/txtEmailItemList"
+            android:id="@+id/txtCusEmailItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -47,11 +47,11 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtStaffName"
+            app:layout_constraintTop_toBottomOf="@+id/txtCusNameItem"
             tools:text="email@mail" />
 
         <TextView
-            android:id="@+id/txtSalary"
+            android:id="@+id/txtCusPasswordItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -60,7 +60,7 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtEmailItemList" />
+            app:layout_constraintTop_toBottomOf="@+id/txtCusEmailItem" />
 
         <Button
             android:id="@+id/btnDelete"

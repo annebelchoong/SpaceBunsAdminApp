@@ -13,7 +13,7 @@
         tools:context=".ui.VouchersFragment">
 
         <TextView
-            android:id="@+id/lblStaffId"
+            android:id="@+id/lblCusId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="22dp"
@@ -21,30 +21,30 @@
             android:text="ID"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/svStaffs" />
+            app:layout_constraintTop_toBottomOf="@+id/svCus" />
 
         <TextView
-            android:id="@+id/lblStaffName"
+            android:id="@+id/lblCusName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:text="Name"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="@+id/lblStaffId"
-            app:layout_constraintEnd_toStartOf="@+id/lblEmail"
-            app:layout_constraintStart_toEndOf="@+id/lblStaffId"
-            app:layout_constraintTop_toTopOf="@+id/lblStaffId" />
+            app:layout_constraintBottom_toBottomOf="@+id/lblCusId"
+            app:layout_constraintEnd_toStartOf="@+id/lblCusEmail"
+            app:layout_constraintStart_toEndOf="@+id/lblCusId"
+            app:layout_constraintTop_toTopOf="@+id/lblCusId" />
 
         <TextView
-            android:id="@+id/lblEmail"
+            android:id="@+id/lblCusEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="54dp"
             android:text="Email"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="@+id/lblStaffId"
+            app:layout_constraintBottom_toBottomOf="@+id/lblCusId"
             app:layout_constraintEnd_toStartOf="@+id/lblSalary"
-            app:layout_constraintTop_toTopOf="@+id/lblStaffId" />
+            app:layout_constraintTop_toTopOf="@+id/lblCusId" />
 
         <TextView
             android:id="@+id/lblSalary"
@@ -53,13 +53,13 @@
             android:layout_marginEnd="28dp"
             android:text="RM"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="@+id/lblStaffId"
+            app:layout_constraintBottom_toBottomOf="@+id/lblCusId"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/lblStaffId"
+            app:layout_constraintTop_toTopOf="@+id/lblCusId"
             app:layout_constraintVertical_bias="0.0" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvStaffs"
+            android:id="@+id/rvCus"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -67,22 +67,22 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lblStaffId"
+            app:layout_constraintTop_toBottomOf="@+id/lblCusId"
             tools:listitem="@layout/item_voucher" />
 
         <TextView
-            android:id="@+id/txtStaffCount"
+            android:id="@+id/txtCusCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="00 Record(s)"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="@+id/svStaffs"
-            app:layout_constraintStart_toEndOf="@+id/svStaffs"
-            app:layout_constraintTop_toTopOf="@+id/svStaffs" />
+            app:layout_constraintBottom_toBottomOf="@+id/svCus"
+            app:layout_constraintStart_toEndOf="@+id/svCus"
+            app:layout_constraintTop_toTopOf="@+id/svCus" />
 
         <SearchView
-            android:id="@+id/svStaffs"
+            android:id="@+id/svCus"
             android:layout_width="150dp"
             android:layout_height="45dp"
             android:layout_marginStart="16dp"
@@ -92,16 +92,16 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Spinner
-            android:id="@+id/spnStaffAttributes"
+            android:id="@+id/spnCustomerAttributes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/txtStaffCount"
+            app:layout_constraintBottom_toBottomOf="@+id/txtCusCount"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/txtStaffCount" />
+            app:layout_constraintTop_toTopOf="@+id/txtCusCount" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabtnAddStaff"
+            android:id="@+id/fabtnAddCus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"

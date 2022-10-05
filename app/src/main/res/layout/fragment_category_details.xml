@@ -21,7 +21,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/txtStaffName"
+            android:id="@+id/txtCusNameItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -39,9 +39,9 @@
             android:layout_marginEnd="8dp"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/txtStaffName"
+            app:layout_constraintBottom_toBottomOf="@+id/txtCusNameItem"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/txtStaffName"
+            app:layout_constraintTop_toTopOf="@+id/txtCusNameItem"
             tools:text="00 Fruit(s)" />
 
         <androidx.recyclerview.widget.RecyclerView

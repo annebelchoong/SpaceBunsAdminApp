@@ -5,6 +5,7 @@ import com.google.firebase.firestore.DocumentId
 import com.google.firebase.firestore.Exclude
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import java.util.*
 
 data class Category(  //when compare, it will compare what in the bracket - id, name
     @DocumentId
@@ -29,13 +30,14 @@ data class User(
 
 data class Customer (
     @DocumentId
-    var id      : String = "",
-    var email   : String = "",
-    var password: String = "",
-    var name    : String = "",
-    var phone   : String = "",
-    var address : String = "",
-    var photo   : Blob = Blob.fromBytes(ByteArray(0)),
+    var cusId      : String = "",
+    var cusEmail   : String = "",
+    var cusPassword: String = "",
+    var cusName    : String = "",
+    var cusPhone   : String = "",
+    var cusAddress : String = "",
+    var cusPhoto   : Blob = Blob.fromBytes(ByteArray(0)),
+    var date : Date = Date(),
 )
 
 data class Staff(

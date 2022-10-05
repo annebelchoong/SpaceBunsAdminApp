@@ -110,4 +110,29 @@
         android:name="com.example.spacebunsadminapp.ui.StaffInsertFragment"
         android:label="fragment_staff_insert"
         tools:layout="@layout/fragment_staff_insert" />
+    <fragment
+        android:id="@+id/customerFragment"
+        android:name="com.example.spacebunsadminapp.ui.CustomerFragment"
+        android:label="fragment_customer"
+        tools:layout="@layout/fragment_customer" />
+    <fragment
+        android:id="@+id/customerInsertFragment"
+        android:name="com.example.spacebunsadminapp.ui.CustomerInsertFragment"
+        android:label="fragment_customer_insert"
+        tools:layout="@layout/fragment_customer_insert" />
+    <fragment
+        android:id="@+id/customerListFragment"
+        android:name="com.example.spacebunsadminapp.ui.CustomerListFragment"
+        android:label="fragment_customer_list"
+        tools:layout="@layout/fragment_customer_list" />
+    <fragment
+        android:id="@+id/customerUpdateFragment"
+        android:name="com.example.spacebunsadminapp.ui.CustomerUpdateFragment"
+        android:label="fragment_customer_update"
+        tools:layout="@layout/fragment_customer_update" />
+    <fragment
+        android:id="@+id/staffListFragment"
+        android:name="com.example.spacebunsadminapp.ui.StaffListFragment"
+        android:label="fragment_staff_list"
+        tools:layout="@layout/fragment_staff_list" />
 </navigation>
