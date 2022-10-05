@@ -149,32 +149,17 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/view5" />
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvOrderDetails2"
+        android:layout_width="409dp"
+        android:layout_height="423dp"
+        android:isScrollContainer="true"
+        app:layoutManager="LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/view7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view6"
-        app:layout_constraintVertical_bias="1.0">
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvOrderDetails"
-            android:layout_width="409dp"
-            android:layout_height="423dp"
-            android:isScrollContainer="true"
-            app:layout_constraintBottom_toTopOf="@+id/view"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view3"
-            tools:listitem="@layout/item_order_detail" />
-    </ScrollView>
+        tools:listitem="@layout/item_order_detail" />
 
     <Button
         android:id="@+id/btnUpdateStatus2"
@@ -206,8 +191,7 @@
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline5" />
 
     <TextView
         android:id="@+id/edtTotal2"
@@ -231,4 +215,13 @@
         android:entries="@array/orderStatus"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/edtPaymentMethod2" />
+
+    <TextView
+        android:id="@+id/lblNewOrderStatus2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Status:"
+        app:layout_constraintBottom_toBottomOf="@+id/spnNewStatus2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/spnNewStatus2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

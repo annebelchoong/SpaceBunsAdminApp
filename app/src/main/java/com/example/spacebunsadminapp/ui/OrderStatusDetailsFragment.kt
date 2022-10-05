@@ -44,9 +44,9 @@ class OrderStatusDetailsFragment : Fragment() {
             val orderStatus = vm.get(id)!!
             binding.lblTitle.text = "${orderStatus.name}"
 
-            val fruits = vm.getOrders(id)
-            adapter.submitList(fruits)
-            binding.txtCount2.text = "${fruits.size} Orders(s)"
+            val orders = vm.getOrders(id)
+            adapter.submitList(orders)
+            binding.txtCount2.text = "${orders.size} Orders(s)"
         }
 
         return binding.root

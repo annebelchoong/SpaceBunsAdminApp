@@ -5,16 +5,17 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.spacebunsadminapp.data.OrderDetails
 import com.example.spacebunsadminapp.data.Orders
 import com.example.spacebunsadminapp.databinding.ItemOrderDetailBinding
 
 class OrderDetailsAdapter (
-    val fn: (ViewHolder, Orders) -> Unit ={ _, _ ->}
-): ListAdapter<Orders, OrderDetailsAdapter.ViewHolder>(DiffCallBack) {
+    val fn: (ViewHolder, OrderDetails) -> Unit ={ _, _ ->}
+): ListAdapter<OrderDetails, OrderDetailsAdapter.ViewHolder>(DiffCallBack) {
 
-    companion object DiffCallBack: DiffUtil.ItemCallback<Orders>(){
-        override fun areItemsTheSame(a: Orders, b: Orders) = a.orderId == b.orderId
-        override fun areContentsTheSame(a: Orders, b: Orders) = a == b
+    companion object DiffCallBack: DiffUtil.ItemCallback<OrderDetails>(){
+        override fun areItemsTheSame(a: OrderDetails, b: OrderDetails) = a.orderId == b.orderId
+        override fun areContentsTheSame(a: OrderDetails, b: OrderDetails) = a == b
     }
     class ViewHolder(val binding: ItemOrderDetailBinding): RecyclerView.ViewHolder(binding.root)
 
@@ -28,12 +29,16 @@ class OrderDetailsAdapter (
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val order = getItem(position)
+        val orderD = getItem(position)
 
+        holder.binding.txtProductName.text = orderD.productName
+        holder.binding.txtProductId.text = orderD.productId
+        holder.binding.txtQuantity.text = "x ${orderD.quantity}"
+        orderD.totalPrice = orderD.price * orderD.quantity
+        holder.binding.txtSubtotal.text = "RM ${"%.2f".format(orderD.totalPrice)}"
+        holder.binding.imageView.setImageBlob(orderD.photo)
 
-//        holder.binding.txtCount.text = "${order.count} Order(s)"
-
-        fn(holder,order)
+        fn(holder,orderD)
     }
 
 }
