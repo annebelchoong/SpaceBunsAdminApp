@@ -31,11 +31,6 @@
         android:label="Donation Events"
         tools:layout="@layout/fragment_donation_events" />
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.spacebunsadminapp.ui.LoginFragment"
-        android:label="Login"
-        tools:layout="@layout/fragment_login" />
-    <fragment
         android:id="@+id/salesFragment"
         android:name="com.example.spacebunsadminapp.ui.SalesFragment"
         android:label="Sales"
@@ -124,4 +119,84 @@
         android:name="com.example.spacebunsadminapp.ui.ProductUpdateFragment"
         android:label="Update Product"
         tools:layout="@layout/fragment_products_update" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.spacebunsadminapp.ui.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/changeEmailActivity"
+        android:name="com.example.spacebunsadminapp.ui.ChangeEmailActivity"
+        android:label="activity_change_email"
+        tools:layout="@layout/activity_change_email" />
+    <activity
+        android:id="@+id/resetPasswordActivity"
+        android:name="com.example.spacebunsadminapp.ui.ResetPasswordActivity"
+        android:label="activity_reset_password"
+        tools:layout="@layout/activity_reset_password" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.spacebunsadminapp.ui.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/categoryDetailsFragment"
+        android:name="com.example.spacebunsadminapp.ui.CategoryDetailsFragment"
+        android:label="fragment_category_details"
+        tools:layout="@layout/fragment_category_details" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.spacebunsadminapp.ui.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/staffFragment"
+        android:name="com.example.spacebunsadminapp.ui.StaffFragment"
+        android:label="fragment_staff"
+        tools:layout="@layout/fragment_staff" />
+    <fragment
+        android:id="@+id/staffUpdateFragment"
+        android:name="com.example.spacebunsadminapp.ui.StaffUpdateFragment"
+        android:label="fragment_staff_update"
+        tools:layout="@layout/fragment_staff_update" />
+    <fragment
+        android:id="@+id/updateProfileFragment"
+        android:name="com.example.spacebunsadminapp.ui.UpdateProfileFragment"
+        android:label="fragment_update_profile"
+        tools:layout="@layout/fragment_update_profile" />
+    <fragment
+        android:id="@+id/userUpdateFragment"
+        android:name="com.example.spacebunsadminapp.ui.UserUpdateFragment"
+        android:label="fragment_user_update"
+        tools:layout="@layout/fragment_user_update" />
+    <fragment
+        android:id="@+id/staffInsertFragment"
+        android:name="com.example.spacebunsadminapp.ui.StaffInsertFragment"
+        android:label="fragment_staff_insert"
+        tools:layout="@layout/fragment_staff_insert" />
+    <fragment
+        android:id="@+id/customerFragment"
+        android:name="com.example.spacebunsadminapp.ui.CustomerFragment"
+        android:label="fragment_customer"
+        tools:layout="@layout/fragment_customer" />
+    <fragment
+        android:id="@+id/customerInsertFragment"
+        android:name="com.example.spacebunsadminapp.ui.CustomerInsertFragment"
+        android:label="fragment_customer_insert"
+        tools:layout="@layout/fragment_customer_insert" />
+    <fragment
+        android:id="@+id/customerListFragment"
+        android:name="com.example.spacebunsadminapp.ui.CustomerListFragment"
+        android:label="fragment_customer_list"
+        tools:layout="@layout/fragment_customer_list" />
+    <fragment
+        android:id="@+id/customerUpdateFragment"
+        android:name="com.example.spacebunsadminapp.ui.CustomerUpdateFragment"
+        android:label="fragment_customer_update"
+        tools:layout="@layout/fragment_customer_update" />
+    <fragment
+        android:id="@+id/staffListFragment"
+        android:name="com.example.spacebunsadminapp.ui.StaffListFragment"
+        android:label="fragment_staff_list"
+        tools:layout="@layout/fragment_staff_list" />
 </navigation>

@@ -6,6 +6,36 @@
 
         <entry key="app/src/main/res/drawable/bottom_side_rounded_rectangle_gold.xml" value="0.2015" />
         <entry key="app/src/main/res/drawable/bottom_side_rounded_rectangle_white.xml" value="0.2015" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/drawable-v24/ic_delete.xml" value="0.2465" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/activity_change_email.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/activity_reset_password.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/fragment_category.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/fragment_category_details.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/fragment_customer.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/fragment_customer_insert.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/fragment_customer_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/fragment_customer_update.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/fragment_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/fragment_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/fragment_staff.xml" value="0.4" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/fragment_staff_insert.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/fragment_staff_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/fragment_staff_update.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/fragment_update_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/fragment_user.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/fragment_user_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/fragment_user_update.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/item_category.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/item_customer.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/item_staff.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/layout/item_user.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBun/SpaceBunsAdminApp/app/src/main/res/menu/drawer.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBunsAdminApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBunsAdminApp/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBunsAdminApp/app/src/main/res/layout/fragment_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBunsAdminApp/app/src/main/res/layout/fragment_user.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/Downloads/Mobile Application Development/SpaceBunsAdminApp/app/src/main/res/menu/drawer.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable/circle.xml" value="0.1565" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.152" />
         <entry key="app/src/main/res/drawable/rounded_rectangle.xml" value="0.1825" />
