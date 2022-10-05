@@ -60,6 +60,7 @@ fun Bitmap.crop(width: Int, height: Int): Bitmap {
         x = 0
         y = (sh - h) / 2
     } else {
+
         // Retain height, calculate width
         w = (sh * ratio).toInt()
         h = sh
