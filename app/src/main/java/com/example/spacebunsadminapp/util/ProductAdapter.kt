@@ -30,7 +30,7 @@ class ProductAdapter (
 
         holder.binding.txtId.text   = product.id
         holder.binding.txtCat.text = ("--> " + product.cat + " <--")
-        holder.binding.txtPrice.text = ("( RM" + product.price + " )")
+        holder.binding.txtPrice.text = "( RM" + String.format("%.2f",product.price) + " )"
         holder.binding.txtName.text = product.name
         holder.binding.txtDesc.text  = product.desc
 
