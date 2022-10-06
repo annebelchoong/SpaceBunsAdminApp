@@ -113,7 +113,8 @@
                     android:layout_marginTop="15dp"
                     android:text="Address"
                     android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/btn_update"

@@ -8,14 +8,7 @@ import com.google.firebase.ktx.Firebase
 
 class StaffViewModal : ViewModel() {
 
-    //    private var fruits = listOf<Voucher>() // Original data
     private val staffs = MutableLiveData<List<Staff>>() // Search + filter + sort result
-
-//    private var voucherCode = ""       // Search
-//    private var voucherId = "" // Filter
-//    private var field = ""      // Sort
-//    private var reverse = false // Sort
-
 
     private val col = Firebase.firestore.collection("staffs")
 
@@ -64,7 +57,7 @@ class StaffViewModal : ViewModel() {
         else ""
 
         e += if (s.staffName == "") "- Name is required.\n"
-        else if (s.staffName.length < 1) "- Name is too short (at least 3 letters).\n"
+        else if (s.staffName.length < 3) "- Name is too short (at least 3 letters).\n"
         else ""
 
 //        e += if (v.discountPercentage < 0.01 || v.discountPercentage > 1.00) "- DiscountPercentage must be within 0.01 to 1.00 only.\n"
@@ -73,12 +66,12 @@ class StaffViewModal : ViewModel() {
         else ""
 
         e += if (s.staffPhone == "") "- Phone no is required.\n"
-        else if (s.staffPhone.length < 11) "- Phone no is invalid.\n"
+        else if (s.staffPhone.length < 10) "- Phone no is invalid.\n"
         else ""
 
-        e += if (s.staffAddress == "") "- Address is required.\n"
-        else if (s.staffAddress.length < 50) "- Address is invalid.\n"
-        else ""
+//        e += if (s.staffAddress == "") "- Address is required.\n"
+//        else if (s.staffAddress.length < 50) "- Address is invalid.\n"
+//        else ""
 
         e += if (s.staffPhoto.toBytes().isEmpty()) "- Photo is required.\n"
         else ""
@@ -86,8 +79,8 @@ class StaffViewModal : ViewModel() {
         return e
     }
 
-    fun getStaffAttributes(): List<String> {
-//        return STAFFS.get().await().toObjects<Staff>()
-        return listOf("ID", "Email", "Name", "Salary")
-    }
+//    fun getStaffAttributes(): List<String> {
+////        return STAFFS.get().await().toObjects<Staff>()
+//        return listOf("ID", "Email", "Name", "Salary")
+//    }
 }

@@ -6,109 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".ui.StaffFragment">
 
-    <TextView
-        android:id="@+id/lblStaffName"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStaff"
         android:layout_width="0dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        android:text="Name"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/rvStaff"
-        app:layout_constraintStart_toEndOf="@+id/lblStaffId"
-        app:layout_constraintTop_toBottomOf="@+id/svStaff" />
+        android:layout_height="0dp"
+        android:padding="4dp"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider3"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/item_staff" />
 
-    <TextView
-        android:id="@+id/lblStaffEmail"
+    <Button
+        android:id="@+id/btnInsertStaff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="8dp"
-        android:text="Email"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/rvStaff"
-        app:layout_constraintEnd_toStartOf="@+id/lblSalary"
-        app:layout_constraintStart_toEndOf="@+id/lblStaffName"
-        app:layout_constraintTop_toBottomOf="@+id/svStaff" />
-
-    <TextView
-        android:id="@+id/lblSalary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="8dp"
-        android:text="RM"
-        android:textColor="@color/black"
+        android:layout_marginEnd="16dp"
+        android:text="Insert"
         app:layout_constraintBottom_toTopOf="@+id/rvStaff"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/svStaff" />
-
-    <TextView
-        android:id="@+id/lblStaffId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        android:text="ID"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/rvStaff"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/svStaff" />
+        app:layout_constraintTop_toTopOf="@+id/divider3"
+        app:layout_constraintVertical_bias="0.519" />
 
     <TextView
         android:id="@+id/txtStaffCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="00 Record(s)"
+        android:layout_marginStart="8dp"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/svStaff"
-        app:layout_constraintStart_toEndOf="@+id/svStaff"
-        app:layout_constraintTop_toTopOf="@+id/svStaff" />
+        app:layout_constraintBottom_toBottomOf="@+id/divider3"
+        app:layout_constraintStart_toStartOf="@+id/divider3"
+        app:layout_constraintTop_toTopOf="@+id/divider3"
+        tools:text="0 record(s)" />
 
-    <SearchView
-        android:id="@+id/svStaff"
-        android:layout_width="150dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/rounded_rectangle_white"
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </SearchView>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvStaff"
-        android:layout_width="409dp"
-        android:layout_height="537dp"
-        tools:layout_editor_absoluteY="112dp" />
-
-    <Spinner
-        android:id="@+id/spnStaffAttribute"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/txtStaffCount"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtStaffCount" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabtnAddStaff"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:backgroundTint="@color/gold"
-        android:clickable="true"
-        android:src="@android:drawable/ic_input_add"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

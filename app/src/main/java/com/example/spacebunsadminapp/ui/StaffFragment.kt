@@ -29,11 +29,15 @@ class StaffFragment : Fragment() {
     ): View {
         binding = FragmentStaffBinding.inflate(inflater, container, false)
 
-        binding.fabtnAddStaff.setOnClickListener { nav.navigate(R.id.staffInsertFragment) }
+        binding.btnInsertStaff.setOnClickListener { nav.navigate(R.id.staffInsertFragment) }
 
         adapter = StaffAdapter { holder, staff ->
             holder.binding.root.setOnClickListener {
-                nav.navigate(R.id.userUpdateFragment, bundleOf("staffId" to staff.staffId))
+                nav.navigate(R.id.staffUpdateFragment, bundleOf("staffId" to staff.staffId))
+            }
+            // Delete button click -> delete record
+            holder.binding.btnDeleteItem.setOnClickListener {
+                delete(staff.staffId)
             }
         }
         binding.rvStaff.adapter = adapter
@@ -46,14 +50,14 @@ class StaffFragment : Fragment() {
 
         // -----------------------------------------------------------------------------------------
 
-        val arrayAdapter =
-            ArrayAdapter<String>(requireContext(), android.R.layout.simple_spinner_item)
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        binding.spnStaffAttribute.adapter = arrayAdapter
-
-        val staffs = vm.getStaffAttributes()
-        arrayAdapter.add("All")
-        arrayAdapter.addAll(staffs)
+//        val arrayAdapter =
+//            ArrayAdapter<String>(requireContext(), android.R.layout.simple_spinner_item)
+//        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+//        binding.spnStaffAttribute.adapter = arrayAdapter
+//
+//        val staffs = vm.getStaffAttributes()
+//        arrayAdapter.add("All")
+//        arrayAdapter.addAll(staffs)
 
         // TODO: Get all
         vm.getAll().observe(viewLifecycleOwner) {
@@ -63,4 +67,8 @@ class StaffFragment : Fragment() {
 
         return binding.root
     }
+        private fun delete(id: String) {
+            // TODO: Delete
+            vm.delete(id)
+        }
 }

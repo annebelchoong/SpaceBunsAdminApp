@@ -35,9 +35,6 @@ class CustomerAdapter (
         holder.binding.txtCusPhoneItem.text = customer.cusPhone
         holder.binding.txtCusAddressItem.text = customer.cusAddress
         holder.binding.imgCusPhotoItem.setImageBlob(customer.cusPhoto)
-        //holder.binding.imgPhoto.setImageBlob(friend.photo)
-        //holder.binding.txtSalary.text = (customer.salary).toString()
-        //holder.binding.txtCount.text = staff.Count.toString() + " times" // count
 
         fn(holder, customer)
     }

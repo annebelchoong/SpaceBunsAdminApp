@@ -27,9 +27,9 @@ class CustomerViewModel : ViewModel() {
         col.document(id).delete()
     }
 
-    fun deleteAll() {
-        customers.value?.forEach { col.document(it.cusId).delete() }
-    }
+//    fun deleteAll() {
+//        customers.value?.forEach { col.document(it.cusId).delete() }
+//    }
 
     fun set(c: Customer) {
         col.document(c.cusId).set(c)
@@ -53,7 +53,7 @@ class CustomerViewModel : ViewModel() {
 
         e += if (c.cusEmail == "") "- Email is required.\n"
         else if (!c.cusEmail.matches(emailRegex)) "- Email is too short (at least 3 letters).\n"
-        else if (emailExists(c.cusEmail)) "- Email is duplicated.\n"
+        //else if (emailExists(c.cusEmail)) "- Email is duplicated.\n"
         else ""
 
         e += if (c.cusName == "") "- Name is required.\n"
@@ -61,11 +61,11 @@ class CustomerViewModel : ViewModel() {
         else ""
 
         e += if (c.cusPhone == "") "- Phone no is required.\n"
-        else if (c.cusPhone.length < 11) "- Phone no is invalid.\n"
+        else if (c.cusPhone.length < 10) "- Phone no is invalid.\n"
         else ""
 
         e += if (c.cusAddress == "") "- Address is required.\n"
-        else if (c.cusAddress.length < 50) "- Address is invalid.\n"
+        //else if (c.cusAddress.length < 50) "- Address is invalid.\n"
         else ""
 
         e += if (c.cusPhoto.toBytes().isEmpty()) "- Photo is required.\n"
@@ -74,8 +74,8 @@ class CustomerViewModel : ViewModel() {
         return e
     }
 
-    fun getCustomerAttributes(): List<String> {
-//        return CUSTOMERS.get().await().toObjects<Customer>()
-        return listOf("ID", "Email", "Name", "Phone", "Address", "Photo")
-    }
+//    fun getCustomerAttributes(): List<String> {
+////        return CUSTOMERS.get().await().toObjects<Customer>()
+//        return listOf("ID", "Email", "Name", "Phone", "Address", "Photo")
+//    }
 }

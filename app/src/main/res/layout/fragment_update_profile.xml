@@ -109,7 +109,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="Address"
-                    android:inputType="textPostalAddress" />
+                    android:inputType="textPostalAddress"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/btnSave"

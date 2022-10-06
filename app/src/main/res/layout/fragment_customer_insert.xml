@@ -26,20 +26,40 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_begin="80dp" />
 
-            <TextView
-                android:id="@+id/txtCusId"
+            <EditText
+                android:id="@+id/edtCusName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:textColor="@color/black"
+                android:ems="10"
+                android:importantForAccessibility="no"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:maxLength="50"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="XXX" />
+                app:layout_constraintTop_toBottomOf="@+id/edtCusId"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <EditText
-                android:id="@+id/edtCusName"
+                android:id="@+id/edtCusEmailInsert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:importantForAccessibility="no"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:maxLength="50"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/edtCusName"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/edtCusId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -51,7 +71,7 @@
                 android:maxLength="50"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/txtCusId"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <EditText
@@ -59,15 +79,44 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:ems="10"
                 android:importantForAccessibility="no"
                 android:importantForAutofill="no"
-                android:inputType="number"
-                android:maxLength="2"
+                android:inputType="textPassword"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/edtCusEmail"
+                app:layout_constraintTop_toBottomOf="@+id/edtCusEmailInsert"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/edtCusPhoneInsert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:importantForAccessibility="no"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/edtCusPassword"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/edtCusAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:importantForAccessibility="no"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/edtCusPhoneInsert"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <ImageView
@@ -100,7 +149,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="24dp"
                 android:text="Reset"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toBottomOf="@+id/txtCusDate" />
@@ -111,19 +160,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Submit"
+                app:layout_constraintBottom_toBottomOf="@+id/btnReset"
                 app:layout_constraintStart_toEndOf="@+id/btnReset"
                 app:layout_constraintTop_toTopOf="@+id/btnReset" />
 
             <TextView
+                android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:labelFor="@id/txtCusId"
                 android:text="Id"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/txtCusId"
+                app:layout_constraintBottom_toBottomOf="@+id/edtCusId"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toTopOf="@+id/txtCusId" />
+                app:layout_constraintTop_toTopOf="@+id/edtCusId" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -145,9 +196,9 @@
                 android:text="Email"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/edtCusEmail"
+                app:layout_constraintBottom_toBottomOf="@+id/edtCusEmailInsert"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toTopOf="@+id/edtCusEmail" />
+                app:layout_constraintTop_toTopOf="@+id/edtCusEmailInsert" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -168,9 +219,9 @@
                 android:text="Phone"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/edtCusPhone"
+                app:layout_constraintBottom_toBottomOf="@+id/edtCusPhoneInsert"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toTopOf="@+id/edtCusPhone" />
+                app:layout_constraintTop_toTopOf="@+id/edtCusPhoneInsert" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -205,39 +256,6 @@
                 app:layout_constraintBottom_toBottomOf="@+id/txtCusDate"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toTopOf="@+id/txtCusDate" />
-
-            <EditText
-                android:id="@+id/edtCusEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:inputType="textEmailAddress"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/edtCusName" />
-
-            <EditText
-                android:id="@+id/edtCusPhone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:inputType="phone"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/edtCusPassword" />
-
-            <EditText
-                android:id="@+id/edtCusAddress"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:inputType="textPostalAddress"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/edtCusPhone" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -15,9 +15,9 @@ class MainActivity : AppCompatActivity() {
     private val nav by lazy { supportFragmentManager.findFragmentById(R.id.host)!!.findNavController() }
     private lateinit var abc: AppBarConfiguration
 
-    // View models
-    private val cusVM: CustomerViewModel by viewModels()
-    private val staffVM: StaffViewModal by viewModels()
+//    // View models
+//    private val cusVM: CustomerViewModel by viewModels()
+//    private val staffVM: StaffViewModal by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,9 +59,9 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(nav, abc) //control the action bar. Add abc it can swap the hamburger menu
         binding.navView.setupWithNavController(nav)
 
-        // Initialize view models
-        cusVM.init()
-        staffVM.init()
+//        // Initialize view models
+//        cusVM.init()
+//        staffVM.init()
     }
 
     override fun onSupportNavigateUp(): Boolean {
