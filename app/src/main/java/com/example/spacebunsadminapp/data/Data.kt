@@ -113,6 +113,14 @@ data class Product(
     var photo: Blob = Blob.fromBytes(ByteArray(0)),  // empty bytes
     var date: Date = Date() // current Date
 )
+
+data class Category(  //when compare, it will compare what in the bracket - id, name
+    @DocumentId
+    var id: String = "",
+    var name: String = "",
+) {
+    @get:Exclude
+    var count: Int = 0
     override fun toString() = name //Spinner
 }
 

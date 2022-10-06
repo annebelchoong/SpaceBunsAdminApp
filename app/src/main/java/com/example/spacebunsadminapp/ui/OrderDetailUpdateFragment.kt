@@ -37,7 +37,7 @@ class OrderDetailUpdateFragment : Fragment() {
             binding.edtDate2.text = "${orders?.date}"
             binding.edtAddress2.text = "${orders?.address}"
             binding.edtPaymentMethod2.text = "${orders?.paymentMethod}"
-            binding.edtTotal2.text = "RM ${"%.2f".format(orders?.totalPrice)}"
+            binding.edtTotal2.text = "${"%.2f".format(orders?.totalPrice)}"
 //        }
 
         }

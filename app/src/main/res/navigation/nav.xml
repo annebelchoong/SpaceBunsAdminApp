@@ -67,7 +67,7 @@
     <fragment
         android:id="@+id/orderStatusDetailsFragment"
         android:name="com.example.spacebunsadminapp.ui.OrderStatusDetailsFragment"
-        android:label="fragment_order_status_details"
+        android:label="Order Status Detail"
         tools:layout="@layout/fragment_order_status_details" />
     <fragment
         android:id="@+id/insertVoucherFragment"
@@ -98,7 +98,7 @@
 
         android:id="@+id/orderDetailUpdateFragment"
         android:name="com.example.spacebunsadminapp.ui.OrderDetailUpdateFragment"
-        android:label="fragment_order_detail_update"
+        android:label="Order Details"
         tools:layout="@layout/fragment_order_detail_update" />
     <fragment
         android:id="@+id/donationEventsUpdateFragment"

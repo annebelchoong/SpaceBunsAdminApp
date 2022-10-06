@@ -32,7 +32,7 @@ class OrdersAdapter (
         val order = getItem(position)
 
         holder.binding.txtId.text = order.orderId
-        holder.binding.txtTotal.text = order.totalPrice.toString()
+        holder.binding.txtTotal.text = "${"%.2f".format(order.totalPrice)}"
 
 //        holder.binding.txtCount.text = "${order.count} Order(s)"
 

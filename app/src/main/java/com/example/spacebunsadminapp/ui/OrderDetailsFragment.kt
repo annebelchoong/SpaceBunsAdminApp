@@ -18,6 +18,7 @@ import java.text.DecimalFormat
 
 class OrderDetailsFragment:Fragment() {
     private lateinit var binding: FragmentOrderDetailsBinding
+    private lateinit var binding2: FragmentOrderDetailsBinding
     private val nav by lazy { findNavController() }
     private val vmO: OrderStatusViewModel by activityViewModels()
     private val vm: OrdersViewModel by activityViewModels()
@@ -36,6 +37,7 @@ class OrderDetailsFragment:Fragment() {
             binding.edtAddress.text = "${orders?.address}"
             binding.edtPaymentMethod.text = "${orders?.paymentMethod}"
             binding.edtTotal.text = "RM ${"%.2f".format(orders?.totalPrice)}"
+
             when(orders.orderStatusId){
                 "D" -> binding.txtOrderStatus.text = "Delivered"
                 "C" -> binding.txtOrderStatus.text = "Cancelled"
