@@ -53,7 +53,7 @@ class StaffViewModal : ViewModel() {
 
         e += if (s.staffEmail == "") "- Email is required.\n"
         else if (!s.staffEmail.matches(emailRegex)) "- Email is too short (at least 3 letters).\n"
-        else if (emailExists(s.staffEmail)) "- Email is duplicated.\n"
+        //else if (emailExists(s.staffEmail)) "- Email is duplicated.\n"
         else ""
 
         e += if (s.staffName == "") "- Name is required.\n"
