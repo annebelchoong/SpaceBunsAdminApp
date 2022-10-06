@@ -1,10 +1,13 @@
 package com.example.spacebunsadminapp.ui
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.spacebunsadminapp.R
@@ -24,8 +27,15 @@ class CustomerUpdateFragment : Fragment() {
     private lateinit var binding: FragmentCustomerUpdateBinding
     private val nav by lazy { findNavController() }
     private val vm: CustomerViewModel by activityViewModels()
+
     private val cusId by lazy { arguments?.getString("cusId") ?: "" }
     private val formatter = SimpleDateFormat("dd MMMM yyyy '-' hh:mm:ss a", Locale.getDefault())
+
+    private val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+        if (it.resultCode == Activity.RESULT_OK) {
+            binding.imgCusPhoto.setImageURI(it.data?.data)
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,11 +45,18 @@ class CustomerUpdateFragment : Fragment() {
         binding = FragmentCustomerUpdateBinding.inflate(inflater, container, false)
 
         reset()
+        binding.imgCusPhoto.setOnClickListener  { select() }
         binding.btnReset.setOnClickListener { reset() }
         binding.btnSubmit.setOnClickListener { submit() }
         binding.btnDelete.setOnClickListener { delete() }
 
         return binding.root
+    }
+
+    private fun select() {
+        val intent = Intent(Intent.ACTION_GET_CONTENT)
+        intent.type = "image/*"
+        launcher.launch(intent)
     }
 
     private fun reset() {
@@ -56,7 +73,7 @@ class CustomerUpdateFragment : Fragment() {
         binding.edtCusEmail.setText(c.cusEmail)
         binding.edtCusPassword.setText(c.cusPassword)
         binding.edtCusPhone.setText(c.cusPhone)
-        binding.edtCusAddress.setText(c.cusAddress)
+        binding.edtCusAddressUpdate.setText(c.cusAddress)
         // TODO: Load photo and date
         binding.imgCusPhoto.setImageBlob(c.cusPhoto)
         binding.txtCusDate.text = formatter.format(c.date)
@@ -71,7 +88,7 @@ class CustomerUpdateFragment : Fragment() {
             cusEmail = binding.edtCusEmail.text.toString().trim(),
             cusPassword = binding.edtCusPassword.text.toString().trim(),
             cusPhone = binding.edtCusPhone.text.toString().trim(),
-            cusAddress = binding.edtCusAddress.text.toString().trim(),
+            cusAddress = binding.edtCusAddressUpdate.text.toString().trim(),
             // TODO: Photo
             cusPhoto = binding.imgCusPhoto.cropToBlob(300,300)
         )
@@ -84,16 +101,16 @@ class CustomerUpdateFragment : Fragment() {
         vm.set(c)
         nav.navigateUp()
     }
-//    private fun delete() {
-//        // TODO: Delete
-//        vm.delete(voucherId)
-//
-//        nav.navigateUp()
-//    }
-
     private fun delete() {
+        // TODO: Delete
         vm.delete(cusId)
+
         nav.navigateUp()
-//        Navigation.findNavController(binding.root).popBackStack(R.id.vouchersFragment, false)
     }
+
+//    private fun delete() {
+//        vm.delete(cusId)
+//        nav.navigateUp()
+////        Navigation.findNavController(binding.root).popBackStack(R.id.vouchersFragment, false)
+//    }
 }

@@ -37,7 +37,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#8F6FC8"
-                android:text="Customer List" />
+                android:text="Customer List"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/btnCusInsert"
@@ -51,7 +52,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#8F6FC8"
-                android:text="Update Customer" />
+                android:text="Update Customer"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/btnStaff"
@@ -59,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:backgroundTint="#087E73"
-                android:text="Staffs"
+                android:text="Staffs List"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="16sp"
@@ -70,7 +72,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#51A8A0"
-                android:text="Staff List" />
+                android:text="Staff List"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/btnStaffInsert"
@@ -84,7 +87,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#51A8A0"
-                android:text="Update Staff" />
+                android:text="Update Staff"
+                android:visibility="gone" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

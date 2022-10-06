@@ -67,14 +67,14 @@ class UpdateProfileFragment : Fragment() {
 
         binding.edtName.setText(s.staffName)
         binding.edtPhone.setText(s.staffPhone)
-        binding.edtAddress.setText(s.staffAddress)
+        //binding.edtAddress.setText(s.staffAddress)
     }
 
     private fun submit() {
         val s = Staff(
             staffName = binding.edtName.text.toString().trim(),
             staffPhone = binding.edtPhone.text.toString(),
-            staffAddress = binding.edtAddress.text.toString().trim(),
+            //staffAddress = binding.edtAddress.text.toString().trim(),
             staffPhoto = binding.imgUser.cropToBlob(300,300)
         )
 

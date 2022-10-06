@@ -30,8 +30,9 @@ class StaffAdapter (
             holder.binding.txtStaffIdItem.text = staff.staffId
             holder.binding.txtStaffNameItem.text = staff.staffName
             holder.binding.txtStaffEmailItem.text = staff.staffEmail
-            holder.binding.txtSalaryItem.text = (staff.salary).toString()
-            //holder.binding.txtCount.text = staff.Count.toString() + " times" // count
+            holder.binding.txtStaffPhoneItem.text = staff.staffPhone
+            holder.binding.txtSalaryItem.text = "( RM" + String.format("%.2f",staff.salary) + " )"
+            holder.binding.imgStaffPhoto.setImageBlob(staff.staffPhoto)
 
             fn(holder, staff)
         }
